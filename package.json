@@ -11,20 +11,32 @@
   "dependencies": {
     "@emotion/react": "11.11.4",
     "@emotion/styled": "11.11.5",
+    "@mui/icons-material": "^5.15.20",
     "@mui/material": "5.15.20",
+    "@mui/styled-engine": "^5.15.14",
+    "@mui/system": "^5.15.20",
     "next": "14.1.0",
-    "react": "^18",
-    "react-dom": "^18",
-    "styled-components": "6.1.11",
-    "tailwindcss": "3.4.4"
+    "next-transpile-modules": "^10.0.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "styled-components": "6.1.11"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/node": "^20.14.2",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
     "@types/styled-components": "5.1.34",
-    "eslint": "^8",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^8.57.0",
     "eslint-config-next": "14.1.0",
-    "typescript": "^5"
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.4.5"
+  },
+  "engines": {
+    "pnpm": ">=8.15.6"
   }
+  "cacheDirectories": [
+    ".next/cache"
+  ]
 }

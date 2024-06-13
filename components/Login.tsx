@@ -1,20 +1,36 @@
-"use client"
-import React from 'react';
-import { Button, TextField, Typography, Container, Box, InputLabel,  } from '@mui/material';
-import styled from 'styled-components';
+"use client";
+import React from "react";
+import {
+  Button,
+  TextField,
+  Typography,
+  Container,
+  Box,
+  InputLabel,
+} from "@mui/material";
+import tw, { styled } from "twin.macro";
+
+const StyledContainer = styled(Container)`
+  @apply mt-10 p-6 bg-white rounded-lg shadow-lg;
+`;
 
 const StyledTextField = styled(TextField)`
   @apply rounded-lg;
-  @apply shadow-lg;
+`;
+
+const StyledTypography = styled(Typography)`
+  text-red-500
+`;
+export const Wrapper = styled.div`
+  ${tw`flex flex-col w-full`}
 `;
 
 const Login = () => {
   return (
-    <Container maxWidth="xs" className="mt-10 p-6 bg-white rounded-lg shadow-lg">
+    <StyledContainer maxWidth="xs">
       <Box display="flex" flexDirection="column" alignItems="center">
-        <Typography variant="h5" className="mb-6">Login</Typography>
-
-        <InputLabel>Email Address</InputLabel>
+        <StyledTypography variant="h5">Login</StyledTypography>
+        <InputLabel className="mt-2">Email Address</InputLabel>
         <StyledTextField
           variant="outlined"
           margin="normal"
@@ -24,9 +40,9 @@ const Login = () => {
           name="email"
           autoComplete="email"
           autoFocus
-          placeholder='Email Address'
+          placeholder="Email Address"
         />
-        <TextField
+        <StyledTextField
           variant="outlined"
           margin="normal"
           required
@@ -47,10 +63,8 @@ const Login = () => {
           Sign In
         </Button>
       </Box>
-    </Container>
+    </StyledContainer>
   );
-}
+};
 
 export default Login;
-
-
