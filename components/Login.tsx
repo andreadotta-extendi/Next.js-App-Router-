@@ -2,6 +2,11 @@
 import React from 'react';
 import { Button, TextField, Typography, Container, Box, InputLabel,  } from '@mui/material';
 import styled from 'styled-components';
+
+const StyledTextField = styled(TextField)`
+  @apply rounded-lg;
+`;
+
 const Login = () => {
   return (
     <Container maxWidth="xs" className="mt-10 p-6 bg-white rounded-lg shadow-lg">
@@ -9,7 +14,7 @@ const Login = () => {
         <Typography variant="h5" className="mb-6">Login</Typography>
 
         <InputLabel>Email Address</InputLabel>
-        <TextField
+        <StyledTextField
           variant="outlined"
           margin="normal"
           required
@@ -48,4 +53,3 @@ const Login = () => {
 export default Login;
 
 
-const Text = styled(TextField, 'rounded-lg')
