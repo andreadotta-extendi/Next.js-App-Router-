@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 const StyledTextField = styled(TextField)`
   @apply rounded-lg;
+  @apply shadow-lg;
 `;
 
 const Login = () => {
