@@ -7,31 +7,19 @@ import {
   Container,
   Box,
   InputLabel,
+  styled,
 } from "@mui/material";
-import tw, { styled } from "twin.macro";
+import StyledTypography from './styled_typography';
 
-const StyledContainer = styled(Container)`
-  @apply mt-10 p-6 bg-white rounded-lg shadow-lg;
-`;
 
-const StyledTextField = styled(TextField)`
-  @apply rounded-lg;
-`;
-
-const StyledTypography = styled(Typography)`
-  text-red-500
-`;
-export const Wrapper = styled.div`
-  ${tw`flex flex-col w-full`}
-`;
 
 const Login = () => {
   return (
-    <StyledContainer maxWidth="xs">
+    <Container maxWidth="xs">
       <Box display="flex" flexDirection="column" alignItems="center">
         <StyledTypography variant="h5">Login</StyledTypography>
         <InputLabel className="mt-2">Email Address</InputLabel>
-        <StyledTextField
+        <TextField
           variant="outlined"
           margin="normal"
           required
@@ -42,7 +30,7 @@ const Login = () => {
           autoFocus
           placeholder="Email Address"
         />
-        <StyledTextField
+        <TextField
           variant="outlined"
           margin="normal"
           required
@@ -63,7 +51,7 @@ const Login = () => {
           Sign In
         </Button>
       </Box>
-    </StyledContainer>
+    </Container>
   );
 };
 
