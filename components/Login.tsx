@@ -27,7 +27,7 @@ const Login = () => {
   useEffect(() => {
     if(email && password) {
       setIsDisabled(false)
-    } else if (isDisabled) {
+    } else if (!isDisabled) {
       setIsDisabled(true)
     }
   }, [email, password])
