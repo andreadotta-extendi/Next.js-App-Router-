@@ -2,13 +2,26 @@
 import { Roboto } from "next/font/google";
 import { PaletteColorOptions, createTheme } from "@mui/material/styles";
 
-// declare module "@mui/material/styles" {
-//   interface Theme {
-//     palette: {
-//       complementary?: PaletteColorOptions | undefined;
-//     };
-//   }
-// }
+declare module "@mui/material/styles" {
+  interface Palette {
+    complementary: PaletteColorOptions;
+    placeholder: PaletteColorOptions;
+    borders: PaletteColorOptions;
+    title: PaletteColorOptions;
+    paragraph: PaletteColorOptions;
+    overlay: PaletteColorOptions & {opacity: number};
+    gradient: PaletteColorOptions;
+  }
+  interface PaletteOptions {
+    complementary: PaletteColorOptions;
+    placeholder: PaletteColorOptions;
+    borders: PaletteColorOptions;
+    title: PaletteColorOptions;
+    paragraph: PaletteColorOptions;
+    overlay: PaletteColorOptions & {opacity: number};
+    gradient: PaletteColorOptions;
+  }
+}
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
