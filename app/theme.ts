@@ -1,25 +1,31 @@
 "use client";
 import { Roboto } from "next/font/google";
-import { PaletteColorOptions, createTheme } from "@mui/material/styles";
+import { SimplePaletteColorOptions, createTheme } from "@mui/material/styles";
 
 declare module "@mui/material/styles" {
+  interface Theme {
+    customShadows: {default: string}
+  }
+  interface ThemeOptions{
+    customShadows: {default: string}
+  }
   interface Palette {
-    complementary: PaletteColorOptions;
-    placeholder: PaletteColorOptions;
-    borders: PaletteColorOptions;
-    title: PaletteColorOptions;
-    paragraph: PaletteColorOptions;
-    overlay: PaletteColorOptions & {opacity: number};
-    gradient: PaletteColorOptions;
+    complementary: SimplePaletteColorOptions;
+    placeholder: SimplePaletteColorOptions;
+    borders: SimplePaletteColorOptions;
+    title: SimplePaletteColorOptions;
+    paragraph: SimplePaletteColorOptions;
+    overlay: SimplePaletteColorOptions & {opacity: number};
+    gradient: SimplePaletteColorOptions;
   }
   interface PaletteOptions {
-    complementary: PaletteColorOptions;
-    placeholder: PaletteColorOptions;
-    borders: PaletteColorOptions;
-    title: PaletteColorOptions;
-    paragraph: PaletteColorOptions;
-    overlay: PaletteColorOptions & {opacity: number};
-    gradient: PaletteColorOptions;
+    complementary: SimplePaletteColorOptions;
+    placeholder: SimplePaletteColorOptions;
+    borders: SimplePaletteColorOptions;
+    title: SimplePaletteColorOptions;
+    paragraph: SimplePaletteColorOptions;
+    overlay: SimplePaletteColorOptions & {opacity: number};
+    gradient: SimplePaletteColorOptions;
   }
 }
 
@@ -120,19 +126,15 @@ const theme = createTheme({
       lineHeight: 1.5,
     },
   },
-  shadows: [
-    "none",
-    "0px 4px 20px rgba(0, 0, 0, 0.5)", // Custom shadow for components
-  ],
   customShadows: {
-    boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.5)",
+    default: "0px 4px 20px rgba(0, 0, 0, 0.5)",
   },
   components: {
     MuiButton: {
       styleOverrides: {
         root: ({ theme }) => ({
           borderRadius: "0.5rem",
-          boxShadow: theme.customShadows.boxShadow,
+          boxShadow: theme.customShadows.default,
           backgroundColor: theme.palette.primary.main,
           color: theme.palette.getContrastText(theme.palette.primary.main),
         }),
@@ -196,7 +198,7 @@ const theme = createTheme({
       styleOverrides: {
         root: ({ theme }) => ({
           borderRadius: "0.5rem",
-          boxShadow: theme.customShadows.boxShadow,
+          boxShadow: theme.customShadows.default,
           backgroundColor: theme.palette.background.default,
         }),
       },
@@ -248,7 +250,7 @@ const theme = createTheme({
         paper: ({ theme }) => ({
           backgroundColor: theme.palette.background.default,
           borderRadius: "0.5rem",
-          boxShadow: theme.customShadows.boxShadow,
+          boxShadow: theme.customShadows.default,
         }),
       },
     },
