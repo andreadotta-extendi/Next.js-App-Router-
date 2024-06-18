@@ -1,10 +1,13 @@
 import React from "react";
-import { TextField, TextFieldProps } from "@mui/material";
+import { TextField, TextFieldProps, styled } from "@mui/material";
 
-const StyledTextField = ({  ...props }: TextFieldProps) => {
-  return <TextField 
+const CustomInput = styled(TextField)({
+  margin: '0 !important'
+})
+
+const StyledTextField = ({ ...props }: TextFieldProps) => {
+  return <CustomInput 
   {...props} 
-  className='!mt-1 ' 
   InputProps={{
         classes: {
           root: '!rounded-lg',
