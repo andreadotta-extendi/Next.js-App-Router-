@@ -1,4 +1,6 @@
-module.exports = {
+const withBuilderDevTools = require("@builder.io/dev-tools/next")();
+
+module.exports = withBuilderDevTools({
   compiler: {
     styledComponents: true,
   },
@@ -10,5 +12,5 @@ module.exports = {
       perf_hooks: false,
     };
     return config;
-  }, 
-};
+  },
+});
