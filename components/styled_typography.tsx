@@ -1,8 +1,12 @@
 import React from "react";
-import { Typography, TypographyProps} from "@mui/material";
+import { Typography, TypographyProps, styled } from "@mui/material";
+
+const CustomTitle = styled(Typography)({
+  // height: 'auto'
+})
 
 const StyledTypography = ({ children, ...props }: TypographyProps) => {
-  return <Typography {...props} className='text-red-700' variant='h1'>{children}</Typography>;
+  return <CustomTitle {...props}>{children}</CustomTitle>;
 };
 
 export default StyledTypography;

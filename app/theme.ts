@@ -1,19 +1,14 @@
 "use client";
 import { Roboto } from "next/font/google";
 import { SimplePaletteColorOptions, createTheme } from "@mui/material/styles";
-import { TypographyStyleOptions } from '@mui/material/styles/createTypography';
-import postcss, { Root } from 'postcss';
-import postcssJs from 'postcss-js';
-import tailwindcss from 'tailwindcss';
-
+import { TypographyStyleOptions } from "@mui/material/styles/createTypography";
 
 declare module "@mui/material/styles" {
-
   interface Theme {
-    customShadows: {default: string}
+    customShadows: { default: string };
   }
-  interface ThemeOptions{
-    customShadows: {default: string}
+  interface ThemeOptions {
+    customShadows: { default: string };
   }
   interface Palette {
     complementary: SimplePaletteColorOptions;
@@ -21,7 +16,7 @@ declare module "@mui/material/styles" {
     borders: SimplePaletteColorOptions;
     title: SimplePaletteColorOptions;
     paragraph: SimplePaletteColorOptions;
-    overlay: SimplePaletteColorOptions & {opacity: number};
+    overlay: SimplePaletteColorOptions & { opacity: number };
     gradient: SimplePaletteColorOptions;
   }
   interface PaletteOptions {
@@ -30,16 +25,16 @@ declare module "@mui/material/styles" {
     borders: SimplePaletteColorOptions;
     title: SimplePaletteColorOptions;
     paragraph: SimplePaletteColorOptions;
-    overlay: SimplePaletteColorOptions & {opacity: number};
+    overlay: SimplePaletteColorOptions & { opacity: number };
     gradient: SimplePaletteColorOptions;
   }
 
   interface TypographyVariantsOptions {
     h1: TypographyStyleOptions;
-    h2: TypographyStyleOptions;  
-    h3: TypographyStyleOptions; 
+    h2: TypographyStyleOptions;
+    h3: TypographyStyleOptions;
     h4: TypographyStyleOptions;
-    h5: TypographyStyleOptions; 
+    h5: TypographyStyleOptions;
     "title-cta": TypographyStyleOptions;
     "title-small": TypographyStyleOptions;
     "paragraph-big": TypographyStyleOptions;
@@ -49,18 +44,18 @@ declare module "@mui/material/styles" {
   }
 }
 
-declare module '@mui/material/Typography' {
+declare module "@mui/material/Typography" {
   interface TypographyPropsVariantOverrides {
     h1: true;
-    h2: true;  
-    h3: true; 
+    h2: true;
+    h3: true;
     h4: true;
-    h5: true; 
-    "title-cta": true; 
-    "title-small": true; 
-    "paragraph-big": true; 
-    "paragraph-small": true; 
-    placeholder: true; 
+    h5: true;
+    "title-cta": true;
+    "title-small": true;
+    "paragraph-big": true;
+    "paragraph-small": true;
+    placeholder: true;
     details: true;
     subtitle1: false;
     body1: false;
@@ -68,7 +63,7 @@ declare module '@mui/material/Typography' {
     button: false;
     caption: false;
     overline: false;
-    subtitle2: false
+    subtitle2: false;
     h6: false;
     inherit: false;
   }
@@ -79,48 +74,6 @@ const roboto = Roboto({
   subsets: ["latin"],
   display: "swap",
 });
-
-const tailwindProcessor = postcss([tailwindcss]);
-
-const cssObjectParser = (obj: postcssJs.CssInJs): Root => {
-  const root = new Root();
-
-  // Aggiungi i nodi al root utilizzando l'oggetto CssInJs
-  for (const [rule, declarations] of Object.entries(obj)) {
-    const node = postcss.rule({ selector: rule });
-    for (const [property, value] of Object.entries(declarations)) {
-      node.append(postcss.decl({ prop: property, value: String(value) }));
-    }
-    root.append(node);
-  }
-
-  return root;
-};
-
-const getTailwindStyles = () => {
-  const root = postcss.root();
-
-  // Aggiungi le regole di Tailwind CSS al root
-  root.append(postcss.comment({ text: '@tailwind base;' }));
-  root.append(postcss.comment({ text: '@tailwind components;' }));
-  root.append(postcss.comment({ text: '@tailwind utilities;' }));
-
-  // Processa le regole di Tailwind CSS
-  const result = tailwindProcessor.process(root, { from: undefined, parser: cssObjectParser }).sync();
-
-  // Assicurati che il risultato sia un oggetto Root
-  const resultRoot = result.root as Root | Document;
-  if (resultRoot instanceof Root) {
-    // Converti il risultato in un oggetto JavaScript utilizzabile
-    return postcssJs.objectify(resultRoot);
-  } else {
-    throw new Error('Il risultato non è un oggetto Root');
-  }
-};
-
-
-const tailwindStyles = getTailwindStyles();
-
 
 const theme = createTheme({
   palette: {
@@ -159,72 +112,86 @@ const theme = createTheme({
   typography: {
     fontFamily: "Inter, sans-serif",
     h1: {
-      fontSize: tailwindStyles[".text-6xl"],
+      fontSize: "60px",
       fontWeight: 700,
-      lineHeight: "1rem",
+      lineHeight: "120%",
     },
     h2: {
-      fontSize: "text-5xl",
+      fontSize: "48px",
       fontWeight: 700,
-      lineHeight: "1rem",
+      lineHeight: "120%",
     },
     h3: {
-      fontSize: "text-4xl",
+      fontSize: "36px",
       fontWeight: 700,
-      lineHeight: '2.25rem',
+      lineHeight: "130%",
     },
     h4: {
-      fontSize: "text-3xl",
+      fontSize: "30px",
       fontWeight: 700,
-      lineHeight: '2.25rem',
+      lineHeight: "130%",
     },
     h5: {
-      fontSize: "text-2xl",
+      fontSize: "24px",
       fontWeight: 700,
-      lineHeight: '2rem',
+      lineHeight: "130%",
     },
     "title-cta": {
-      fontSize: "text-base",
+      fontSize: "16px",
       fontWeight: 600,
-      lineHeight: '1.5rem',
+      lineHeight: "150%",
     },
-    'paragraph-big':{
-      fontSize: "text-base",
+    "paragraph-big": {
+      fontSize: "16px",
       fontWeight: 500,
-      lineHeight: '1.5rem',
+      lineHeight: "150%",
     },
     "title-small": {
-      fontSize: "text-sm",
+      fontSize: "14px",
       fontWeight: 600,
-      lineHeight: '1.25rem',
+      lineHeight: "140%",
     },
     placeholder: {
-      fontSize: "text-sm",
+      fontSize: "14px",
       fontWeight: 500,
-      lineHeight: '1.25rem',
+      lineHeight: "140%",
     },
     details: {
-      fontSize: "text-xs",
+      fontSize: "12px",
       fontWeight: 600,
-      lineHeight: '1rem',
+      lineHeight: "130%",
     },
     "paragraph-small": {
-      fontSize: "text-sm",
+      fontSize: "12px",
       fontWeight: 500,
-      lineHeight: '1.25rem',
+      lineHeight: "130%",
     },
   },
   customShadows: {
     default: "0px 4px 20px rgba(0, 0, 0, 0.5)",
   },
   components: {
+    MuiContainer: {
+      defaultProps: {
+        disableGutters: true,
+      },
+      styleOverrides: {
+        root: ({ theme }) => ({
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center', 
+          justifyContent: 'center',
+        }),
+      },
+    },
     MuiButton: {
       styleOverrides: {
         root: ({ theme }) => ({
-          borderRadius: "0.5rem",
-          boxShadow: theme.customShadows.default,
-          backgroundColor: theme.palette.primary.main,
-          color: theme.palette.getContrastText(theme.palette.primary.main),
+          textTransform: "none",
+          borderRadius: "8px",
+          // boxShadow: theme.customShadows.default,
+          // backgroundColor: theme.palette.primary.main,
+          // color: theme.palette.getContrastText(theme.palette.primary.main),
         }),
       },
     },
