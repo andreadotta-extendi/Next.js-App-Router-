@@ -2,7 +2,13 @@
 import { Roboto } from "next/font/google";
 import { SimplePaletteColorOptions, createTheme } from "@mui/material/styles";
 import { TypographyStyleOptions } from "@mui/material/styles/createTypography";
+import taiwindConfig from '../tailwind.config'
+import { CustomExtendConfig } from '@/tailwind.type';
+import { Config } from 'tailwindcss/types/config';
 
+const tc:any = taiwindConfig;
+const extendConfig: CustomExtendConfig = tc.theme?.extend as CustomExtendConfig;
+console.log(tc.theme)
 declare module "@mui/material/styles" {
   interface Theme {
     customShadows: { default: string };
@@ -78,10 +84,13 @@ const roboto = Roboto({
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#6910F2", // Colore primario
+      main: extendConfig.colors?.primary // Colore primario
     },
     secondary: {
-      main: "#191969", // Colore secondario
+      light: '#ff7961',
+      main: extendConfig.colors?.secondary.main,
+      dark: extendConfig.colors?.secondary.dark,
+      contrastText: '#000',
     },
     complementary: {
       main: "#A5FFAC", // Colore complementare

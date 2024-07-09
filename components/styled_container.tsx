@@ -1,13 +1,12 @@
-import React from "react";
-import { Container, ContainerProps, styled } from "@mui/material";
+import React from 'react';
+import { Container, ContainerProps } from '@mui/material';
 
-const CustomContainer = styled(Container)({
-  paddingRight: '64px !important',
-  paddingLeft: '64px !important'
-})
-
-const StyledContainer = ({ children, ...props }: ContainerProps) => {
-  return <CustomContainer {...props}>{children}</CustomContainer>;
+const StyledContainer = ({ children, className, ...props }: ContainerProps) => {
+  return (
+    <Container className={`px-16 ${className}`} {...props}>
+      {children}
+    </Container>
+  );
 };
 
 export default StyledContainer;
