@@ -6,11 +6,11 @@ import React from 'react';
 const Header: React.FC = () => {
   return (
     <header className="flex gap-2.5 justify-between self-stretch px-6 py-5 w-full text-xs leading-4 text-white whitespace-nowrap bg-neutral-900 max-md:flex-wrap max-md:px-5 max-md:max-w-full">
-      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/390c6b2aba9daa3015e73ddd49b7b48adb9c50025a85406cecf393253e5ac9a0?apiKey=0d8d667b87194d319b3212d5b3a9fed4&" alt="Vibly logo" className="shrink-0 max-w-full aspect-[3.33] w-[151px]" />
+      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f565a164dd046b560e4a7b80d5dcd7a3a37a0b1926e36b6bbfc94851c986e5e0?apiKey=0d8d667b87194d319b3212d5b3a9fed4&" alt="" className="shrink-0 max-w-full aspect-[3.33] w-[151px]" />
       <nav className="flex gap-5 justify-center items-center my-auto max-md:flex-wrap">
         <a href="#" className="self-stretch my-auto">Catalogo</a>
-        <a href="#" className="self-stretch my-auto text-sky-600">Prezzi</a>
-        <a href="#" className="self-stretch my-auto">Insegnanti</a>
+        <a href="#" className="self-stretch my-auto">Prezzi</a>
+        <a href="#" className="self-stretch my-auto text-sky-600">Insegnanti</a>
         <a href="#" className="self-stretch my-auto">Percorsi</a>
         <a href="#" className="justify-center self-stretch my-auto">Aiuto</a>
         <button className="justify-center self-stretch px-2 py-1 bg-white rounded text-neutral-900">
