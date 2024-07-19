@@ -9,23 +9,11 @@ Builder.registerComponent(withChildren(Button), {
   name: "Button",
   inputs: [
     {
-      name: "action",
-      type: "object",
-      hideFromUI: true,
-      meta: {
-        ts: "Ref<ButtonBaseActions>",
-      },
-    },
-    {
-      name: "centerRipple",
-      type: "boolean",
-    },
-    {
       name: "children",
       type: "string",
       hideFromUI: true,
       meta: {
-        ts: "ReactNode",
+        ts: "any",
       },
     },
     {
@@ -37,27 +25,10 @@ Builder.registerComponent(withChildren(Button), {
       },
     },
     {
-      name: "className",
-      type: "string",
-    },
-    {
       name: "color",
       type: "string",
-      enum: [
-        "error",
-        "info",
-        "inherit",
-        "primary",
-        "secondary",
-        "success",
-        "warning",
-      ],
-    },
-    {
-      name: "component",
-      type: "string",
       meta: {
-        ts: "ElementType<any, keyof IntrinsicElements>",
+        ts: 'OverridableStringUnion<"primary" | "secondary" | "tertiary" , ButtonPropsColorOverrides>',
       },
     },
     {
@@ -77,24 +48,12 @@ Builder.registerComponent(withChildren(Button), {
       type: "boolean",
     },
     {
-      name: "disableTouchRipple",
-      type: "boolean",
-    },
-    {
       name: "endIcon",
-      type: "string",
+      type: "object",
       hideFromUI: true,
       meta: {
         ts: "ReactNode",
       },
-    },
-    {
-      name: "focusRipple",
-      type: "boolean",
-    },
-    {
-      name: "focusVisibleClassName",
-      type: "string",
     },
     {
       name: "fullWidth",
@@ -105,31 +64,18 @@ Builder.registerComponent(withChildren(Button), {
       type: "string",
     },
     {
-      name: "LinkComponent",
-      type: "string",
-      meta: {
-        ts: "ElementType<any, keyof IntrinsicElements>",
-      },
-    },
-    {
       name: "size",
       type: "string",
-      enum: ["large", "medium", "small"],
+      meta: {
+        ts: 'OverridableStringUnion<"small" | "medium" | "large", ButtonPropsSizeOverrides>',
+      },
     },
     {
       name: "startIcon",
-      type: "string",
-      hideFromUI: true,
-      meta: {
-        ts: "ReactNode",
-      },
-    },
-    {
-      name: "style",
       type: "object",
       hideFromUI: true,
       meta: {
-        ts: "CSSProperties",
+        ts: "ReactNode",
       },
     },
     {
@@ -141,25 +87,10 @@ Builder.registerComponent(withChildren(Button), {
       },
     },
     {
-      name: "TouchRippleProps",
-      type: "object",
-      hideFromUI: true,
-      meta: {
-        ts: "Partial<TouchRippleProps>",
-      },
-    },
-    {
-      name: "touchRippleRef",
-      type: "object",
-      hideFromUI: true,
-      meta: {
-        ts: "Ref<TouchRippleActions>",
-      },
-    },
-    {
       name: "variant",
       type: "string",
       enum: ["contained", "outlined", "text"],
+      required: true,
     },
   ],
 });
