@@ -179,6 +179,9 @@ import MUIToolbar, { ToolbarProps } from "@mui/material/Toolbar";
 import MUITooltip, { TooltipProps } from "@mui/material/Tooltip";
 import MUITypography, { TypographyProps } from "@mui/material/Typography";
 import MUIZoom, { ZoomProps } from "@mui/material/Zoom";
+import MUISvgIcon, { SvgIconProps } from "@mui/material/SvgIcon";
+
+export const SvgIcon = (props: SvgIconProps) => <MUISvgIcon {...props} />;
 
 export const Accordion = (props: AccordionProps) => <MUIAccordion {...props} />;
 export const AccordionActions = (props: AccordionActionsProps) => (
