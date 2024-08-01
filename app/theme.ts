@@ -1,5 +1,5 @@
 "use client";
-import { Roboto } from "next/font/google";
+import { Poppins } from "next/font/google";
 import { SimplePaletteColorOptions, createTheme } from "@mui/material/styles";
 import { TypographyStyleOptions } from "@mui/material/styles/createTypography";
 import taiwindConfig from '../tailwind.config'
@@ -76,7 +76,7 @@ declare module "@mui/material/Typography" {
   }
 }
 
-const roboto = Roboto({
+const poppins = Poppins({
   weight: ["300", "400", "500", "700"],
   subsets: ["latin"],
   display: "swap",
@@ -128,7 +128,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Inter, sans-serif",
+    fontFamily: "Poppins, sans-serif",
     h1: {
       fontSize: "60px",
       fontWeight: 700,
@@ -412,9 +412,9 @@ const theme = createTheme({
              top: "0",
           },
           // Placeholder Color
-          "& label[data-shrink=false]+.MuiInputBase-formControl .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input::-webkit-input-placeholder": {
+          "& label[data-shrink=false]+.MuiInputBase-formControl ::-webkit-input-placeholder": {
             opacity: "1 !important",
-            color: "#9597AC", // text secondary
+            color: theme.palette.text.secondary, // text secondary
           },
         }),
         
