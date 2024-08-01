@@ -15,32 +15,24 @@ const LoginForm: React.FC = () => {
       </p>
       <TextField
         placeholder="Il tuo nome utente o indirizzo email"
-        value="Value"
-        variant="filled"
+        variant="outlined"
         size="medium"
         className="mt-12 max-md:mt-10 max-md:max-w-full"
         InputProps={{}}
-        label={
-          <FormLabel className="self-start">Nome utente o e-mail</FormLabel>
-        }
+        label="Nome utente o e-mail"
       />
       <TextField
         placeholder="La tua password"
-        value="Value"
-        variant="filled"
+        variant="outlined"
         size="medium"
-        className="mt-6 max-md:max-w-full"
+        className="max-md:max-w-full"
         InputProps={{}}
-        label={
-          <FormLabel className="self-start whitespace-nowrap">
-            Password
-          </FormLabel>
-        }
+        label="Password"
       />
       <FormControlLabel
         labelPlacement="end"
         className="mt-4 max-w-full w-[131px]"
-        control={<Checkbox size="small" color="primary" checked />} label={undefined}      />
+        control={<Checkbox size="small" color="primary" checked />} label="label" />
       <Button
         size="large"
         variant="contained"

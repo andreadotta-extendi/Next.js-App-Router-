@@ -8,7 +8,7 @@ import Footer from "./Footer";
 
 const LoginPage: React.FC = () => {
   return (
-    <main className="flex flex-col items-center py-20">
+    <main className="flex flex-col items-center py-20 bg-background">
       <LoginForm />
       <RegisterSection />
       <Footer />

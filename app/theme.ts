@@ -84,14 +84,17 @@ const roboto = Roboto({
 
 const theme = createTheme({
   palette: {
+    // mode: 'dark',
     primary: {
-      main: extendConfig.colors?.primary // Colore primario
+      light: extendConfig.colors?.primary.light,
+      main: extendConfig.colors?.primary.main, // Colore primario
+      dark: extendConfig.colors?.primary.dark,
     },
     secondary: {
       light: '#ff7961',
       main: extendConfig.colors?.secondary.main,
       dark: extendConfig.colors?.secondary.dark,
-      contrastText: '#000',
+      //contrastText: '#000',
     },
     complementary: {
       main: "#A5FFAC", // Colore complementare
@@ -347,13 +350,14 @@ const theme = createTheme({
           color: theme.palette.primary.contrastText,
           // Input
           "& .MuiInputBase-input":{
-            border: "1px solid #8C8D97",
+            border: "1px solid #8C8D97", // Action Divider
             borderRadius: "8px",
             padding: "16px",
             fontSize: "14px",
           },
           // Variant Outlined
           "& .MuiOutlinedInput-root":{
+            color: theme.palette.primary.contrastText,
             borderRadius: "8px",
             backgroundColor: "transparent",
           },
@@ -365,7 +369,7 @@ const theme = createTheme({
             marginBottom: "6px",
           },
           "& .MuiInputBase-input:hover":{
-            border: "1px solid #8C8D97",
+            border: "1px solid #8C8D97", // Action Divider
           },
           // Focused
           "& .Mui-focused":{
