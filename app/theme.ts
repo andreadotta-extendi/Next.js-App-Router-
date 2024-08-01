@@ -42,10 +42,23 @@ declare module "@mui/material/styles" {
     h3: TypographyStyleOptions;
     h4: TypographyStyleOptions;
     h5: TypographyStyleOptions;
+    "s1": TypographyStyleOptions;
+    "s2": TypographyStyleOptions;
+    "body-500":  TypographyStyleOptions;
+    "body-400": TypographyStyleOptions;
     "title-cta": TypographyStyleOptions;
     "title-small": TypographyStyleOptions;
     "paragraph-big": TypographyStyleOptions;
     "paragraph-small": TypographyStyleOptions;
+    "body-small-500": TypographyStyleOptions;
+    "body-small-400": TypographyStyleOptions;
+    "caption-500": TypographyStyleOptions;
+    "caption-400": TypographyStyleOptions;
+    "caption-small-500": TypographyStyleOptions;
+    "button-xl": TypographyStyleOptions;
+    "button-l": TypographyStyleOptions;
+    "button-m": TypographyStyleOptions;
+    "button-s": TypographyStyleOptions;
     placeholder: TypographyStyleOptions;
     details: TypographyStyleOptions;
   }
@@ -58,10 +71,23 @@ declare module "@mui/material/Typography" {
     h3: true;
     h4: true;
     h5: true;
+    "s1": true;
+    "s2": true;
+    "body-500": true;
+    "body-400": true;
     "title-cta": true;
     "title-small": true;
     "paragraph-big": true;
     "paragraph-small": true;
+    "body-small-500": true;
+    "body-small-400": true;
+    "caption-500": true;
+    "caption-400": true;
+    "caption-small-500": true;
+    "button-xl": true;
+    "button-l": true;
+    "button-m": true;
+    "button-s": true;
     placeholder: true;
     details: true;
     subtitle1: false;
@@ -77,7 +103,7 @@ declare module "@mui/material/Typography" {
 }
 
 const poppins = Poppins({
-  weight: ["300", "400", "500", "700"],
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
   display: "swap",
 });
@@ -130,30 +156,95 @@ const theme = createTheme({
   typography: {
     fontFamily: "Poppins, sans-serif",
     h1: {
-      fontSize: "60px",
-      fontWeight: 700,
-      lineHeight: "120%",
+      fontSize: "48px",
+      fontWeight: 600,
+      lineHeight: "58px",
     },
     h2: {
-      fontSize: "48px",
-      fontWeight: 700,
-      lineHeight: "120%",
+      fontSize: "40px",
+      fontWeight: 600,
+      lineHeight: "40px",
     },
     h3: {
-      fontSize: "36px",
-      fontWeight: 700,
-      lineHeight: "130%",
+      fontSize: "32px",
+      fontWeight: 600,
+      lineHeight: "38px",
     },
     h4: {
-      fontSize: "30px",
-      fontWeight: 700,
-      lineHeight: "130%",
+      fontSize: "28px",
+      fontWeight: 600,
+      lineHeight: "34px",
     },
     h5: {
       fontSize: "24px",
-      fontWeight: 700,
-      lineHeight: "130%",
+      fontWeight: 600,
+      lineHeight: "28px",
     },
+    "s1": {
+      fontSize: "18px",
+      fontWeight: 600,
+      lineHeight: "28px",
+    },
+    "s2": {
+      fontSize: "16px",
+      fontWeight: 600,
+      lineHeight: "24px",
+    },
+    "body-500":{
+      fontSize: "16px",
+      fontWeight: 500,
+      lineHeight: "24px",
+    },
+    "body-400":{
+      fontSize: "16px",
+      fontWeight: 400,
+      lineHeight: "24px",
+    },
+    "body-small-500":{
+      fontSize: "14px",
+      fontWeight: 500,
+      lineHeight: "20px",
+    },
+    "body-small-400":{
+      fontSize: "14px",
+      fontWeight: 400,
+      lineHeight: "20px",
+    },
+    "caption-500":{
+      fontSize: "12px",
+      fontWeight: 500,
+      lineHeight: "16px",
+    },
+    "caption-400":{
+      fontSize: "12px",
+      fontWeight: 400,
+      lineHeight: "16px",
+    },
+    "caption-small-500":{
+      fontSize: "10px",
+      fontWeight: 400,
+      lineHeight: "14px",
+    },
+    "button-xl":{
+      fontSize: "18px",
+      fontWeight: 600,
+      lineHeight: "24px",
+    },
+    "button-l":{
+      fontSize: "16px",
+      fontWeight: 600,
+      lineHeight: "20px",
+    },
+    "button-m":{
+      fontSize: "14px",
+      fontWeight: 600,
+      lineHeight: "16px",
+    },
+    "button-s":{
+      fontSize: "12px",
+      fontWeight: 600,
+      lineHeight: "16px",
+    } ,
     "title-cta": {
       fontSize: "16px",
       fontWeight: 600,
@@ -216,6 +307,10 @@ const theme = createTheme({
             background: theme.palette.gradient.main,
             color: theme.palette.text.primary,
             boxShadow: "0 0 0 5px #6C7AFF25",
+          },
+
+          "&.MuiButton-containedPrimary:hover":{
+            background: theme.palette.primary.dark,
           },
 
          "&.Mui-disabled": {
@@ -369,14 +464,14 @@ const theme = createTheme({
           // Input
           "& .MuiInputBase-input":{
             border: "1px solid #8C8D97", // Action Divider
-            borderRadius: "8px",
-            padding: "16px",
+            borderRadius: theme.spacing(1),
+            padding: theme.spacing(2),
             fontSize: "14px",
           },
           // Variant Outlined
           "& .MuiOutlinedInput-root":{
             color: theme.palette.text.primary,
-            borderRadius: "8px",
+            borderRadius: theme.spacing(1),
             backgroundColor: "transparent",
           },
           // Label
@@ -385,6 +480,7 @@ const theme = createTheme({
             position: "relative",
             transform: "none",
             marginBottom: "6px",
+            fontWeight: "500",
           },
           "& .MuiInputBase-input:hover":{
             border: "1px solid #8C8D97", // Action Divider
@@ -395,7 +491,7 @@ const theme = createTheme({
           },
           "& .Mui-focused .MuiInputLabel-root":{
             color: "#E2E3E9 !important", // text primary
-            marginBottom: "4px",
+            marginBottom: theme.spacing(0.5),
           },
           "& .Mui-focused .MuiOutlinedInput-notchedOutline":{
             borderColor: "#6C7AFF !important", // primary main
@@ -423,7 +519,13 @@ const theme = createTheme({
     MuiFormControlLabel: {
       styleOverrides: {
        root: ({ theme }) => ({
-        color: theme.palette.text.primary,        
+        color: theme.palette.text.primary,
+        "& .MuiTypography-root": {
+          fontWeight: "500",
+        },
+        "& .MuiCheckbox-sizeSmall .MuiTypography-root": {
+          fontSize: "0.9rem",
+        },  
        }),
       },
     },
