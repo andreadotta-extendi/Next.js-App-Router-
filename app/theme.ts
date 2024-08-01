@@ -345,30 +345,55 @@ const theme = createTheme({
       styleOverrides: {
         root: ({ theme }) => ({
           color: theme.palette.primary.contrastText,
-          "& .MuiOutlinedInput-root":{
-            borderRadius: "8px",
-            backgroundColor: "transparent",
-          },
-          "& .MuiInputLabel-root":{
-            color: theme.palette.primary.contrastText,
-            position: "relative",
-            transform: "none",
-          },
+          // Input
           "& .MuiInputBase-input":{
             border: "1px solid #8C8D97",
             borderRadius: "8px",
             padding: "16px",
+            fontSize: "14px",
+          },
+          // Variant Outlined
+          "& .MuiOutlinedInput-root":{
+            borderRadius: "8px",
+            backgroundColor: "transparent",
+          },
+          // Label
+          "& .MuiInputLabel-root":{
+            color: theme.palette.primary.contrastText,
+            position: "relative",
+            transform: "none",
+            marginBottom: "6px",
           },
           "& .MuiInputBase-input:hover":{
             border: "1px solid #8C8D97",
           },
+          // Focused
+          "& .Mui-focused":{
+            color: "#E2E3E9 !important", // text primary
+          },
           "& .Mui-focused .MuiInputLabel-root":{
             color: "#E2E3E9 !important", // text primary
-            border: "2px inset ",
+            marginBottom: "4px",
           },
-          "& input:-internal-autofill-selected": {
-            backgroundColor: "red",
-          }
+          "& .Mui-focused .MuiOutlinedInput-notchedOutline":{
+            borderColor: "#6C7AFF !important", // primary main
+          },
+           "& .Mui-focused .MuiInputBase-input":{
+            backgroundColor: "#393A47 !important", // Action focus
+          },
+          // hide notchedOutline
+          "& .MuiOutlinedInput-notchedOutline legend":{
+            display: "none !important",
+          },
+          ".MuiOutlinedInput-notchedOutline": {
+             borderColor: "#8C8D97 !important", // Action Divider
+             top: "0",
+          },
+          // Placeholder Color
+          "& label[data-shrink=false]+.MuiInputBase-formControl .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input::-webkit-input-placeholder": {
+            opacity: "1 !important",
+            color: "#9597AC", // text secondary
+          },
         }),
         
       },
