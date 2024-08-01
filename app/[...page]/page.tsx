@@ -1,34 +1,25 @@
+import React from "react";
 import { builder } from "@builder.io/sdk";
-import { RenderBuilderContent } from "../../components/builder";
-import React from 'react';
+import { RenderBuilderContent } from '@/components/builder';
+// See the full code: https://www.builder.io/c/docs/integrate-section-building?codeFramework=nextApp#add-an-announcement-bar-section-to-your-app
 
-// Builder Public API Key set in .env file
+
+// Put your API key here
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
 
-interface PageProps {
-  params: {
-    page: string[];
-  };
-}
-
-export default async function Page(props: PageProps) {
-  const builderModelName = "page";
-
+export default async function Page(props: { params: { page: any[]; }; }) {
   const content = await builder
-    // Get the page content from Builder with the specified options
-    .get(builderModelName, {
+    .get("page", {
       userAttributes: {
-        // Use the page path specified in the URL to fetch the content
         urlPath: "/" + (props?.params?.page?.join("/") || ""),
       },
     })
-    // Convert the result to a promise
     .toPromise();
-
+    console.log("PAGE")
   return (
     <>
       {/* Render the Builder page */}
-      <RenderBuilderContent content={content} model={builderModelName} />
+      <RenderBuilderContent content={content} model={"page"} />
     </>
   );
 }

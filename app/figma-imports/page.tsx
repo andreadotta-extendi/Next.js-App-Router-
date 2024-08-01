@@ -25,6 +25,7 @@ export default async function Page(props: PageProps) {
     // Convert the result to a promise
     .toPromise();
 
+    console.log("FIGMA IMPORT")
   return (
     <>
       {/* Render the Builder page */}
