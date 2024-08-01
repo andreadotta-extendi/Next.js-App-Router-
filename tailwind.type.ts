@@ -2,7 +2,11 @@ import { Config } from 'tailwindcss/types/config';
 
 export interface CustomExtendConfig {
   colors: {
-    primary: string;
+    primary: {
+      light: string;
+      main: string;
+      dark: string;
+    };
     secondary: {
       light: string;
       main: string;
