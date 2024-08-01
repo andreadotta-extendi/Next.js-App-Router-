@@ -5,6 +5,7 @@ import { TypographyStyleOptions } from "@mui/material/styles/createTypography";
 import taiwindConfig from '../tailwind.config'
 import { CustomExtendConfig } from '@/tailwind.type';
 import { Config } from 'tailwindcss/types/config';
+import { colors } from "@mui/material";
 
 const tc:any = taiwindConfig;
 const extendConfig: CustomExtendConfig = tc.theme?.extend as CustomExtendConfig;
@@ -340,6 +341,38 @@ const theme = createTheme({
         }),
       },
     },
+    MuiTextField: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          color: theme.palette.primary.contrastText,
+          "& .MuiOutlinedInput-root":{
+            borderRadius: "8px",
+            backgroundColor: "transparent",
+          },
+          "& .MuiInputLabel-root":{
+            color: theme.palette.primary.contrastText,
+            position: "relative",
+            transform: "none",
+          },
+          "& .MuiInputBase-input":{
+            border: "1px solid #8C8D97",
+            borderRadius: "8px",
+            padding: "16px",
+          },
+          "& .MuiInputBase-input:hover":{
+            border: "1px solid #8C8D97",
+          },
+          "& .Mui-focused .MuiInputLabel-root":{
+            color: "#E2E3E9 !important", // text primary
+            border: "2px inset ",
+          },
+          "& input:-internal-autofill-selected": {
+            backgroundColor: "red",
+          }
+        }),
+        
+      },
+    }
   },
 });
 
