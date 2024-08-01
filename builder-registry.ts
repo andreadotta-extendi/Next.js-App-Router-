@@ -116,6 +116,7 @@ import {
   Typography,
   Zoom,
 } from './app/mui-components';
+import Counter from './components/Counter/Counter';
 import StyledTextField from './app/input_typography';
 
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
@@ -3690,6 +3691,16 @@ Builder.registerComponent(withChildren(Zoom), {
       meta: {
         ts: 'any',
       },
+    },
+  ],
+});
+
+Builder.registerComponent(Counter, {
+  name: 'Counter',
+  inputs: [
+    {
+      name: 'initialCount',
+      type: 'number',
     },
   ],
 });
