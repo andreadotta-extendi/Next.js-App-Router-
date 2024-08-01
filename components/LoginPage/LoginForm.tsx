@@ -31,14 +31,21 @@ const LoginForm: React.FC = () => {
       />
       <FormControlLabel
         labelPlacement="end"
-        className="mt-4 max-w-full w-[131px]"
-        control={<Checkbox size="small" color="primary" checked />} label="label" />
+        className="mt-4"
+        control={<Checkbox size="small" color="primary" />} label="Remember me" />
+      <Button
+        size="large"
+        variant="contained"
+        className="mt-8 whitespace-nowrap max-md:max-w-full"
+        disabled
+      >
+        Accedi
+      </Button>
       <Button
         size="large"
         variant="contained"
         color="primary"
         className="mt-8 whitespace-nowrap max-md:max-w-full"
-        disabled
       >
         Accedi
       </Button>

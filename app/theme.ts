@@ -84,7 +84,7 @@ const roboto = Roboto({
 
 const theme = createTheme({
   palette: {
-    // mode: 'dark',
+   // mode: 'dark',
     primary: {
       light: extendConfig.colors?.primary.light,
       main: extendConfig.colors?.primary.main, // Colore primario
@@ -94,7 +94,12 @@ const theme = createTheme({
       light: '#ff7961',
       main: extendConfig.colors?.secondary.main,
       dark: extendConfig.colors?.secondary.dark,
-      //contrastText: '#000',
+      contrastText: extendConfig.colors?.secondary.contrastText,
+    },
+    text: {
+      primary: extendConfig.colors?.text.primary,
+      secondary: extendConfig.colors?.text.secondary,
+      disabled: extendConfig.colors?.text.disabled,
     },
     complementary: {
       main: "#A5FFAC", // Colore complementare
@@ -119,7 +124,7 @@ const theme = createTheme({
       opacity: 0.7,
     },
     gradient: {
-      main: "linear-gradient(90deg, #772FAC 0%, #5C00DE 100%)", // Gradient
+      main: "linear-gradient(-45deg, #8590FF 0%, #5767FF 100% )", // Gradient
     },
   },
   typography: {
@@ -202,9 +207,22 @@ const theme = createTheme({
         root: ({ theme }) => ({
           textTransform: "none",
           borderRadius: "8px",
-          // boxShadow: theme.customShadows.default,
-          // backgroundColor: theme.palette.primary.main,
-          // color: theme.palette.getContrastText(theme.palette.primary.main),
+
+         "&.MuiButton-sizeLarge": {
+            padding: "16px 32px",
+          },
+
+         "&.MuiButton-containedPrimary":{
+            background: theme.palette.gradient.main,
+            color: theme.palette.text.primary,
+            boxShadow: "0 0 0 5px #6C7AFF25",
+          },
+
+         "&.Mui-disabled": {
+            background: theme.palette.text.disabled,
+            color: theme.palette.secondary.contrastText,
+            boxShadow: "none",
+          },
         }),
       },
     },
@@ -347,7 +365,7 @@ const theme = createTheme({
     MuiTextField: {
       styleOverrides: {
         root: ({ theme }) => ({
-          color: theme.palette.primary.contrastText,
+          color: theme.palette.text.primary,
           // Input
           "& .MuiInputBase-input":{
             border: "1px solid #8C8D97", // Action Divider
@@ -357,13 +375,13 @@ const theme = createTheme({
           },
           // Variant Outlined
           "& .MuiOutlinedInput-root":{
-            color: theme.palette.primary.contrastText,
+            color: theme.palette.text.primary,
             borderRadius: "8px",
             backgroundColor: "transparent",
           },
           // Label
           "& .MuiInputLabel-root":{
-            color: theme.palette.primary.contrastText,
+            color: theme.palette.text.primary,
             position: "relative",
             transform: "none",
             marginBottom: "6px",
@@ -373,7 +391,7 @@ const theme = createTheme({
           },
           // Focused
           "& .Mui-focused":{
-            color: "#E2E3E9 !important", // text primary
+            color: theme.palette.text.primary, // text primary
           },
           "& .Mui-focused .MuiInputLabel-root":{
             color: "#E2E3E9 !important", // text primary
@@ -401,7 +419,14 @@ const theme = createTheme({
         }),
         
       },
-    }
+    },
+    MuiFormControlLabel: {
+      styleOverrides: {
+       root: ({ theme }) => ({
+        color: theme.palette.text.primary,        
+       }),
+      },
+    },
   },
 });
 

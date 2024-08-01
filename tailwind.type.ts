@@ -13,6 +13,11 @@ export interface CustomExtendConfig {
       dark: string;
       contrastText: string;
     };
+    text: {
+      primary: string;
+      secondary: string;
+      disabled: string;
+    }
     background: string;
     button: string;
     buttonDisabled: string;
