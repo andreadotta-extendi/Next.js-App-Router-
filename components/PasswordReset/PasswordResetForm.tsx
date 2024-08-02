@@ -1,18 +1,18 @@
 import React from "react";
 import { Button, TextField } from "@mui/material";
-import ArrowBackFilled from '@mui/icons-material/ArrowBackFilled';
+import ArrowBackFilled from '@mui/icons-material/ArrowBack';
 
 const PasswordResetForm: React.FC = () => {
   return (
-    <form className="flex flex-col mt-12 w-full max-md:mt-10 max-md:max-w-full">
+    <form className="flex flex-col mt-12">
         <TextField placeholder="Inserisci la tua mail" variant="outlined" size="medium" label="Inserisci la tua mail" />
-        <div className="flex flex-col mt-8 w-full max-md:max-w-full">
+        <div className="flex flex-col mt-8 w-full max-md:max-w-full gap-4">
             <Button
             size="large"
             variant="contained"
             color="primary"
-            className="w-full max-md:max-w-full"
-            disabled
+            className="w-full"
+            
             >
             Invia link
             </Button>
@@ -20,7 +20,7 @@ const PasswordResetForm: React.FC = () => {
             size="large"
             variant="text"
             color="primary"
-            className="mt-4 w-full max-md:max-w-full"
+            className="w-full gap-2"
             >
                 <ArrowBackFilled />
                 Torna al login

@@ -13,7 +13,7 @@ const BackgroundWaves: React.FC = () => {
   ];
 
   return (
-    <div className="flex absolute right-0 bottom-48 z-0 w-full flex-col h-[364px] max-md:max-w-full">
+    <div className="flex absolute right-0 bottom-[17%] z-0 w-full flex-col h-[364px] max-md:max-w-full">
       {waves.map((wave, index) => (
         <div
           key={index}

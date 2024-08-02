@@ -26,6 +26,7 @@ declare module "@mui/material/styles" {
     paragraph: SimplePaletteColorOptions;
     overlay: SimplePaletteColorOptions & { opacity: number };
     gradient: SimplePaletteColorOptions;
+    header: SimplePaletteColorOptions;
   }
   interface PaletteOptions {
     complementary: SimplePaletteColorOptions;
@@ -35,6 +36,7 @@ declare module "@mui/material/styles" {
     paragraph: SimplePaletteColorOptions;
     overlay: SimplePaletteColorOptions & { opacity: number };
     gradient: SimplePaletteColorOptions;
+    header: SimplePaletteColorOptions;
   }
 
   interface TypographyVariantsOptions {
@@ -151,7 +153,10 @@ const theme = createTheme({
       opacity: 0.7,
     },
     gradient: {
-      main: "linear-gradient(-45deg, #8590FF 0%, #5767FF 100% )", // Gradient
+      main: "linear-gradient(45deg, #8590FF 0%, #5767FF 100% )", // Gradient
+    },
+    header: {
+      main: extendConfig.colors?.header,
     },
   },
   typography: {

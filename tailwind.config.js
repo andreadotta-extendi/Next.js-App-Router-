@@ -25,6 +25,7 @@ const tailwindConfig = {
           disabled: '#515466 !important',
         },
         background: '#1C1D22', // Sostituisci con il colore di sfondo
+        header: '#15151A', // Colore header
         button: '#5B21B6', // Colore del bottone "Accedi"
         buttonDisabled: '#D1D5DB', // Colore del bottone disabilitato
       },

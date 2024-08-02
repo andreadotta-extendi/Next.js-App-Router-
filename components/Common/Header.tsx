@@ -5,7 +5,7 @@ import React from "react";
 
 const Header: React.FC = () => {
     return (
-        <header className="flex justify-between items-center px-4 py-6 w-full bg-neutral-900 max-md:max-w-full">
+        <header className="flex justify-center items-center px-4 py-6 w-full bg-header z-10">
             <img
                 loading="lazy"
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/f4b7ead5bbd68b16be08f000a11d8756e4f91099498b58d4c478b1b6ba608ac8?apiKey=ab14136582c84aab8af41f16349d0438&&apiKey=ab14136582c84aab8af41f16349d0438"

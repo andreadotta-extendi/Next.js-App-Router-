@@ -19,7 +19,7 @@ export default function LoginForm() {
   };
 
   return (
-    <form className="flex flex-col gap-2 px-16 py-12 max-w-full rounded-xl bg-neutral-900 w-[600px] max-md:px-5">
+    <form className='px-6 py-8 md:px-16 md:py-12 rounded-xl bg-neutral-900'>
       <div className='flex flex-col items-center gap-2 mb-12'>
         <Typography variant="h3" component="h1" className="text-zinc-200">
           Accedi a Vibly

@@ -8,7 +8,7 @@ import React from "react";
 
 const RegisterSection: React.FC = () => {
   return (
-    <section className="flex flex-col gap-2 items-center px-16 py-8 mt-4 max-w-full rounded-xl bg-neutral-900 w-[600px] max-md:px-5">
+    <section className="flex flex-col gap-2 items-center px-16 py-8 max-w-full rounded-xl bg-neutral-900 w-[600px] max-md:px-5">
       <Typography variant="s1" component="h2" className='text-zinc-200'>
         Non hai un account?
       </Typography>
