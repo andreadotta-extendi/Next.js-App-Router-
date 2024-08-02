@@ -5,6 +5,7 @@ import React from "react";
 import LoginForm from "./LoginForm";
 import RegisterSection from "./RegisterSection";
 import Footer from "./Footer";
+import BackgroundWaves from "../PasswordReset/BackgroundWaves";
 
 const LoginPage: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const LoginPage: React.FC = () => {
         <RegisterSection />
         <Footer />
       </div>
+      <BackgroundWaves />
       <div className="absolute bottom-[30%] w-full z-0">
         <svg width="100%" height="365" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g opacity="0.6">
