@@ -6,6 +6,7 @@ import taiwindConfig from '../tailwind.config'
 import { CustomExtendConfig } from '@/tailwind.type';
 import { Config } from 'tailwindcss/types/config';
 import { colors } from "@mui/material";
+import { BorderColor } from "@mui/icons-material";
 
 const tc:any = taiwindConfig;
 const extendConfig: CustomExtendConfig = tc.theme?.extend as CustomExtendConfig;
@@ -299,12 +300,20 @@ const theme = createTheme({
           textTransform: "none",
           borderRadius: "8px",
 
+          // size
          "&.MuiButton-sizeLarge": {
             padding: "16px 32px",
           },
 
+          // color
          "&.MuiButton-containedPrimary":{
             background: theme.palette.gradient.main,
+            color: theme.palette.text.primary,
+            boxShadow: "0 0 0 5px #6C7AFF25",
+          },
+
+          "&.MuiButton-containedSecondary":{
+            background: theme.palette.secondary.main,
             color: theme.palette.text.primary,
             boxShadow: "0 0 0 5px #6C7AFF25",
           },
@@ -313,11 +322,17 @@ const theme = createTheme({
             background: theme.palette.primary.dark,
           },
 
+          "&.MuiButton-text":{
+            color: theme.palette.primary.dark,
+          },
+
+          // disabled
          "&.Mui-disabled": {
             background: theme.palette.text.disabled,
             color: theme.palette.secondary.contrastText,
             boxShadow: "none",
           },
+          
         }),
       },
     },
@@ -461,19 +476,61 @@ const theme = createTheme({
       styleOverrides: {
         root: ({ theme }) => ({
           color: theme.palette.text.primary,
+
+          /*"& .MuiInputBase-input:hover":{
+           border: "1px inset #8C8D97", // Action Divider
+          },*/
+
+          // Focused
+          "& .Mui-focused .MuiOutlinedInput-root":{
+            color: theme.palette.text.primary, // text primary
+          },
+          "& .Mui-focused .MuiInputLabel-root":{
+            color: (theme.palette.text.primary, "!important"),
+            marginBottom: theme.spacing(0.5),
+          },
+          "& .Mui-focused .MuiOutlinedInput-notchedOutline":{
+            borderColor: "#6C7AFF !important", // primary main
+          },
+
+          // hide notchedOutline
+          "& .MuiInputBase-root-MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline":{
+            borderColor: theme.palette.text.secondary,
+          },
+          "& .MuiOutlinedInput-notchedOutline legend":{
+            display: "none !important",
+          },
+          ".MuiOutlinedInput-notchedOutline": {
+             borderColor: "#8C8D97 !important", // Action Divider
+             top: "0",
+          },
+        }),
+        
+      },
+    },
+    MuiFormControl: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          color: theme.palette.text.primary,
           // Input
           "& .MuiInputBase-input":{
-            border: "1px solid #8C8D97", // Action Divider
-            borderRadius: theme.spacing(1),
             padding: theme.spacing(2),
             fontSize: "14px",
+            border: "none",
           },
+          "& .MuiInputBase-formControl":{
+            color: theme.palette.text.primary,
+            border: "1px inset #8C8D97", // Action Divider
+            borderRadius: theme.spacing(1),
+          },
+
           // Variant Outlined
           "& .MuiOutlinedInput-root":{
             color: theme.palette.text.primary,
-            borderRadius: theme.spacing(1),
-            backgroundColor: "transparent",
+            border: "none",
+            backgroundColor: "transparent !important",
           },
+
           // Label
           "& .MuiInputLabel-root":{
             color: theme.palette.text.primary,
@@ -482,35 +539,39 @@ const theme = createTheme({
             marginBottom: "6px",
             fontWeight: "500",
           },
-          "& .MuiInputBase-input:hover":{
-            border: "1px solid #8C8D97", // Action Divider
-          },
+
+          // "& .MuiInputBase-input:hover":{
+          //  border: "1px inset #8C8D97", // Action Divider
+          // },
+
           // Focused
-          "& .Mui-focused":{
+          "& .Mui-focused.MuiOutlinedInput-root":{
             color: theme.palette.text.primary, // text primary
+            backgroundColor: "#393A47 !important", // Action focus
+            
           },
           "& .Mui-focused .MuiInputLabel-root":{
-            color: "#E2E3E9 !important", // text primary
+            color: (theme.palette.text.primary, "!important"),
             marginBottom: theme.spacing(0.5),
           },
-          "& .Mui-focused .MuiOutlinedInput-notchedOutline":{
-            borderColor: "#6C7AFF !important", // primary main
+          "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
+             borderColor: (theme.palette.primary.main, "!important"),
+             top: "0",
           },
-           "& .Mui-focused .MuiInputBase-input":{
-            backgroundColor: "#393A47 !important", // Action focus
-          },
+
           // hide notchedOutline
           "& .MuiOutlinedInput-notchedOutline legend":{
             display: "none !important",
           },
-          ".MuiOutlinedInput-notchedOutline": {
-             borderColor: "#8C8D97 !important", // Action Divider
+          "& .MuiOutlinedInput-notchedOutline": {
+             borderColor: "#8C8D97", // Action Divider
              top: "0",
           },
-          // Placeholder Color
-          "& label[data-shrink=false]+.MuiInputBase-formControl ::-webkit-input-placeholder": {
-            opacity: "1 !important",
-            color: theme.palette.text.secondary, // text secondary
+          
+
+          // adornment color
+          "& .MuiIconButton-root": {
+            color: theme.palette.text.secondary,
           },
         }),
         
@@ -523,9 +584,18 @@ const theme = createTheme({
         "& .MuiTypography-root": {
           fontWeight: "500",
         },
-        "& .MuiCheckbox-sizeSmall .MuiTypography-root": {
-          fontSize: "0.9rem",
-        },  
+        // size small 
+        "& .MuiCheckbox-sizeSmall ~ .MuiTypography-root": {
+          fontSize: "14px", // button-m
+        },
+        // checked  
+        "& .Mui-checked .MuiSvgIcon-root":{
+            fill: theme.palette.primary.light,
+          },
+          "& .Mui-checked .MuiSvgIcon-root path":{
+            strokeWidth: "2px",
+            stroke: theme.palette.primary.main,
+         }, 
        }),
       },
     },

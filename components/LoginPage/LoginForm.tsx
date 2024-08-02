@@ -19,69 +19,69 @@ export default function LoginForm() {
   };
 
   return (
-    <form className="flex flex-col px-16 py-12 max-w-full rounded-xl bg-neutral-900 w-[600px] max-md:px-5">
-      <Typography variant="h3" component="h1" className="self-center leading-10 text-zinc-200">
-        Accedi a Vibly
-      </Typography>
-      <Typography variant="body-500" component="p" className="self-center leading-6 text-gray-400">
-        Accedi al tuo account
-      </Typography>
-      <TextField
-        placeholder="Il tuo nome utente o indirizzo email"
-        variant="outlined"
-        size="medium"
-        className="mt-12 max-md:mt-10 max-md:max-w-full"
-        InputProps={{}}
-        label="Nome utente o e-mail"
-      />
-      <FormControl variant="outlined">
-        <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
-          <OutlinedInput
-            id="outlined-adornment-password"
-            type={showPassword ? 'text' : 'password'}
-            endAdornment={
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label="toggle password visibility"
-                  onClick={handleClickShowPassword}
-                  onMouseDown={handleMouseDownPassword}
-                  edge="end"
-                >
-                  {showPassword ? <VisibilityOff /> : <Visibility />}
-                </IconButton>
-              </InputAdornment>
-            }
-            label="Password"
+    <form className="flex flex-col gap-2 px-16 py-12 max-w-full rounded-xl bg-neutral-900 w-[600px] max-md:px-5">
+      <div className='flex flex-col items-center gap-2 mb-12'>
+        <Typography variant="h3" component="h1" className="text-zinc-200">
+          Accedi a Vibly
+        </Typography>
+        <Typography variant="body-500" component="p" className="text-gray-400">
+          Accedi al tuo account
+        </Typography>
+      </div>
+      <div className='mb-8'>
+        <div className='flex flex-col gap-5'>
+          <TextField
+            placeholder="Il tuo nome utente o indirizzo email"
+            variant="outlined"
+            size="medium"
+            className="mt-12 max-md:mt-10 max-md:max-w-full"
+            InputProps={{}}
+            label="Nome utente o e-mail"
           />
-        </FormControl>
+          <FormControl variant="outlined">
+            <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
+              <OutlinedInput
+                id="outlined-adornment-password"
+                type={showPassword ? 'text' : 'password'}
+                endAdornment={
+                  <InputAdornment position="end">
+                    <IconButton
+                      aria-label="toggle password visibility"
+                      onClick={handleClickShowPassword}
+                      onMouseDown={handleMouseDownPassword}
+                      edge="end"
+                    >
+                      {showPassword ? <VisibilityOff /> : <Visibility />}
+                    </IconButton>
+                  </InputAdornment>
+                }
+                label="Password"
+              />
+          </FormControl>
+      </div>
       <FormControlLabel
         labelPlacement="end"
-        className="mt-4"
+        className='mt-2'
         control={<Checkbox size="small" color="primary" />} label="Remember me" />
-      <Button
-        size="large"
-        variant="contained"
-        className="mt-8 whitespace-nowrap max-md:max-w-full"
-        disabled
-      >
-        Accedi
-      </Button>
-      <Button
-        size="large"
-        variant="contained"
-        color="primary"
-        className="mt-8 whitespace-nowrap max-md:max-w-full"
-      >
-        Accedi
-      </Button>
-      <Button
-        size="large"
-        variant="text"
-        color="primary"
-        className="mt-4 max-md:max-w-full"
-      >
-        Dimenticato la password?
-      </Button>
+      </div>
+      <div className='flex flex-col gap-4'>
+        <Button
+          size="large"
+          variant="contained"
+          className="pb-8 whitespace-nowrap w-full"
+          disabled
+        >
+          Accedi
+        </Button>
+        <Button
+          size="large"
+          variant="text"
+          color="primary"
+          className="mt-4 w-full"
+        >
+          Dimenticato la password?
+        </Button>
+      </div>
     </form>
   );
 }
