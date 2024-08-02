@@ -5,15 +5,28 @@ import React from "react";
 import LoginForm from "./LoginForm";
 import RegisterSection from "./RegisterSection";
 import Footer from "./Footer";
+import BackgroundWaves from "../PasswordReset/BackgroundWaves";
 
 const LoginPage: React.FC = () => {
   return (
-    <main className="flex flex-col items-center py-20">
-      <LoginForm />
-      <RegisterSection />
-      <Footer />
-      <div className="self-stretch mt-0 w-full bg-indigo-500 min-h-[145px] max-md:mt-0 max-md:max-w-full" />
-      <div className="self-stretch mt-2 w-full bg-indigo-500 min-h-[59px] max-md:max-w-full" />
+    <main className="flex flex-col justify-center items-center py-20 bg-background h-screen">
+      <div className="z-10">
+        <LoginForm />
+        <RegisterSection />
+        <Footer />
+      </div>
+      <BackgroundWaves />
+      <div className="absolute bottom-[30%] w-full z-0">
+        <svg width="100%" height="365" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g opacity="0.6">
+          <rect y="0.5" width="100%" height="145.6" fill="#5262FF"/>
+          <rect y="153.38" width="100%" height="58.24" fill="#5262FF"/>
+          <rect y="226.18" width="100%" height="29.12" fill="#5262FF"/>
+          <rect y="284.42" width="100%" height="14.56" fill="#5262FF"/>
+          <rect y="357.22" width="100%" height="7.28" fill="#5262FF"/>
+          </g>
+        </svg>
+      </div>
     </main>
   );
 };

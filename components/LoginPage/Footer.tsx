@@ -8,10 +8,11 @@ import React from "react";
 const Footer: React.FC = () => {
   return (
     <footer className="flex z-10 justify-center items-center px-6 mt-4 max-w-full whitespace-nowrap w-[600px] max-md:px-5">
-      <nav className="flex gap-5 justify-between max-w-full w-[180px]">
+      <nav className="flex gap-5 items-center text-white">
         <Link color="inherit" underline="none">
           Termini
         </Link>
+        <div className='w-[1px] h-[18px] bg-white block' />
         <Link color="inherit" underline="none">
           Condizioni
         </Link>
