@@ -3,10 +3,10 @@
  */
 import React from "react";
 import LoginForm from "./LoginForm";
-import RegisterSection from "../Common/BottomSection";
+import RegisterSection from "../Layout/BottomSection";
 import Footer from "./Footer";
-import BackgroundWaves from "../Common/BackgroundWaves";
-import Header from "../Common/Header";
+import BackgroundWaves from "../Layout/BackgroundWaves";
+import Header from "../Layout/Header";
 
 const LoginPage: React.FC = () => {
   return (

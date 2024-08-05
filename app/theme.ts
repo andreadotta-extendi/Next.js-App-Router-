@@ -604,6 +604,13 @@ const theme = createTheme({
        }),
       },
     },
+    MuiFormHelperText:{
+      styleOverrides: {
+       root: ({ theme }) => ({
+          marginLeft: "0px",
+        }),
+      },
+    },
   },
 });
 

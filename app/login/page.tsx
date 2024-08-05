@@ -2,6 +2,7 @@
 import EmailSentPage from '@/components/EmailSent/EmailSentPage';
 import LoginPage from '@/components/LoginPage/LoginPage';
 import AuthPage from '@/components/Onboarding/AuthComponents/AuthPage';
+import SignUpPage from '@/components/Onboarding/AuthComponents/SignUpPage';
 import WelcomePage from '@/components/Onboarding/AuthComponents/WelcomePage';
 import PasswordResetPage from '@/components/PasswordReset/PasswordResetPage';
 import React from "react";
@@ -14,7 +15,7 @@ export default async function Page(props: { params: { page: any[]; }; }) {
   return (
     <>
       {/* Render the Builder page */}
-      <AuthPage />
+      <SignUpPage />
     </>
   );
 }
