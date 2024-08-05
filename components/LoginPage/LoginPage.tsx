@@ -3,7 +3,7 @@
  */
 import React from "react";
 import LoginForm from "./LoginForm";
-import RegisterSection from "./RegisterSection";
+import RegisterSection from "../Common/BottomSection";
 import Footer from "./Footer";
 import BackgroundWaves from "../Common/BackgroundWaves";
 import Header from "../Common/Header";
@@ -15,7 +15,7 @@ const LoginPage: React.FC = () => {
       <main className="flex flex-col justify-center items-center py-20 px-4 bg-background h-screen">
         <div className="flex z-10 flex-col self-center max-w-[600px] w-full gap-4">
           <LoginForm />
-          <RegisterSection />
+          <RegisterSection title="Non hai un account" buttontext="Registrati" />
           <Footer />
         </div>
         <BackgroundWaves />

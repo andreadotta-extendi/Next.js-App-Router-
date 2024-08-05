@@ -1,3 +1,4 @@
+import AuthPage from '@/components/AuthComponents/AuthPage';
 import EmailSentPage from '@/components/EmailSent/EmailSentPage';
 import LoginPage from '@/components/LoginPage/LoginPage';
 import PasswordResetPage from '@/components/PasswordReset/PasswordResetPage';
@@ -11,7 +12,7 @@ export default async function Page(props: { params: { page: any[]; }; }) {
   return (
     <>
       {/* Render the Builder page */}
-      <EmailSentPage />
+      <AuthPage />
     </>
   );
 }
