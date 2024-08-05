@@ -7,10 +7,11 @@ import RegisterSection from "../Layout/BottomSection";
 import Footer from "./Footer";
 import BackgroundWaves from "../Layout/BackgroundWaves";
 import Header from "../Layout/Header";
+import Layout from "../Layout/Layout";
 
 const LoginPage: React.FC = () => {
   return (
-    <div className="flex flex-col h-screen">
+    <Layout>
       <Header leftButton={false} rightButton={false}/>
       <main className="flex flex-col justify-center items-center py-20 px-4 bg-background h-screen">
         <div className="flex z-10 flex-col self-center max-w-[600px] w-full gap-4">
@@ -20,7 +21,7 @@ const LoginPage: React.FC = () => {
         </div>
         <BackgroundWaves />
       </main>
-    </div>
+    </Layout>
   );
 };
 
