@@ -17,7 +17,7 @@ const Header: React.FC<HeaderProps> = ({
     }) => {
     return (
         <header className="flex justify-center items-center px-4 py-6 w-full bg-header z-10 justify-between h-[100px]">
-            <div className="w-[136px]">
+            <div className="md:w-[136px]">
                 {leftButton &&
                 <Button
                     size="large"
@@ -26,7 +26,7 @@ const Header: React.FC<HeaderProps> = ({
                     className="flex-1 shrink my-auto w-full min-w-[240px] max-md:max-w-full"
                 >
                     <ChevronLeftFilled />
-                    Indietro
+                    <span className="hidden md:block">Indietro</span>
                 </Button>
                 }
             </div>
@@ -36,7 +36,7 @@ const Header: React.FC<HeaderProps> = ({
                 alt="Company logo"
                 className="object-contain self-stretch my-auto aspect-[3.62] w-[152px]"
             />
-            <div className="w-[136px]">
+            <div className="md:w-[136px]">
                 {rightButton &&
                 <Button
                     size="large"
@@ -44,7 +44,7 @@ const Header: React.FC<HeaderProps> = ({
                     color="primary"
                     className="flex-1 shrink my-auto w-full min-w-[240px] max-md:max-w-full"
                 >
-                    Avanti
+                    <span className="hidden md:block">Avanti</span>
                     <ChevronRightFilled />
                 </Button>
                 }
