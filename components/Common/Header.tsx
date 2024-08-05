@@ -6,10 +6,19 @@ import React from "react";
 import ChevronLeftFilled from "@mui/icons-material/ChevronLeft";
 import ChevronRightFilled from "@mui/icons-material/ChevronRight";
 
-const Header: React.FC = () => {
+type HeaderProps = {
+  leftButton: boolean;
+  rightButton: boolean;
+};
+
+const Header: React.FC<HeaderProps> = ({
+    leftButton,
+    rightButton,
+    }) => {
     return (
         <header className="flex justify-center items-center px-4 py-6 w-full bg-header z-10 justify-between h-[100px]">
             <div className="w-[136px]">
+                {leftButton &&
                 <Button
                     size="large"
                     variant="text"
@@ -19,6 +28,7 @@ const Header: React.FC = () => {
                     <ChevronLeftFilled />
                     Indietro
                 </Button>
+                }
             </div>
             <img
                 loading="lazy"
@@ -27,6 +37,7 @@ const Header: React.FC = () => {
                 className="object-contain self-stretch my-auto aspect-[3.62] w-[152px]"
             />
             <div className="w-[136px]">
+                {rightButton &&
                 <Button
                     size="large"
                     variant="text"
@@ -36,6 +47,7 @@ const Header: React.FC = () => {
                     Avanti
                     <ChevronRightFilled />
                 </Button>
+                }
             </div>
         </header>
     );
