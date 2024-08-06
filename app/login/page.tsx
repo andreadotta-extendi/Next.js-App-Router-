@@ -1,6 +1,6 @@
 
 import EmailSentPage from '@/components/EmailSent/EmailSentPage';
-import InstrumentSelection from '@/components/InstrumentSelection/InstrumentSelection';
+import InstrumentSelection from '@/components/Onboarding/StepsPage/InstrumentSelection';
 import LoginPage from '@/components/LoginPage/LoginPage';
 import AuthPage from '@/components/Onboarding/AuthPage/AuthPage';
 import SignUpPage from '@/components/Onboarding/AuthPage/SignUpPage';
