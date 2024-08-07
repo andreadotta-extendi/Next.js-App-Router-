@@ -1,4 +1,4 @@
-import SessionPlanner from '@/components/SessionPlanner/SessionPlanner';
+import SessionPlanner from '@/components/Onboarding/StepsPage/SessionPlanner';
 import React from "react";
 // See the full code: https://www.builder.io/c/docs/integrate-section-building?codeFramework=nextApp#add-an-announcement-bar-section-to-your-app
 
