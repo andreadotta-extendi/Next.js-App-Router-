@@ -26,6 +26,8 @@ declare module "@mui/material/styles" {
     paragraph: SimplePaletteColorOptions;
     overlay: SimplePaletteColorOptions & { opacity: number };
     gradient: SimplePaletteColorOptions;
+    header: SimplePaletteColorOptions;
+    actions: SimplePaletteColorOptions;
   }
   interface PaletteOptions {
     complementary: SimplePaletteColorOptions;
@@ -35,6 +37,8 @@ declare module "@mui/material/styles" {
     paragraph: SimplePaletteColorOptions;
     overlay: SimplePaletteColorOptions & { opacity: number };
     gradient: SimplePaletteColorOptions;
+    header: SimplePaletteColorOptions;
+    actions: SimplePaletteColorOptions;
   }
 
   interface TypographyVariantsOptions {
@@ -111,14 +115,13 @@ const poppins = Poppins({
 
 const theme = createTheme({
   palette: {
-   // mode: 'dark',
     primary: {
       light: extendConfig.colors?.primary.light,
       main: extendConfig.colors?.primary.main, // Colore primario
       dark: extendConfig.colors?.primary.dark,
     },
     secondary: {
-      light: '#ff7961',
+      light: extendConfig.colors?.secondary.light,
       main: extendConfig.colors?.secondary.main,
       dark: extendConfig.colors?.secondary.dark,
       contrastText: extendConfig.colors?.secondary.contrastText,
@@ -127,6 +130,10 @@ const theme = createTheme({
       primary: extendConfig.colors?.text.primary,
       secondary: extendConfig.colors?.text.secondary,
       disabled: extendConfig.colors?.text.disabled,
+    },
+    action: {
+      divider: extendConfig.colors?.action.divider,
+      focus: extendConfig.colors?.action.focus,
     },
     complementary: {
       main: "#A5FFAC", // Colore complementare
@@ -151,7 +158,10 @@ const theme = createTheme({
       opacity: 0.7,
     },
     gradient: {
-      main: "linear-gradient(-45deg, #8590FF 0%, #5767FF 100% )", // Gradient
+      main: "linear-gradient(45deg, #8590FF 0%, #5767FF 100% )", // Gradient
+    },
+    header: {
+      main: extendConfig.colors?.header,
     },
   },
   typography: {
@@ -589,14 +599,21 @@ const theme = createTheme({
           fontSize: "14px", // button-m
         },
         // checked  
-        "& .Mui-checked .MuiSvgIcon-root":{
+        "& .MuiCheckbox-root.Mui-checked .MuiSvgIcon-root":{
             fill: theme.palette.primary.light,
           },
-          "& .Mui-checked .MuiSvgIcon-root path":{
+          "& .MuiCheckbox-root.Mui-checked .MuiSvgIcon-root path":{
             strokeWidth: "2px",
             stroke: theme.palette.primary.main,
          }, 
        }),
+      },
+    },
+    MuiFormHelperText:{
+      styleOverrides: {
+       root: ({ theme }) => ({
+          marginLeft: "0px",
+        }),
       },
     },
   },

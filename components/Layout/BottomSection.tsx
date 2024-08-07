@@ -3,14 +3,22 @@
  */
 
 import { Button, Typography } from '@mui/material';
+
 import React from "react";
 
+type BottomSectionProps = {
+  title: string;
+  buttontext: string;
+};
 
-const RegisterSection: React.FC = () => {
+const BottomSection: React.FC<BottomSectionProps> = ({
+    title,
+    buttontext,
+}) => {
   return (
-    <section className="flex flex-col gap-2 items-center px-16 py-8 mt-4 max-w-full rounded-xl bg-neutral-900 w-[600px] max-md:px-5">
+    <section className="flex flex-col gap-2 items-center px-16 py-8 max-w-full rounded-xl bg-neutral-900 w-[600px] max-md:px-5">
       <Typography variant="s1" component="h2" className='text-zinc-200'>
-        Non hai un account?
+        {title}
       </Typography>
       <Button
         size="large"
@@ -18,10 +26,10 @@ const RegisterSection: React.FC = () => {
         color="primary"
         className="mt-2 w-full whitespace-nowrap"
       >
-        Registrati
+        {buttontext}
       </Button>
     </section>
   );
 };
 
-export default RegisterSection;
+export default BottomSection;
