@@ -3,10 +3,11 @@
  */
 import React from "react";
 import InstrumentCard from "./InstrumentCard";
-import { Button, Typography } from "@mui/material";
+import { Button, Link, Typography } from "@mui/material";
 import Layout from "../../Layout/Layout";
 import Header from "../../Layout/Header";
 import ProgressIndicator from "./ProgressIndicator";
+import ChevronRightFilled from '@mui/icons-material/ChevronRight';
 
 const instruments = [
   {
@@ -52,10 +53,8 @@ const InstrumentSelection: React.FC = () => {
     <Layout>
       <Header leftButton={false} rightButton={false} />
       <main className="py-16 px-4 bg-background h-screen">
-        <div className="flex gap-2 items-center justify-center">
-          <ProgressIndicator active={true} />
-          <ProgressIndicator active={false} />
-          <ProgressIndicator active={false} />
+        <div className="flex gap-2 mx-auto mb-6 w-[232px]">
+          <ProgressIndicator steps={3} currentStep={1} />
         </div>
         <section className="flex flex-col py-4 gap-y-8 items-center max-w-[700px] m-auto text-center">
           <div className="space-y-4">
@@ -66,12 +65,38 @@ const InstrumentSelection: React.FC = () => {
               Scegli lo strumento che ti interessa suonare per permetterci
               di offrirti i contenuti migliori
             </Typography>
+
+            {/* da mostrare al go back */}
+              <div>
+                <Link href="#" underline="none" variant="button-s">
+                  Chitarra
+                </Link>
+                <ChevronRightFilled className="primary h-[16px]" />
+                <Link href="#" underline="none" variant="button-s">
+                  Acustica
+                </Link>
+              </div>
+            {/* end */}
           </div>
-          <div className="grid grid-cols-3 gap-4 w-[600px]">
-            {instruments.slice(0, 6).map((instrument, index) => (
-              <InstrumentCard key={index} {...instrument} />
-            ))}
+
+          <div>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-[600px]">
+              {/* Esempio strumento selezionato */}
+              {instruments.slice(0, 1).map((instrument, index) => (
+                <InstrumentCard key={index} {...instrument} radioValue="a"/>
+              ))}
+              {instruments.slice(1, 6).map((instrument, index) => (
+                <InstrumentCard key={index} {...instrument} radioValue="b"/>
+              ))}
+            </div>
+          
+            {/* da mostrare al go back */}
+            <div className="flex mx-auto mt-4 gap-2 justify-center w-[40px]">
+              <ProgressIndicator steps={2} currentStep={1} />
+            </div>
+            {/* end */}
           </div>
+
           <Button
             size="large"
             variant="contained"

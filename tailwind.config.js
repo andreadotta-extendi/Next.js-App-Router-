@@ -24,6 +24,10 @@ const tailwindConfig = {
           secondary: '#9597AC',
           disabled: '#515466 !important',
         },
+        action: {
+          divider: '#8C8D97',
+          focus: '#393A47',
+        },
         background: '#1C1D22', // Sostituisci con il colore di sfondo
         header: '#15151A', // Colore header
         button: '#5B21B6', // Colore del bottone "Accedi"

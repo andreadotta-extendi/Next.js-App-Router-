@@ -4,18 +4,31 @@
 import React from "react";
 
 interface ProgressIndicatorProps {
-  active: boolean;
+  steps: number;
+  currentStep: number;
 }
 
-const ProgressIndicator: React.FC<ProgressIndicatorProps> = ({ active }) => {
+const ProgressIndicator: React.FC<ProgressIndicatorProps> = ({
+  steps,
+  currentStep,
+}) => {
   return (
-    <div className="flex overflow-hidden flex-col items-center self-stretch my-auto w-[72px]">
-      <div
-        className={`flex rounded-3xl min-h-[16px] min-w-[24px] w-[72px] ${
-          active ? "bg-indigo-500" : "bg-gray-600 bg-opacity-70"
-        }`}
-      />
-    </div>
+    <React.Fragment>
+      {Array.from({ length: steps }, (_, index) => (
+        <div
+          key={index}
+          className="w-full"
+        >
+          <div
+            className={`flex rounded-3xl min-h-[16px] ${
+              index + 1 === currentStep
+                ? "bg-indigo-500"
+                : "bg-gray-600 bg-opacity-70"
+            }`}
+          />
+        </div>
+      ))}
+    </React.Fragment>
   );
 };
 
