@@ -162,7 +162,7 @@ const levelOptions = [
 
                 {/* Radio Group */}
                 <div className="space-y-4"> 
-                    <RadioOptionGroup options={radioOptions} value={radioValue} />
+                    <RadioOptionGroup options={radioOptions} value={radioValue} labelPlacement="start" />
                 </div>
 
                 {/* Feedback once you select the option */}

@@ -15,8 +15,8 @@ const tailwindConfig = {
         },
         secondary: {
           light: '#7248b8', // 20% più chiaro
-          main: '#4C1D95',  // Colore principale
-          dark: '#3a1571',  // 20% più scuro
+          main: '#B3EEFF',  // Colore principale
+          dark: '#8AE5FF',  // 20% più scuro
           contrastText: '#15151A', // Contrasto del testo (opzionale)
         },
         text: {

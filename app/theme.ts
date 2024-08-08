@@ -322,13 +322,18 @@ const theme = createTheme({
 
           "&.MuiButton-containedSecondary":{
             background: theme.palette.secondary.main,
-            color: theme.palette.text.primary,
-            boxShadow: "0 0 0 5px #6C7AFF25",
+            color: theme.palette.secondary.contrastText,
           },
 
           "&.MuiButton-containedPrimary:hover":{
             background: theme.palette.primary.dark,
           },
+
+          "&.MuiButton-containedSecondary:hover":{
+            background: theme.palette.secondary.dark,
+            color: theme.palette.secondary.contrastText,
+          },
+
 
           "&.MuiButton-text":{
             color: theme.palette.primary.dark,

@@ -3,24 +3,29 @@
  */
 import { FormControl, FormControlLabel, Radio, RadioGroup } from "@mui/material";
 import React from "react";
+import { start } from "repl";
 interface RadioOptionGroupProps {
   options: string[];
   value: string[];
+  labelClass?: string;
+  labelPlacement?: 'bottom' | 'end' | 'start' | 'top';
 }
 
 export const RadioOptionGroup: React.FC<RadioOptionGroupProps> = ({
   options,
   value,
+  labelPlacement,
+  labelClass,
 }) => {
   return (
-    <FormControl>
+    <FormControl className="w-full">
       <RadioGroup
         aria-labelledby="demo-radio-buttons-group-label"
         name="radio-buttons-group"
-        className="space-y-4"
+        className="space-y-4 w-full"
       >
       {options.map((option, value) => (
-        <div className={`py-4 pr-4 border rounded-2xl ${
+        <div className={`w-full py-4 pr-4 border rounded-2xl ${
               false
                 ? "border-primary-main bg-action-focus"
                 : "border-action-divider bg-default"
@@ -29,8 +34,8 @@ export const RadioOptionGroup: React.FC<RadioOptionGroupProps> = ({
             value={value}
             control={<Radio />}
             label={option}
-            labelPlacement="start"
-            className="m-0"
+            labelPlacement={labelPlacement}
+            className={`${labelClass} m-0 w-full`}
           />
         </div>
       ))}
