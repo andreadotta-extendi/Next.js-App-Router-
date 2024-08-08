@@ -18,8 +18,13 @@ export interface CustomExtendConfig {
       primary: string;
       secondary: string;
       disabled: string;
+    };
+    action: {
+      divider: string;
+      focus: string;
     }
     background: string;
+    paper: string;
     button: string;
     buttonDisabled: string;
   };

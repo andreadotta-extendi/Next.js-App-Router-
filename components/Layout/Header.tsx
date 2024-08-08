@@ -16,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({
     rightButton,
     }) => {
     return (
-        <header className="flex justify-center items-center px-4 py-6 w-full bg-header z-10 justify-between h-[100px]">
+        <header className="flex justify-center items-center px-4 py-6 w-full bg-paper z-10 justify-between h-[100px]">
             <div className="md:w-[136px]">
                 {leftButton &&
                 <Button

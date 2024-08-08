@@ -23,7 +23,7 @@ const OptionCard: React.FC<OptionCardProps> = ({
   };
 
   return (
-    <button className={`w-full p-2 rounded-lg border ${selectedValue === radioValue ? "border-primary-main bg-header" : "border-action-divider bg-default"}`}>
+    <button className={`w-full p-2 rounded-lg border ${selectedValue === radioValue ? "border-primary-main bg-action-focus" : "border-action-divider bg-default"}`}>
       <div className="flex flex-row-reverse">
         <RadioGroup name="use-radio-group">
           <Radio

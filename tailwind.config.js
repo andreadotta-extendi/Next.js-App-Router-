@@ -29,7 +29,7 @@ const tailwindConfig = {
           focus: '#393A47',
         },
         background: '#1C1D22', // Sostituisci con il colore di sfondo
-        header: '#15151A', // Colore header
+        paper: '#15151A', // Colore superfici
         button: '#5B21B6', // Colore del bottone "Accedi"
         buttonDisabled: '#D1D5DB', // Colore del bottone disabilitato
       },

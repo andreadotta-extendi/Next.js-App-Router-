@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <AppRouterCacheProvider  options={{ key: 'css' }}>
       <ThemeProvider theme={theme}>
-        <body className={poppins.className}>{children}</body>
+        <body className={`${poppins.className} bg-background`}>{children}</body>
       </ThemeProvider>
       </AppRouterCacheProvider>
     </html>
