@@ -14,6 +14,7 @@ import Layout from "@/app/layout";
 import Header from "@/components/Layout/Header";
 import theme from "@/app/theme";
 import OptionCard from "./Elements/OptionCard";
+import OptionSelectedFeedback from "./Elements/OptionSelectedFeedback";
 
 interface MusicJourneySelectionProps {}
 
@@ -163,6 +164,13 @@ const levelOptions = [
                 <div className="space-y-4"> 
                     <RadioOptionGroup options={radioOptions} value={radioValue} />
                 </div>
+
+                {/* Feedback once you select the option */}
+                <OptionSelectedFeedback
+                    imageSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/fefd87c43df65a0f5ea72240f66fbce99941d130db0488f79b4242cbab607263?apiKey=ae92917785e7425fbb91907da8ebf914&&apiKey=ae92917785e7425fbb91907da8ebf914"
+                    text="Ti consigliamo di suonare 15min, seguire 8 puntate di vibly e 8 di ripasso."
+                    alt="consiglio"
+                />
 
 
                 <Button
