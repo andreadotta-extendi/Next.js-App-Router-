@@ -3,27 +3,26 @@
  */
 import React from "react";
 import { Typography } from "@mui/material";
-import PasswordResetForm from "./Form/PasswordResetForm";
 import Layout from "@/components/Layout/Layout";
 import BackgroundWaves from "@/components/Layout/BackgroundWaves";
+import NewPasswordForm from "./Form/NewPasswordForm";
 
 
-const PasswordResetPage: React.FC = () => {
+const NewPasswordPage: React.FC = () => {
   return (
     <Layout>
-      <section className="flex z-10 flex-col self-center max-w-[600px] px-6 py-8 md:px-16 md:py-12 rounded-xl bg-paper">
+      <section className="flex z-10 flex-col self-center w-full max-w-[600px] px-6 py-8 md:px-16 md:py-12 rounded-xl bg-paper">
         <div className="flex flex-col text-center gap-2">
-          <Typography variant="h3" component="h1" className="text-zinc-200">Password dimenticata?</Typography>
+          <Typography variant="h3" component="h1" className="text-zinc-200">Resetta password</Typography>
           <Typography variant="body-500" component="p" className="text-gray-400">
-            Inserisci il tuo indirizzo email e ti invieremo un link per
-            resettare la tua password
+            Inserisci la tua nuova password
           </Typography>
         </div>
-        <PasswordResetForm />
+        <NewPasswordForm />
       </section>
       <BackgroundWaves wave="login"/>
     </Layout>
   );
 };
 
-export default PasswordResetPage;
+export default NewPasswordPage;
