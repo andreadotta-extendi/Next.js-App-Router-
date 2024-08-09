@@ -10,6 +10,7 @@ type EmailSentContentProps = {
   mail?: string;
   description?: string;
   footer?: React.ReactNode;
+  imgSrc?: string; 
 };
 
 const EmailSentContent: React.FC<EmailSentContentProps> = ({
@@ -18,13 +19,14 @@ const EmailSentContent: React.FC<EmailSentContentProps> = ({
   mail,
   description,
   footer,
+  imgSrc,
 }) => {
   return (
     <section>
       <div className="flex flex-col text-zinc-200 gap-4">
         <img
           loading="lazy"
-          src="../../public/assets/success-green.svg"
+          src={imgSrc}
           className="object-contain self-center w-14 aspect-square"
           alt="Email sent icon"
         />

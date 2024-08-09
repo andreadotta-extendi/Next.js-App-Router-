@@ -3,16 +3,15 @@
  */
 import React from "react";
 import { Button, Link } from "@mui/material";
-import Layout from "@/components/Layout/Layout";
-import Header from "@/components/Layout/Header";
 import EmailSentContent from "@/components/Layout/EmailSentContent";
 import BackgroundWaves from "@/components/Layout/BackgroundWaves";
+import Layout from "@/components/Layout/Layout";
 
 const EmailSentPage: React.FC = () => {
   return (
     <Layout>
       <section className="flex z-10 flex-col self-center max-w-[600px] px-6 py-8 md:px-16 md:py-12 rounded-xl bg-paper">
-        <EmailSentContent
+        <EmailSentContent 
           imgSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/d0b63192e18fd0ff818c276e1056450547838217c8a2815fc993d60e80f51ad9?placeholderIfAbsent=true&apiKey=ae92917785e7425fbb91907da8ebf914"
           title="Email inviata a"
           mailfield={true}
@@ -44,8 +43,8 @@ const EmailSentPage: React.FC = () => {
             </div>
           </div>}
         />
-        </section>
-        <BackgroundWaves wave="onboardingAuth" />
+      </section>
+      <BackgroundWaves wave="registration" />
     </Layout>
   );
 };

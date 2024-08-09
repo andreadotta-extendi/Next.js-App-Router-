@@ -7,8 +7,8 @@ import ChevronLeftFilled from "@mui/icons-material/ChevronLeft";
 import ChevronRightFilled from "@mui/icons-material/ChevronRight";
 
 type HeaderProps = {
-  leftButton: boolean;
-  rightButton: boolean;
+  leftButton?: boolean;
+  rightButton?: boolean;
 };
 
 const Header: React.FC<HeaderProps> = ({

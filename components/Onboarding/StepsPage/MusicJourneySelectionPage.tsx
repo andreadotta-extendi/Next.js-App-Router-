@@ -10,11 +10,12 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import { RadioOptionGroup } from "./Elements/RadioOptionGroup";
 import ArrowBackFilled from '@mui/icons-material/ArrowBack';
 import ExpandMore from '@mui/icons-material/ExpandMore';
-import Layout from "@/app/layout";
 import Header from "@/components/Layout/Header";
 import theme from "@/app/theme";
 import OptionCard from "./Elements/OptionCard";
 import OptionSelectedFeedback from "./Elements/OptionSelectedFeedback";
+import BackgroundWaves from "@/components/Layout/BackgroundWaves";
+import Layout from "@/components/Layout/Layout";
 
 interface MusicJourneySelectionProps {}
 
@@ -105,85 +106,82 @@ const levelOptions = [
     };
 
   return (
-    <Layout>
-        <Header leftButton={false} rightButton={false} />
-        <main className="py-16 px-4 bg-background h-screen">
+    <Layout stepsPage={true}>
+      {/* Progress Indicator */}
+      <div className="flex justify-center items-center gap-x-4">
+          <IconButton color="primary" aria-label="back" >
+              <ArrowBackFilled />
+          </IconButton>
+          <Stepper alternativeLabel activeStep={3} connector={<QontoConnector />}>
+          {steps.map((label) => (
+              <Step key={label}>
+              <StepLabel StepIconComponent={QontoStepIcon} />
+              </Step>
+          ))}
+          </Stepper>
+          <div className="w-[32px]" />
+      </div>
 
-            {/* Progress Indicator */}
-            <div className="flex justify-center items-center gap-x-4">
-                <IconButton color="primary" aria-label="back" >
-                    <ArrowBackFilled />
-                </IconButton>
-                <Stepper alternativeLabel activeStep={3} connector={<QontoConnector />}>
-                {steps.map((label) => (
-                    <Step key={label}>
-                    <StepLabel StepIconComponent={QontoStepIcon} />
-                    </Step>
-                ))}
-                </Stepper>
-                <div className="w-[32px]" />
-            </div>
+      <section className="flex flex-col py-4 gap-y-8 items-center max-w-[650px] m-auto">
 
-            <section className="flex flex-col py-4 gap-y-8 items-center max-w-[650px] m-auto">
+          {/* Heading */}
+          <div className="space-y-4 text-center">
+              <Typography variant="h1" component="h1" className="text-zinc-200">
+              Quale strumento vuoi suonare?
+              </Typography>
+              <Typography variant="s1" component="h2" className="text-gray-400">
+              Scegli lo strumento che ti interessa suonare per permetterci
+              di offrirti i contenuti migliori
+              </Typography>
+          </div>
 
-                {/* Heading */}
-                <div className="space-y-4 text-center">
-                    <Typography variant="h1" component="h1" className="text-zinc-200">
-                    Quale strumento vuoi suonare?
-                    </Typography>
-                    <Typography variant="s1" component="h2" className="text-gray-400">
-                    Scegli lo strumento che ti interessa suonare per permetterci
-                    di offrirti i contenuti migliori
-                    </Typography>
-                </div>
+          {/* Accordion */}
+          <Accordion expanded className="w-full">
+              <AccordionSummary
+              expandIcon={<ExpandMore color="primary" />}
+              aria-controls="panel1-content"
+              id="panel1-header"
+              >
+              So già suonare lo strumento
+              </AccordionSummary>
+              <AccordionDetails>
+                  {/* Options to select */}
+                  <div className="grid grid-cols-2 gap-4 w-full mt-2">
+                      {levelOptions.slice(0, 2).map((levelOption, index) => (
+                      <OptionCard key={index} {...levelOption}/>
+                      ))}
+                  </div>
+              </AccordionDetails>
+          </Accordion>
+          
+          <Typography variant="h3" component="h2" className="text-zinc-200">
+              Quale frase ti rappresenta di più?
+          </Typography>
 
-                {/* Accordion */}
-                <Accordion expanded className="w-full">
-                    <AccordionSummary
-                    expandIcon={<ExpandMore color="primary" />}
-                    aria-controls="panel1-content"
-                    id="panel1-header"
-                    >
-                    So già suonare lo strumento
-                    </AccordionSummary>
-                    <AccordionDetails>
-                        {/* Options to select */}
-                        <div className="grid grid-cols-2 gap-4 w-full mt-2">
-                            {levelOptions.slice(0, 2).map((levelOption, index) => (
-                            <OptionCard key={index} {...levelOption}/>
-                            ))}
-                        </div>
-                    </AccordionDetails>
-                </Accordion>
-                
-                <Typography variant="h3" component="h2" className="text-zinc-200">
-                    Quale frase ti rappresenta di più?
-                </Typography>
+          {/* Radio Group */}
+          <div className="space-y-4"> 
+              <RadioOptionGroup options={radioOptions} value={radioValue} labelPlacement="start" />
+          </div>
 
-                {/* Radio Group */}
-                <div className="space-y-4"> 
-                    <RadioOptionGroup options={radioOptions} value={radioValue} labelPlacement="start" />
-                </div>
-
-                {/* Feedback once you select the option */}
-                <OptionSelectedFeedback
-                    imageSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/fefd87c43df65a0f5ea72240f66fbce99941d130db0488f79b4242cbab607263?apiKey=ae92917785e7425fbb91907da8ebf914&&apiKey=ae92917785e7425fbb91907da8ebf914"
-                    text="Ti consigliamo di suonare 15min, seguire 8 puntate di vibly e 8 di ripasso."
-                    alt="consiglio"
-                />
+          {/* Feedback once you select the option */}
+          <OptionSelectedFeedback
+              imageSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/fefd87c43df65a0f5ea72240f66fbce99941d130db0488f79b4242cbab607263?apiKey=ae92917785e7425fbb91907da8ebf914&&apiKey=ae92917785e7425fbb91907da8ebf914"
+              text="Ti consigliamo di suonare 15min, seguire 8 puntate di vibly e 8 di ripasso."
+              alt="consiglio"
+          />
 
 
-                <Button
-                size="large"
-                variant="contained"
-                color="primary"
-                className="mt-8 max-w-full w-[220px]"
-                disabled
-                >
-                Continua
-                </Button>
-            </section>
-        </main>
+          <Button
+          size="large"
+          variant="contained"
+          color="primary"
+          className="mt-8 max-w-full w-[220px]"
+          disabled
+          >
+          Continua
+          </Button>
+      </section>
+      <BackgroundWaves wave="onboardingEnd" />
     </Layout>
   );
 };

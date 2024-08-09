@@ -10,12 +10,11 @@ import StepLabel from '@mui/material/StepLabel';
 import StepConnector, { stepConnectorClasses } from '@mui/material/StepConnector';
 import StepIcon, { StepIconProps } from '@mui/material/StepIcon';
 import { Button, IconButton, Typography } from "@mui/material";
-import Layout from "@/app/layout";
-import Header from "@/components/Layout/Header";
 import ArrowBackFilled from '@mui/icons-material/ArrowBack';
 import OptionCard from "./Elements/OptionCard";
-import OptionSelectedFeedback from "./Elements/OptionSelectedFeedback";
 import theme from "@/app/theme";
+import BackgroundWaves from "@/components/Layout/BackgroundWaves";
+import Layout from "@/components/Layout/Layout";
 
 
 const QontoConnector = styled(StepConnector)(({ theme }) => ({
@@ -78,59 +77,55 @@ const levelOptions = [
   ];
 
   
-const SessionPlanner: React.FC = () => {  
+const LevelSelection: React.FC = () => {  
   return (
-    <Layout>
-      <Header leftButton={false} rightButton={false} />
-      <main className="py-16 px-4 bg-background h-screen">
+    <Layout stepsPage={true}>
+      {/* Progress Indicator */}
+      <div className="flex justify-center items-center gap-x-4">
+        <IconButton color="primary" aria-label="back" >
+          <ArrowBackFilled />
+        </IconButton>
+        <Stepper alternativeLabel activeStep={3} connector={<QontoConnector />}>
+          {steps.map((label) => (
+            <Step key={label}>
+              <StepLabel StepIconComponent={QontoStepIcon} />
+            </Step>
+          ))}
+        </Stepper>
+        <div className="w-[32px]" />
+      </div>
 
-        {/* Progress Indicator */}
-        <div className="flex justify-center items-center gap-x-4">
-          <IconButton color="primary" aria-label="back" >
-            <ArrowBackFilled />
-          </IconButton>
-          <Stepper alternativeLabel activeStep={3} connector={<QontoConnector />}>
-            {steps.map((label) => (
-              <Step key={label}>
-                <StepLabel StepIconComponent={QontoStepIcon} />
-              </Step>
-            ))}
-          </Stepper>
-          <div className="w-[32px]" />
+      <section className="flex flex-col py-4 gap-y-8 items-center max-w-[750px] m-auto text-center">
+        {/* Heading */}
+        <div className="space-y-4">
+          <Typography variant="h1" component="h1" className="text-zinc-200">
+            Che percorso vuoi intraprendere?
+          </Typography>
+          <Typography variant="s1" component="h2" className="text-gray-400">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+          </Typography>
         </div>
-
-        <section className="flex flex-col py-4 gap-y-8 items-center max-w-[750px] m-auto text-center">
-          {/* Heading */}
-          <div className="space-y-4">
-            <Typography variant="h1" component="h1" className="text-zinc-200">
-              Che percorso vuoi intraprendere?
-            </Typography>
-            <Typography variant="s1" component="h2" className="text-gray-400">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-            </Typography>
-          </div>
-          
-          {/* Options to select */}
-          <div className="grid grid-cols-2 gap-4 max-w-[650px] w-full">
-            {/* Esempio sessione selezionat */}
-            {levelOptions.slice(0, 4).map((levelOption, index) => (
-               <OptionCard key={index} {...levelOption}/>
-            ))}
-          </div>
-          
-          <Button
-            size="large"
-            variant="contained"
-            color="primary"
-            className="mt-8 max-w-full w-[220px]"
-          >
-            Continua
-          </Button>
-
-        </section>
-      </main>
+        
+        {/* Options to select */}
+        <div className="grid grid-cols-2 gap-4 max-w-[650px] w-full">
+          {/* Esempio sessione selezionat */}
+          {levelOptions.slice(0, 4).map((levelOption, index) => (
+              <OptionCard key={index} {...levelOption}/>
+          ))}
+        </div>
+        
+        <Button
+          size="large"
+          variant="contained"
+          color="primary"
+          className="mt-8 max-w-full w-[220px]"
+        >
+          Continua
+        </Button>
+      </section>
+      <BackgroundWaves wave="onboardingSteps" />
     </Layout>
   );
 };
 
-export default SessionPlanner;
+export default LevelSelection;

@@ -3,29 +3,35 @@
  */
 import React, { Fragment } from "react";
 
-const BackgroundWaves: React.FC = () => {
-  const waves = [
-    { height: "145px", marginTop: "0" },
-    { height: "59px", marginTop: "2px" },
-    { height: "29px", marginTop: "14px" },
-    { height: "15px", marginTop: "28px" },
-    { height: "7px", marginTop: "56px" },
-  ];
+interface WaveProps {
+  wave?: 'login' | 'registration' | 'onboardingAuth' | 'onboardingSteps' | 'onboardingEnd';
+}
 
+
+const BackgroundWaves: React.FC<WaveProps> = ({
+  wave,
+}) => {
   return (
     <React.Fragment>
-      <div className="flex absolute right-0 bottom-[17%] z-0 w-full flex-col h-[364px] max-md:max-w-full">
-        {waves.map((wave, index) => (
-          <div
-            key={index}
-            className="flex w-full bg-indigo-500"
-            style={{
-              minHeight: wave.height,
-              marginTop: wave.marginTop,
-            }}
-          />
-        ))}
-      </div>
+      {wave === 'login' &&
+        <img className="hidden md:block absolute right-0 left-0 bottom-[17%] -z-10 w-full" src="https://cdn.builder.io/api/v1/image/assets/TEMP/9531b10c43356882ac65cbb0899ef304dfa57338d6efaef08c09042517863232?placeholderIfAbsent=true&apiKey=ae92917785e7425fbb91907da8ebf914" />
+      }
+
+      {wave === 'registration' &&
+        <img className="hidden md:block absolute h-[600px] left-0 bottom-0 -z-10" src="https://cdn.builder.io/api/v1/image/assets/TEMP/90a95ef11a182eeb87f3509c32f84330c8cf820bf52fc56a37fd0746c26975eb?placeholderIfAbsent=true&apiKey=ae92917785e7425fbb91907da8ebf914" />
+      }
+
+      {wave === 'onboardingAuth' &&
+         <img className="hidden md:block absolute right-0 left-0 m-auto -z-10 w-full opacity-40" src="https://cdn.builder.io/api/v1/image/assets/TEMP/357d33b70b2b4d63ffdda48426aaa6b75d5b7555fab2fc7ca7a749e7d0a89c5c?placeholderIfAbsent=true&apiKey=ae92917785e7425fbb91907da8ebf914" />
+      }
+
+      {wave === 'onboardingSteps' &&
+        <img className="hidden md:block fixed right-0 left-0 bottom-[12%] -z-10 w-full opacity-40" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ecd3b26096f0fdf57faacea59f607efbf3be43d375ff4ce11af4faefff0c969b?placeholderIfAbsent=true&apiKey=ae92917785e7425fbb91907da8ebf914" />
+      }
+
+      {wave === 'onboardingEnd' &&
+         <img className="hidden md:block fixed pr-12 left-0 bottom-[12%] -z-10 w-full" src="https://cdn.builder.io/api/v1/image/assets/TEMP/2d310c1fa586282d22a6bf83f642e5b26627f7dc6b146c5e619e3c6cfd205001?placeholderIfAbsent=true&apiKey=ae92917785e7425fbb91907da8ebf914" />
+      }
     </React.Fragment>
   );
 };

@@ -25,17 +25,18 @@ export const RadioOptionGroup: React.FC<RadioOptionGroupProps> = ({
         className="space-y-4 w-full"
       >
       {options.map((option, value) => (
-        <div className={`w-full py-4 pr-4 border rounded-2xl ${
+        <div className={`w-full py-4 pr-6 border rounded-2xl ${
+          /* change style when checked */
               false
                 ? "border-primary-main bg-action-focus"
-                : "border-action-divider bg-default"
+                : "border-action-divider bg-background"
             }`}>
            <FormControlLabel
             value={value}
             control={<Radio />}
             label={option}
             labelPlacement={labelPlacement}
-            className={`${labelClass} m-0 w-full`}
+            className={`${labelClass} w-full`}
           />
         </div>
       ))}

@@ -12,22 +12,19 @@ import Layout from "@/components/Layout/Layout";
 const WelcomePage: React.FC = () => {
   return (
     <Layout>
-      <Header leftButton={false} rightButton={false} />
-      <main className="flex flex-col justify-center items-center py-20 px-4 bg-background h-screen">
-        <section className="flex z-10 flex-col gap-4 self-center w-full max-w-[600px]">
-          <TopSection title="Benvenuto in Vibly!" subtitle="Dicci qualcosa in più su di te! Rispondi a queste poche domande per permetterci di offrirti l’esperienza migliore">
-             <Button
-            size="large"
-            variant="contained"
-            color="primary"
-            className="w-full"
-            >
-                Iscriviti
-            </Button>
-          </TopSection>
-        </section>
-        <BackgroundWaves />
-      </main>
+      <section className="flex z-10 flex-col gap-4 self-center w-full max-w-[600px]">
+        <TopSection title="Benvenuto in Vibly!" subtitle="Dicci qualcosa in più su di te! Rispondi a queste poche domande per permetterci di offrirti l’esperienza migliore">
+            <Button
+          size="large"
+          variant="contained"
+          color="primary"
+          className="w-full"
+          >
+              Iscriviti
+          </Button>
+        </TopSection>
+      </section>
+      <BackgroundWaves wave="onboardingAuth" />
     </Layout>
   );
 };
