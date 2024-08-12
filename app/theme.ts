@@ -26,8 +26,7 @@ declare module "@mui/material/styles" {
     paragraph: SimplePaletteColorOptions;
     overlay: SimplePaletteColorOptions & { opacity: number };
     gradient: SimplePaletteColorOptions;
-    header: SimplePaletteColorOptions;
-    actions: SimplePaletteColorOptions;
+    paper: SimplePaletteColorOptions;
   }
   interface PaletteOptions {
     complementary: SimplePaletteColorOptions;
@@ -37,8 +36,7 @@ declare module "@mui/material/styles" {
     paragraph: SimplePaletteColorOptions;
     overlay: SimplePaletteColorOptions & { opacity: number };
     gradient: SimplePaletteColorOptions;
-    header: SimplePaletteColorOptions;
-    actions: SimplePaletteColorOptions;
+    paper: SimplePaletteColorOptions;
   }
 
   interface TypographyVariantsOptions {
@@ -131,6 +129,9 @@ const theme = createTheme({
       secondary: extendConfig.colors?.text.secondary,
       disabled: extendConfig.colors?.text.disabled,
     },
+    paper: {
+      main: extendConfig.colors?.paper,
+    },
     action: {
       divider: extendConfig.colors?.action.divider,
       focus: extendConfig.colors?.action.focus,
@@ -139,7 +140,7 @@ const theme = createTheme({
       main: "#A5FFAC", // Colore complementare
     },
     background: {
-      default: "#FCFDFD", // Colore di sfondo
+      default: "#1C1D22", // Colore di sfondo
     },
     placeholder: {
       main: "#818084", // Placeholder
@@ -159,9 +160,6 @@ const theme = createTheme({
     },
     gradient: {
       main: "linear-gradient(45deg, #8590FF 0%, #5767FF 100% )", // Gradient
-    },
-    header: {
-      main: extendConfig.colors?.header,
     },
   },
   typography: {
@@ -324,13 +322,18 @@ const theme = createTheme({
 
           "&.MuiButton-containedSecondary":{
             background: theme.palette.secondary.main,
-            color: theme.palette.text.primary,
-            boxShadow: "0 0 0 5px #6C7AFF25",
+            color: theme.palette.secondary.contrastText,
           },
 
           "&.MuiButton-containedPrimary:hover":{
             background: theme.palette.primary.dark,
           },
+
+          "&.MuiButton-containedSecondary:hover":{
+            background: theme.palette.secondary.dark,
+            color: theme.palette.secondary.contrastText,
+          },
+
 
           "&.MuiButton-text":{
             color: theme.palette.primary.dark,
@@ -396,7 +399,11 @@ const theme = createTheme({
     MuiPaper: {
       styleOverrides: {
         root: ({ theme }) => ({
-          backgroundColor: theme.palette.background.default,
+          borderRadius: theme.spacing(2),
+          backgroundColor:theme.palette.paper.main,
+          "&.MuiPaper-outlined": {
+             borderColor: "#8C8D97", // Action Divider
+          },
         }),
       },
     },
@@ -406,6 +413,15 @@ const theme = createTheme({
           borderRadius: "0.5rem",
           boxShadow: theme.customShadows.default,
           backgroundColor: theme.palette.background.default,
+        }),
+      },
+    },
+    MuiAccordion: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          borderRadius: theme.spacing(2),
+          backgroundColor:theme.palette.paper.main,
+          border: "1px solid #8C8D97",
         }),
       },
     },

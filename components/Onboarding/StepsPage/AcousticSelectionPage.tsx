@@ -11,6 +11,7 @@ import ChevronRightFilled from '@mui/icons-material/ChevronRight';
 import ArrowBackFilled from '@mui/icons-material/ArrowBack';
 import OptionCard from "./Elements/OptionCard";
 import theme from "@/app/theme";
+import { RadioOptionGroup } from "./Elements/RadioOptionGroup";
 import BackgroundWaves from "@/components/Layout/BackgroundWaves";
 
 const QontoConnector = styled(StepConnector)(({ theme }) => ({
@@ -54,52 +55,17 @@ function QontoStepIcon(props: StepIconProps) {
 
 const steps = ['Select campaign settings', 'Create an ad group', 'Create an ad'];
 
-const instruments = [
-  {
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/a9f01c79b578f715b459251417837ada39421f498679215632897a35cb74a861?apiKey=ab14136582c84aab8af41f16349d0438&&apiKey=ab14136582c84aab8af41f16349d0438",
-    altText: "Guitar icon",
-    name: "Chitarra",
-    radioValue: "a",
-  },
-  {
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/558487ca2355b45bd61fbc7dc3a5c91d6f085498186a6bf5775f8404e8445ca3?apiKey=ab14136582c84aab8af41f16349d0438&&apiKey=ab14136582c84aab8af41f16349d0438",
-    altText: "Drums icon",
-    name: "Batteria",
-    radioValue: "b",
-  },
-  {
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/43fd97e731124e26acb223602590dc8987e8e4c34ef23a88ab50eb66ad69d40c?apiKey=ab14136582c84aab8af41f16349d0438&&apiKey=ab14136582c84aab8af41f16349d0438",
-    altText: "Bass icon",
-    name: "Basso",
-    radioValue: "c",
-  },
-  {
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/921aa9828e9a3933467471100fecb692c9b1a2c7ddaa773cc3ed4bbabc64588a?apiKey=ab14136582c84aab8af41f16349d0438&&apiKey=ab14136582c84aab8af41f16349d0438",
-    altText: "Ukulele icon",
-    name: "Ukulele",
-    radioValue: "d",
-  },
-  {
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/8fc704ae23d18f0b9a1b877ffe6b2982bc865dc95ec174d4d948d3c8bb3fc1ab?apiKey=ab14136582c84aab8af41f16349d0438&&apiKey=ab14136582c84aab8af41f16349d0438",
-    altText: "Music production icon",
-    name: "Produzione musicale",
-    radioValue: "e",
-  },
-  {
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/9a79385cac6dfd9bee1a13a56b86c76dc2dfd8ff2efb5930e6220f5ebf84dd47?apiKey=ab14136582c84aab8af41f16349d0438&&apiKey=ab14136582c84aab8af41f16349d0438",
-    altText: "Piano and keyboard icon",
-    name: "Piano e tastiera",
-    radioValue: "f",
-  },
-];
+const radioOptions = [
+    "Acustica",
+    "Elettrica",
+  ];
 
-const InstrumentSelection: React.FC = () => {
+  const radioValue = [
+    "acoustic",
+    "electric",
+  ];
+
+const AcousticSelection: React.FC = () => {
   return (
     <Layout stepsPage={true}>
       {/* Progress Indicator */}
@@ -118,6 +84,7 @@ const InstrumentSelection: React.FC = () => {
       </div>
       <section className="flex flex-col py-4 gap-y-8 items-center max-w-[700px] m-auto text-center">
         <div className="space-y-4">
+          {/* heading */}
           <Typography variant="h1" component="h1" className="text-zinc-200">
             Quale strumento vuoi suonare?
           </Typography>
@@ -139,12 +106,10 @@ const InstrumentSelection: React.FC = () => {
           {/* end */}
         </div>
 
-        <div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-[600px]">
-            {/* Esempio strumento selezionato */}
-            {instruments.slice(0, 6).map((instrument, index) => (
-              <OptionCard key={index} {...instrument}/>
-            ))}
+        <div className="w-full">
+          {/* Radio Group */}
+          <div className="space-y-4 w-full"> 
+              <RadioOptionGroup options={radioOptions} value={radioValue} labelClass="flex justify-between pl-4" labelPlacement="start" />
           </div>
         
           {/* da mostrare al go back */}
@@ -153,20 +118,31 @@ const InstrumentSelection: React.FC = () => {
           </div>
           {/* end */}
         </div>
-
-        <Button
-          size="large"
-          variant="contained"
-          color="primary"
-          className="mt-8 max-w-full w-[220px]"
-          disabled
-        >
-          Continua
-        </Button>
+      
+      
+        <div className="flex flex-wrap gap-4 justify-center">
+          <Button
+              size="large"
+              variant="contained"
+              color="secondary"
+              className="mt-8 max-w-full w-[220px]"
+          >
+              Indietro
+          </Button>
+          <Button
+              size="large"
+              variant="contained"
+              color="primary"
+              className="mt-8 max-w-full w-[220px]"
+              disabled
+          >
+              Continua
+          </Button>
+        </div>
       </section>
       <BackgroundWaves wave="onboardingSteps" />
     </Layout>
   );
 };
 
-export default InstrumentSelection;
+export default AcousticSelection;

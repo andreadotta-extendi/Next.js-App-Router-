@@ -2,14 +2,14 @@
 import { Checkbox, FormControlLabel, Radio, RadioGroup } from "@mui/material";
 import React, { ChangeEvent } from "react";
 
-interface InstrumentCardProps {
+interface OptionCardProps {
   imageSrc: string;
   altText: string;
   name: string;
   radioValue?: string;
 }
 
-const InstrumentCard: React.FC<InstrumentCardProps> = ({
+const OptionCard: React.FC<OptionCardProps> = ({
   imageSrc,
   altText,
   name,
@@ -23,7 +23,7 @@ const InstrumentCard: React.FC<InstrumentCardProps> = ({
   };
 
   return (
-    <button style={{boxShadow:selectedValue === radioValue? "0 0 0 5px #6C7AFF25": ""}} className={`p-2 rounded-lg border ${selectedValue === radioValue ? "border-primary-main bg-header" : "border-action-divider bg-default"}`}>
+    <button className={`w-full p-2 rounded-lg border ${selectedValue === radioValue ? "border-primary-main bg-action-focus" : "border-action-divider bg-default"}`}>
       <div className="flex flex-row-reverse">
         <RadioGroup name="use-radio-group">
           <Radio
@@ -43,10 +43,10 @@ const InstrumentCard: React.FC<InstrumentCardProps> = ({
             alt={altText}
             className="object-contain aspect-square w-[72px]"
           />
-          <div className="mt-2">{name}</div>
+          <div className="mt-2 text-wrap">{name}</div>
         </div>
     </button>
   );
 };
 
-export default InstrumentCard;
+export default OptionCard;

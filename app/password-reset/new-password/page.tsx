@@ -1,5 +1,4 @@
-
-import EmailSentPage from "@/components/Onboarding/AuthPage/EmailSentPage";
+import NewPasswordPage from "@/components/Auth/PasswordReset/NewPasswordPage";
 import React from "react";
 // See the full code: https://www.builder.io/c/docs/integrate-section-building?codeFramework=nextApp#add-an-announcement-bar-section-to-your-app
 
@@ -10,7 +9,7 @@ export default async function Page(props: { params: { page: any[]; }; }) {
   return (
     <>
       {/* Render the Builder page */}
-      <EmailSentPage />
+      <NewPasswordPage />
     </>
   );
 }

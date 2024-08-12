@@ -13,24 +13,21 @@ import Layout from "@/components/Layout/Layout";
 
 const AuthPage: React.FC = () => {
   return (
-    <Layout>
-      <Header leftButton={true} rightButton={false} />
-      <main className="flex flex-col justify-center items-center py-20 px-4 bg-background h-screen">
-        <section className="flex z-10 flex-col gap-4 self-center w-full max-w-[600px]">
-          <TopSection title="Entra a far parte della community" subtitle="Condimentum sit nunc in eros scelerisque sed. Commodo in viverra nunc, ullamcorper ut. Non, amet, ">
-            <Button
-              size="large"
-              variant="contained"
-              color="primary"
-              className="w-full"
-            >
-              Iscriviti
-            </Button>
-          </TopSection>
-          <BottomSection title="Hai già un account" buttontext="Fai Login"  />
-        </section>
-        <BackgroundWaves />
-      </main>
+    <Layout headerLeftButton={true}>
+      <section className="flex z-10 flex-col gap-4 self-center w-full max-w-[600px]">
+        <TopSection title="Entra a far parte della community" subtitle="Condimentum sit nunc in eros scelerisque sed. Commodo in viverra nunc, ullamcorper ut. Non, amet, ">
+          <Button
+            size="large"
+            variant="contained"
+            color="primary"
+            className="w-full"
+          >
+            Iscriviti
+          </Button>
+        </TopSection>
+        <BottomSection title="Hai già un account" buttontext="Fai Login"  />
+      </section>
+      <BackgroundWaves wave="onboardingAuth" />
     </Layout>
   );
 };
