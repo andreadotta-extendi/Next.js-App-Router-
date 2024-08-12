@@ -8,6 +8,12 @@ import { Config } from 'tailwindcss/types/config';
 import { colors } from "@mui/material";
 import { BorderColor } from "@mui/icons-material";
 
+declare module '@mui/material/styles' {
+  interface TypeAction {
+    divider?: string;
+  }
+}
+
 const tc:any = taiwindConfig;
 const extendConfig: CustomExtendConfig = tc.theme?.extend as CustomExtendConfig;
 console.log(tc.theme)
@@ -27,6 +33,8 @@ declare module "@mui/material/styles" {
     overlay: SimplePaletteColorOptions & { opacity: number };
     gradient: SimplePaletteColorOptions;
     paper: SimplePaletteColorOptions;
+    actions?: SimplePaletteColorOptions;
+    divider: string;
   }
   interface PaletteOptions {
     complementary: SimplePaletteColorOptions;
@@ -37,6 +45,7 @@ declare module "@mui/material/styles" {
     overlay: SimplePaletteColorOptions & { opacity: number };
     gradient: SimplePaletteColorOptions;
     paper: SimplePaletteColorOptions;
+    actions?: SimplePaletteColorOptions;
   }
 
   interface TypographyVariantsOptions {
