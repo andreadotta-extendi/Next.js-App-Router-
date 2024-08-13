@@ -16,7 +16,7 @@ declare module '@mui/material/styles' {
 
 const tc:any = taiwindConfig;
 const extendConfig: CustomExtendConfig = tc.theme?.extend as CustomExtendConfig;
-console.log(tc.theme)
+
 declare module "@mui/material/styles" {
   interface Theme {
     customShadows: { default: string };

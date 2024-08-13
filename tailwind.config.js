@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const tailwindConfig = {
+  important: '#root',
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}', 
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -7,6 +8,9 @@ const tailwindConfig = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-poppins)', 'sans-serif'],
+      },
       colors: {
         primary: {
           light: '#6C7AFF30', // 30% più chiaro
