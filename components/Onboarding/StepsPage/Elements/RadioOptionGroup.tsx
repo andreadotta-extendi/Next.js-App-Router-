@@ -3,7 +3,6 @@
  */
 import { FormControl, FormControlLabel, Radio, RadioGroup } from "@mui/material";
 import React from "react";
-import { start } from "repl";
 interface RadioOptionGroupProps {
   options: string[];
   value: string[];
@@ -29,7 +28,7 @@ export const RadioOptionGroup: React.FC<RadioOptionGroupProps> = ({
           /* change style when checked */
               false
                 ? "border-primary-main bg-action-focus"
-                : "border-action-divider bg-background"
+                : "border-action-divider bg-paper"
             }`}>
            <FormControlLabel
             value={value}

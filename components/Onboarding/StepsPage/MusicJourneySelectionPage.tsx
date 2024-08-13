@@ -10,7 +10,6 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import { RadioOptionGroup } from "./Elements/RadioOptionGroup";
 import ArrowBackFilled from '@mui/icons-material/ArrowBack';
 import ExpandMore from '@mui/icons-material/ExpandMore';
-import Header from "@/components/Layout/Header";
 import theme from "@/app/theme";
 import OptionCard from "./Elements/OptionCard";
 import OptionSelectedFeedback from "./Elements/OptionSelectedFeedback";
@@ -122,7 +121,7 @@ const levelOptions = [
           <div className="w-[32px]" />
       </div>
 
-      <section className="flex flex-col py-4 gap-y-8 items-center max-w-[650px] m-auto">
+      <section className="flex flex-col pt-4 pb-12 gap-y-8 items-center max-w-[650px] m-auto">
 
           {/* Heading */}
           <div className="space-y-4 text-center">
@@ -175,7 +174,7 @@ const levelOptions = [
           size="large"
           variant="contained"
           color="primary"
-          className="mt-8 max-w-full w-[220px]"
+          className="max-w-full w-[220px]"
           disabled
           >
           Continua

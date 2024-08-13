@@ -1,5 +1,5 @@
 "use client"
-import { Checkbox, FormControlLabel, Radio, RadioGroup } from "@mui/material";
+import { Radio, RadioGroup } from "@mui/material";
 import React, { ChangeEvent } from "react";
 
 interface OptionCardProps {
@@ -23,7 +23,7 @@ const OptionCard: React.FC<OptionCardProps> = ({
   };
 
   return (
-    <button className={`w-full p-2 rounded-lg border ${selectedValue === radioValue ? "border-primary-main bg-action-focus" : "border-action-divider bg-default"}`}>
+    <button className={`w-full p-2 rounded-lg border ${selectedValue === radioValue ? "border-primary-main bg-action-focus" : "border-action-divider bg-paper"}`}>
       <div className="flex flex-row-reverse">
         <RadioGroup name="use-radio-group">
           <Radio

@@ -110,7 +110,7 @@ const SessionPlanner: React.FC = () => {
         <div className="w-[32px]" />
       </div>
 
-      <section className="flex flex-col py-4 gap-y-8 items-center max-w-[750px] m-auto text-center">
+      <section className="flex flex-col pt-4 pb-12 gap-y-8 items-center max-w-[750px] m-auto text-center">
         {/* Heading */}
         <div className="space-y-4">
           <Typography variant="h1" component="h1" className="text-zinc-200">
@@ -134,7 +134,7 @@ const SessionPlanner: React.FC = () => {
           size="large"
           variant="contained"
           color="primary"
-          className="mt-8 max-w-full w-[220px]"
+          className="max-w-full w-[220px]"
         >
           Continua
         </Button>

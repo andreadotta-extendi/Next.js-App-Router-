@@ -68,7 +68,7 @@ export default function LoginForm() {
         <Button
           size="large"
           variant="contained"
-          className="pb-8 whitespace-nowrap w-full"
+          className="whitespace-nowrap w-full"
           disabled
         >
           Accedi

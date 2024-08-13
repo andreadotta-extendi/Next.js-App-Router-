@@ -5,11 +5,9 @@
 import React from "react";
 import { Button, IconButton, Link, Step, StepConnector, stepConnectorClasses, StepIconProps, StepLabel, Stepper, styled, Typography } from "@mui/material";
 import Layout from "../../Layout/Layout";
-import Header from "../../Layout/Header";
 import ProgressIndicator from "./Elements/ProgressIndicator";
 import ChevronRightFilled from '@mui/icons-material/ChevronRight';
 import ArrowBackFilled from '@mui/icons-material/ArrowBack';
-import OptionCard from "./Elements/OptionCard";
 import theme from "@/app/theme";
 import { RadioOptionGroup } from "./Elements/RadioOptionGroup";
 import BackgroundWaves from "@/components/Layout/BackgroundWaves";
@@ -82,7 +80,7 @@ const AcousticSelection: React.FC = () => {
         </Stepper>
         <div className="w-[32px]" />
       </div>
-      <section className="flex flex-col py-4 gap-y-8 items-center max-w-[700px] m-auto text-center">
+      <section className="flex flex-col pt-4 pb-12 gap-y-8 items-center max-w-[700px] m-auto text-center">
         <div className="space-y-4">
           {/* heading */}
           <Typography variant="h1" component="h1" className="text-zinc-200">
@@ -125,7 +123,7 @@ const AcousticSelection: React.FC = () => {
               size="large"
               variant="contained"
               color="secondary"
-              className="mt-8 max-w-full w-[220px]"
+              className="max-w-full w-[220px]"
           >
               Indietro
           </Button>
@@ -133,7 +131,7 @@ const AcousticSelection: React.FC = () => {
               size="large"
               variant="contained"
               color="primary"
-              className="mt-8 max-w-full w-[220px]"
+              className="max-w-full w-[220px]"
               disabled
           >
               Continua
