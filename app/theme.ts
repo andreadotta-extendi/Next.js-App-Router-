@@ -509,43 +509,59 @@ const theme = createTheme({
     },
     MuiTextField: {
       styleOverrides: {
-        root: ({ theme }) => ({
+        root: ({ theme }: any) => ({
           color: theme.palette.text.primary,
 
-          /*"& .MuiInputBase-input:hover":{
-           border: "1px inset #8C8D97", // Action Divider
-          },*/
-
           // Focused
-          "& .Mui-focused .MuiOutlinedInput-root":{
-            color: theme.palette.text.primary, // text primary
+          '& .Mui-focused .MuiOutlinedInput-root': {
+            color: theme.palette.text.primary,
           },
-          "& .Mui-focused .MuiInputLabel-root":{
-            color: (theme.palette.text.primary, "!important"),
+          '& .Mui-focused .MuiInputLabel-root': {
+            color: theme.palette.text.primary,
             marginBottom: theme.spacing(0.5),
           },
-          "& .Mui-focused .MuiOutlinedInput-notchedOutline":{
-            borderColor: "#6C7AFF !important", // primary main
+          '& .Mui-focused .MuiOutlinedInput-notchedOutline': {
+            borderColor: '#6C7AFF !important', // primary main
           },
-
-          // hide notchedOutline
-          "& .MuiInputBase-root-MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline":{
+          // Nascondi il notchedOutline
+          '& .MuiInputBase-root-MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline': {
             borderColor: theme.palette.text.secondary,
           },
-          "& .MuiOutlinedInput-notchedOutline legend":{
-            display: "none !important",
+          '& .MuiOutlinedInput-notchedOutline legend': {
+            display: 'none !important',
           },
-          ".MuiOutlinedInput-notchedOutline": {
-             borderColor: "#8C8D97 !important", // Action Divider
-             top: "0",
+          '.MuiOutlinedInput-notchedOutline': {
+            borderColor: '#8C8D97 !important', // Action Divider
+            top: '0',
           },
+
           '& input:-webkit-autofill': {
-            '-webkit-box-shadow': '0 0 0 30px #1C1D22 inset !important', // Colore sfondo autocompletato
-            '-webkit-text-fill-color': '#ffffff !important', // Colore del testo autocompletato
+            WebkitBoxShadow: '0 0 0 100px #1C1D22 inset !important', // Sfondo specifico
+            WebkitTextFillColor: '#fff !important', // Colore del testo
+            caretColor: '#fff !important',
+          },
+          '& input:-webkit-autofill:focus': {
+            WebkitBoxShadow: '0 0 0 100px #1C1D22 inset !important',
+            WebkitTextFillColor: '#fff !important',
+            caretColor: '#fff !important',
+          },
+          '& input[type="password"]:-webkit-autofill': {
+            WebkitBoxShadow: '0 0 0 100px #1C1D22 inset !important', // Background color fix for password field
+            WebkitTextFillColor: '#fff !important', // Text color inside autofill
+            caretColor: '#fff !important',
           },
         }),
-        
-        
+      },
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          '& input:-webkit-autofill': {
+            WebkitBoxShadow: '0 0 0 100px #1C1D22 inset !important', // Sfondo specifico
+            WebkitTextFillColor: '#fff !important', // Colore del testo
+            caretColor: '#fff !important',
+          },
+        },
       },
     },
     MuiFormControl: {
