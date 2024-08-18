@@ -539,7 +539,12 @@ const theme = createTheme({
              borderColor: "#8C8D97 !important", // Action Divider
              top: "0",
           },
+          '& input:-webkit-autofill': {
+            '-webkit-box-shadow': '0 0 0 30px #1C1D22 inset !important', // Colore sfondo autocompletato
+            '-webkit-text-fill-color': '#ffffff !important', // Colore del testo autocompletato
+          },
         }),
+        
         
       },
     },
