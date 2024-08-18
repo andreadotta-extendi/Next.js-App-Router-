@@ -1,6 +1,6 @@
 "use client"
 import React from "react";
-import { Button, FormControl, FormHelperText, IconButton, InputAdornment, InputLabel, OutlinedInput } from "@mui/material";
+import { Button, FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput } from "@mui/material";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 const PasswordResetForm: React.FC = () => {

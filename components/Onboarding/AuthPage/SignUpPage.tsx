@@ -5,7 +5,6 @@ import React from "react";
 import SignUpForm from "./Form/SignUpForm";
 import BottomSection from "@/components/Layout/BottomSection";
 import BackgroundWaves from "@/components/Layout/BackgroundWaves";
-import Header from "@/components/Layout/Header";
 import Layout from "@/components/Layout/Layout";
 
 const SignUpPage: React.FC = () => {

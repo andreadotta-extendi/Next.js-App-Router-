@@ -5,7 +5,6 @@
 import React from "react";
 import { Button, IconButton, Link, Step, StepConnector, stepConnectorClasses, StepIconProps, StepLabel, Stepper, styled, Typography } from "@mui/material";
 import Layout from "../../Layout/Layout";
-import Header from "../../Layout/Header";
 import ProgressIndicator from "./Elements/ProgressIndicator";
 import ChevronRightFilled from '@mui/icons-material/ChevronRight';
 import ArrowBackFilled from '@mui/icons-material/ArrowBack';
@@ -116,7 +115,7 @@ const InstrumentSelection: React.FC = () => {
         </Stepper>
         <div className="w-[32px]" />
       </div>
-      <section className="flex flex-col py-4 gap-y-8 items-center max-w-[700px] m-auto text-center">
+      <section className="flex flex-col pt-4 pb-12 gap-y-8 items-center max-w-[700px] m-auto text-center">
         <div className="space-y-4">
           <Typography variant="h1" component="h1" className="text-zinc-200">
             Quale strumento vuoi suonare?
@@ -158,7 +157,7 @@ const InstrumentSelection: React.FC = () => {
           size="large"
           variant="contained"
           color="primary"
-          className="mt-8 max-w-full w-[220px]"
+          className="max-w-full w-[220px]"
           disabled
         >
           Continua

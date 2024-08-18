@@ -3,7 +3,6 @@
  */
 import React from "react";
 import BackgroundWaves from "@/components/Layout/BackgroundWaves";
-import Header from "@/components/Layout/Header";
 import Layout from "@/components/Layout/Layout";
 import SignUpForm from "./Form/SignUpForm";
 
