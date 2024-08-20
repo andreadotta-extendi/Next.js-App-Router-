@@ -14,7 +14,7 @@ import theme from "@/app/theme";
 import OptionCard from "./Elements/OptionCard";
 import OptionSelectedFeedback from "./Elements/OptionSelectedFeedback";
 import BackgroundWaves from "@/components/Layout/BackgroundWaves";
-import Layout from "@/components/Layout/Layout";
+import Layout from "@/components/Layout/LayoutOunboarding";
 
 interface MusicJourneySelectionProps {}
 

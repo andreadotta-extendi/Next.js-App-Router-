@@ -4,7 +4,7 @@
 import React from "react";
 import LoginForm from "./LoginForm";
 import Footer from "./Footer";
-import Layout from "@/components/Layout/Layout";
+import Layout from "@/components/Layout/LayoutOunboarding";
 import BackgroundWaves from "@/components/Layout/BackgroundWaves";
 import BottomSection from "@/components/Layout/BottomSection";
 

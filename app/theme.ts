@@ -17,7 +17,8 @@ declare module '@mui/material/styles' {
 const tc:any = taiwindConfig;
 const extendConfig: CustomExtendConfig = tc.theme?.extend as CustomExtendConfig;
 
-declare module "@mui/material/styles" {
+
+declare module '@mui/material/styles' {
   interface Theme {
     customShadows: { default: string };
   }
@@ -46,6 +47,32 @@ declare module "@mui/material/styles" {
     gradient: SimplePaletteColorOptions;
     paper: SimplePaletteColorOptions;
     actions?: SimplePaletteColorOptions;
+  }
+  interface TypographyVariants {
+    h1: TypographyStyleOptions;
+    h2: TypographyStyleOptions;
+    h3: TypographyStyleOptions;
+    h4: TypographyStyleOptions;
+    h5: TypographyStyleOptions;
+    "s1": TypographyStyleOptions;
+    "s2": TypographyStyleOptions;
+    "body-500":  TypographyStyleOptions;
+    "body-400": TypographyStyleOptions;
+    "title-cta": TypographyStyleOptions;
+    "title-small": TypographyStyleOptions;
+    "paragraph-big": TypographyStyleOptions;
+    "paragraph-small": TypographyStyleOptions;
+    "body-small-500": TypographyStyleOptions;
+    "body-small-400": TypographyStyleOptions;
+    "caption-500": TypographyStyleOptions;
+    "caption-400": TypographyStyleOptions;
+    "caption-small-500": TypographyStyleOptions;
+    "button-xl": TypographyStyleOptions;
+    "button-l": TypographyStyleOptions;
+    "button-m": TypographyStyleOptions;
+    "button-s": TypographyStyleOptions;
+    placeholder: TypographyStyleOptions;
+    details: TypographyStyleOptions;
   }
 
   interface TypographyVariantsOptions {
@@ -76,7 +103,7 @@ declare module "@mui/material/styles" {
   }
 }
 
-declare module "@mui/material/Typography" {
+declare module '@mui/material/Typography' {
   interface TypographyPropsVariantOverrides {
     h1: true;
     h2: true;
@@ -102,17 +129,9 @@ declare module "@mui/material/Typography" {
     "button-s": true;
     placeholder: true;
     details: true;
-    subtitle1: false;
-    body1: false;
-    body2: false;
-    button: false;
-    caption: false;
-    overline: false;
-    subtitle2: false;
-    h6: false;
-    inherit: false;
   }
 }
+
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
@@ -133,6 +152,11 @@ const theme = createTheme({
       dark: extendConfig.colors?.secondary.dark,
       contrastText: extendConfig.colors?.secondary.contrastText,
     },
+    complementary: {
+      light: extendConfig.colors?.complementary.light,
+      main: extendConfig.colors?.complementary.main,
+      dark: extendConfig.colors?.complementary.dark,
+    },
     text: {
       primary: extendConfig.colors?.text.primary,
       secondary: extendConfig.colors?.text.secondary,
@@ -144,9 +168,6 @@ const theme = createTheme({
     action: {
       divider: extendConfig.colors?.action.divider,
       focus: extendConfig.colors?.action.focus,
-    },
-    complementary: {
-      main: "#A5FFAC", // Colore complementare
     },
     background: {
       default: "#1C1D22", // Colore di sfondo
@@ -320,6 +341,14 @@ const theme = createTheme({
           // size
          "&.MuiButton-sizeLarge": {
             padding: "16px 32px",
+          },
+
+          "&.MuiButton-sizeMedium": {
+            padding: "14px 32px",
+          },
+
+          "&.MuiButton-sizeSmall": {
+            padding: "10px 32px",
           },
 
           // color

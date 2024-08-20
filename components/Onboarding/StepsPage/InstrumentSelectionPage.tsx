@@ -4,7 +4,7 @@
 "use client"
 import React from "react";
 import { Button, IconButton, Link, Step, StepConnector, stepConnectorClasses, StepIconProps, StepLabel, Stepper, styled, Typography } from "@mui/material";
-import Layout from "../../Layout/Layout";
+import Layout from "../../Layout/LayoutOunboarding";
 import ProgressIndicator from "./Elements/ProgressIndicator";
 import ChevronRightFilled from '@mui/icons-material/ChevronRight';
 import ArrowBackFilled from '@mui/icons-material/ArrowBack';

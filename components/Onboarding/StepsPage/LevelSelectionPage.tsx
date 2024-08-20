@@ -14,7 +14,7 @@ import ArrowBackFilled from '@mui/icons-material/ArrowBack';
 import OptionCard from "./Elements/OptionCard";
 import theme from "@/app/theme";
 import BackgroundWaves from "@/components/Layout/BackgroundWaves";
-import Layout from "@/components/Layout/Layout";
+import Layout from "@/components/Layout/LayoutOunboarding";
 
 
 const QontoConnector = styled(StepConnector)(({ theme }) => ({

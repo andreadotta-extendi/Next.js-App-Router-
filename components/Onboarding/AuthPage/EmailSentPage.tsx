@@ -3,7 +3,7 @@
  */
 import React from "react";
 import { Button, Link } from "@mui/material";
-import Layout from "@/components/Layout/Layout";
+import Layout from "@/components/Layout/LayoutOunboarding";
 import EmailSentContent from "@/components/Layout/EmailSentContent";
 import BackgroundWaves from "@/components/Layout/BackgroundWaves";
 

@@ -4,7 +4,7 @@
 import React from "react";
 import { Typography } from "@mui/material";
 import PasswordResetForm from "./Form/PasswordResetForm";
-import Layout from "@/components/Layout/Layout";
+import Layout from "@/components/Layout/LayoutOunboarding";
 import BackgroundWaves from "@/components/Layout/BackgroundWaves";
 
 

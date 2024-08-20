@@ -14,6 +14,11 @@ export interface CustomExtendConfig {
       dark: string;
       contrastText: string;
     };
+     complementary: {
+      light: string;
+      main: string;
+      dark: string;
+    };
     text: {
       primary: string;
       secondary: string;

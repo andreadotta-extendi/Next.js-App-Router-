@@ -3,7 +3,7 @@
  */
 import React from "react";
 import BackgroundWaves from "@/components/Layout/BackgroundWaves";
-import Layout from "@/components/Layout/Layout";
+import Layout from "@/components/Layout/LayoutOunboarding";
 import SignUpForm from "./Form/SignUpForm";
 
 const SignUpPage: React.FC = () => {

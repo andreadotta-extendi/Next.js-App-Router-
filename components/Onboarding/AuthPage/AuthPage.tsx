@@ -6,7 +6,7 @@ import BottomSection from "@/components/Layout/BottomSection";
 import BackgroundWaves from "@/components/Layout/BackgroundWaves";
 import TopSection from "@/components/Layout/TopSection";
 import { Button } from "@mui/material";
-import Layout from "@/components/Layout/Layout";
+import Layout from "@/components/Layout/LayoutOunboarding";
 
 
 const AuthPage: React.FC = () => {

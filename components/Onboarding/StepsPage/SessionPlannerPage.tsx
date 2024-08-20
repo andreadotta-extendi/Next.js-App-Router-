@@ -9,12 +9,12 @@ import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import StepConnector, { stepConnectorClasses } from '@mui/material/StepConnector';
 import StepIcon, { StepIconProps } from '@mui/material/StepIcon';
-import { Button, IconButton, Typography } from "@mui/material";
+import { Button, Chip, IconButton, Typography } from "@mui/material";
 import ArrowBackFilled from '@mui/icons-material/ArrowBack';
 import OptionCard from "./Elements/OptionCard";
 import OptionSelectedFeedback from "./Elements/OptionSelectedFeedback";
 import theme from "@/app/theme";
-import Layout from "@/components/Layout/Layout";
+import Layout from "@/components/Layout/LayoutOunboarding";
 import BackgroundWaves from "@/components/Layout/BackgroundWaves";
 
 
@@ -144,6 +144,9 @@ const SessionPlanner: React.FC = () => {
             imageSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/b6ebe69212335ff31e8c68399faec898376f3fa09436a5debbacbeb0ae729041?apiKey=ab14136582c84aab8af41f16349d0438&&apiKey=ab14136582c84aab8af41f16349d0438"
             text="La maggior parte delle persone sceglie questa opzione"
           />
+
+
+        <Chip color="secondary" size="small" className="text-primary" label="ciaone" sx={{ color: 'red' }} />
 
       </section>
       <BackgroundWaves wave="onboardingSteps" />
