@@ -1,5 +1,6 @@
 
-import CategoryPage from "@/components/CategoryPage/CategoryPage";
+
+import CatalogPage from "@/components/Catalog/CatalogPage";
 import React from "react";
 // See the full code: https://www.builder.io/c/docs/integrate-section-building?codeFramework=nextApp#add-an-announcement-bar-section-to-your-app
 
@@ -10,7 +11,7 @@ export default async function Page(props: { params: { page: any[]; }; }) {
   return (
     <>
       {/* Render the Builder page */}
-      <CategoryPage />
+      <CatalogPage />
     </>
   );
 }
