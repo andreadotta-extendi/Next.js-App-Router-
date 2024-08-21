@@ -33,6 +33,7 @@ declare module '@mui/material/styles' {
     paragraph: SimplePaletteColorOptions;
     overlay: SimplePaletteColorOptions & { opacity: number };
     gradient: SimplePaletteColorOptions;
+    neutral: SimplePaletteColorOptions;
     paper: SimplePaletteColorOptions;
     actions?: SimplePaletteColorOptions;
     divider: string;
@@ -42,6 +43,7 @@ declare module '@mui/material/styles' {
     placeholder: SimplePaletteColorOptions;
     borders: SimplePaletteColorOptions;
     title: SimplePaletteColorOptions;
+    neutral: SimplePaletteColorOptions;
     paragraph: SimplePaletteColorOptions;
     overlay: SimplePaletteColorOptions & { opacity: number };
     gradient: SimplePaletteColorOptions;
@@ -171,6 +173,9 @@ const theme = createTheme({
     },
     background: {
       default: "#1C1D22", // Colore di sfondo
+    },
+    neutral:{
+      main: "#54566870"
     },
     placeholder: {
       main: "#818084", // Placeholder
@@ -384,6 +389,14 @@ const theme = createTheme({
             boxShadow: "none",
           },
           
+        }),
+      },
+    },
+    MuiChip: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          padding: `"0px" ${theme.spacing(0.375)}`, // 3px
+          borderRadius: theme.spacing(0.75), // 6px
         }),
       },
     },
