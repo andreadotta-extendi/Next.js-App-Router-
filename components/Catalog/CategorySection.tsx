@@ -32,14 +32,14 @@ export const CategorySection: React.FC<CategorySectionProps> = ({ title }) => {
       </div>
       <div className="flex gap-4 mt-6 w-full max-md:max-w-full">
         <CourseCard
-          imageSrc="image"
+          imageSrc="https://images.unsplash.com/photo-1580832945253-9a8f87b606f2?q=80&w=2893&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           chipLabel="chiplabel"
           chipColor="primary"
           videoCount={19}
-          title="tipo"
-          tags="Jazz"
+          title="Chitarra da zero"
+          tags={["Jazz", "Pop", "Jazz"]}
           instructor="Andrea Mazzanti"
-          type="percorsi"
+          courseType="serie"
         />
       </div>
     </section>

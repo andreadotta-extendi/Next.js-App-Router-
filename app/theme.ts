@@ -448,9 +448,23 @@ const theme = createTheme({
     MuiCard: {
       styleOverrides: {
         root: ({ theme }) => ({
-          borderRadius: "0.5rem",
-          boxShadow: theme.customShadows.default,
+          borderRadius: theme.spacing(2),
           backgroundColor: theme.palette.background.default,
+        }),
+      },
+    },
+    MuiCardMedia: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          padding: theme.spacing(1),
+          borderRadius: theme.spacing(2.5),
+        }),
+      },
+    },
+    MuiCardContent: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          padding: `${theme.spacing(1)} ${theme.spacing(2)}`,
         }),
       },
     },
