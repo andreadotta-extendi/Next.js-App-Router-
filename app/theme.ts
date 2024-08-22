@@ -159,6 +159,11 @@ const theme = createTheme({
       main: extendConfig.colors?.complementary.main,
       dark: extendConfig.colors?.complementary.dark,
     },
+    error: {
+      light: extendConfig.colors?.error.light,
+      main: extendConfig.colors?.error.main,
+      dark: extendConfig.colors?.error.dark,
+    },
     text: {
       primary: extendConfig.colors?.text.primary,
       secondary: extendConfig.colors?.text.secondary,
@@ -462,7 +467,6 @@ const theme = createTheme({
       styleOverrides: {
         root: ({ theme }) => ({
           borderRadius: theme.spacing(2),
-          backgroundColor: theme.palette.background.default,
         }),
       },
     },

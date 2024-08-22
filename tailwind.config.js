@@ -28,6 +28,11 @@ const tailwindConfig = {
           main: '#FF6043',
           dark: '#E95135',
         },
+        error: {
+          light: '#FEE2E2',
+          main: '#B91C1C',
+          dark: '#9B1717',
+        },
         text: {
           primary: '#E2E3E9',
           secondary: '#9597AC',
@@ -36,6 +41,9 @@ const tailwindConfig = {
         action: {
           divider: '#8C8D97',
           focus: '#393A47',
+        },
+        neutral:{
+          main: "#54566870",
         },
         background: '#1C1D22', // Sostituisci con il colore di sfondo
         paper: '#15151A', // Colore superfici

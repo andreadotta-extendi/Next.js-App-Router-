@@ -2,6 +2,7 @@ import { Config } from 'tailwindcss/types/config';
 
 export interface CustomExtendConfig {
   colors: {
+    error: any;
     header: string;
     primary: {
       light: string;
@@ -15,6 +16,11 @@ export interface CustomExtendConfig {
       contrastText: string;
     };
      complementary: {
+      light: string;
+      main: string;
+      dark: string;
+    };
+    eror: {
       light: string;
       main: string;
       dark: string;

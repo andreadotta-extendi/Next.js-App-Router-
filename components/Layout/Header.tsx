@@ -67,7 +67,7 @@ const Header: React.FC<HeaderProps> = ({
                             aria-haspopup="true"
                             onClick={handleClick}
                         >
-                            <ArrowDropDownRounded />
+                            <ArrowDropDownRounded className="text-white" />
                         </IconButton>
                         <Menu
                             id="long-menu"
