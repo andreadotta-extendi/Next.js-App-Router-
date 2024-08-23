@@ -1,7 +1,6 @@
 import React from "react";
-import { CategorySection } from "./CategorySection";
-import { FilterSection } from "./FilterSection";
-import { Avatar, Button, Chip, FormLabel, StepIcon, SvgIcon, Theme, Typography } from "@mui/material";
+import { CatalogSection } from "./CatalogSection";
+import { FormLabel } from "@mui/material";
 import Layout from "../Layout/Layout";
 import CatalogSearch from "./CatalogSearch";
 import { SwipableCatalogCarousel } from "./CatalogCarousel";
@@ -40,14 +39,14 @@ const CatalogPage = () => {
             </div>
           ))}
         </div>
-        <div className="flex flex-wrap gap-6 items-start mt-8 w-full">
+        <div className="flex gap-6 items-start mt-8 w-full">
           <FilterContainer />
-          <div className="flex flex-col flex-1 shrink justify-center basis-0 min-w-[240px] max-md:max-w-full">
-            <CategorySection title="In evidenza" />
-            <CategorySection title="Impara da zero" />
-            <CategorySection title="Ultime uscite"/>
-            <CategorySection title="Più seguiti"/>
-            <CategorySection title="Categoria statica 1"/>
+          <div className="flex flex-1 flex-col gap-10">
+            <CatalogSection title="In evidenza" hasLink/>
+            <CatalogSection title="Impara da zero" />
+            <CatalogSection title="Ultime uscite"/>
+            <CatalogSection title="Più seguiti" hasLink />
+            <CatalogSection title="Categoria statica 1" hasLink/>
           </div>
         </div>
       </div>

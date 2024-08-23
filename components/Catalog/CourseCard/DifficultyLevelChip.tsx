@@ -8,6 +8,7 @@ const DifficultyLevelChip = ({courseType, level, highlighted}: Pick<CourseCardPr
   const colors = getCardColors(courseType, highlighted)
     return (
     <Chip 
+    size='small'
     label={<Typography variant="caption-500">{level}</Typography>}
     avatar={<Avatar src="/assets/play-arrow-filled.png" />}
     sx={{background:colors?.chipBg, color: colors?.chipTextColor }}

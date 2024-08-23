@@ -113,7 +113,7 @@ export function SwipableCatalogCarousel() {
         <div className="flex flex-wrap justify-center items-center mt-2 w-full">
         <MobileStepper
             className="gap-3"
-            variant="text"
+            variant="dots"
             steps={maxSteps}
             position="static"
             activeStep={activeStep}

@@ -200,6 +200,7 @@ const theme = createTheme({
     },
     gradient: {
       // main: "linear-gradient(45deg, #8590FF 0%, #5767FF 100% ) ", // Gradient
+      main: "#5767FF", // Gradient
     },
   },
   typography: {
@@ -397,11 +398,36 @@ const theme = createTheme({
         }),
       },
     },
+   MuiIconButton: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+            color: theme.palette.primary.main,
+            "&.Mui-disabled": {
+            color: theme.palette.text.disabled,
+          },
+        }),
+        colorInherit: ({ theme }) => ({
+          borderRadius: theme.spacing(1),
+          color: theme.palette.primary.main,
+          border: `1px solid ${theme.palette.primary.main}`,
+          "&.Mui-disabled": {
+          border: `1px solid ${theme.palette.text.disabled}`,
+          color: theme.palette.text.disabled,
+        },
+        }),
+      },
+    },
     MuiChip: {
       styleOverrides: {
         root: ({ theme }) => ({
-          padding: `"0px" ${theme.spacing(0.375)}`, // 3px
-          borderRadius: theme.spacing(0.75), // 6px
+          borderRadius: theme.spacing(0.75),
+          padding: `${theme.spacing(0.25)} ${theme.spacing(0.5)}`,
+        }),
+        labelSmall: ({ theme }) => ({
+          padding: `0px ${theme.spacing(0.5)}`,
+        }),
+        avatar: ({ theme }) => ({
+          marginLeft: "0px",
         }),
       },
     },
@@ -725,7 +751,7 @@ const theme = createTheme({
           fontSize: "14px", // button-m
         },
         // checked  
-        "& .MuiCheckbox-root.Mui-checked .MuiSvgIcon-root":{
+        "& .MuiCheckbox-root.Mui-checked .MuiSvgIcon-root": {
             fill: theme.palette.primary.dark,
           },
        }),
@@ -738,6 +764,24 @@ const theme = createTheme({
         }),
       },
     },
+    MuiMobileStepper:{
+      styleOverrides: {
+       root: ({ theme }) => ({
+        color: theme.palette.neutral.main,
+        "&.Mui-disabled" : {
+            color: theme.palette.neutral.main,
+        },
+       }),
+       dot: ({ theme }) => ({
+          height: theme.spacing(2),
+          width: theme.spacing(2),
+          backgroundColor: theme.palette.neutral.main,
+        }),
+        dotActive: ({ theme }) => ({
+          backgroundColor: theme.palette.primary.main,
+        }),
+      },
+    }
   },
 });
 

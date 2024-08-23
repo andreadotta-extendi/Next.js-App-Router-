@@ -9,7 +9,7 @@ import { Checkbox, FormControlLabel, FormGroup } from "@mui/material";
 
 const FilterContainer: React.FC = () => {
   return (
-    <section className="flex flex-col rounded-xl bg-paper w-[264px] py-6 gap-6">
+    <section className="flex flex-col rounded-xl bg-paper min-w-[264px] py-6 gap-6">
       <FilterHeader />
         <FilterAccordion title="Tipo chitarra">
           <FormGroup>
