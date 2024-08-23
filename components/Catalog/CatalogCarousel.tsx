@@ -1,7 +1,7 @@
 "use client"
 import React from "react";
-import { Typography, Chip, Button, Avatar, Grid, Paper, Box, IconButton } from "@mui/material";
-import { ChevronLeft, ChevronRight, KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material";
+import { Typography, Chip, Button, Avatar, Grid, IconButton } from "@mui/material";
+import { KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material";
 import { useTheme } from '@mui/material/styles';
 import MobileStepper from '@mui/material/MobileStepper';
 

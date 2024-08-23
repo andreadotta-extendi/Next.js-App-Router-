@@ -3,6 +3,7 @@
  */
 import { Accordion, AccordionDetails, AccordionSummary, SvgIcon, Typography } from '@mui/material';
 import React from 'react';
+import ExpandMoreRoundedIcon from '@mui/icons-material/ExpandMoreRounded';
 // <FILE path="components/Catalog/FilterSection.tsx">
 
 export const FilterSection: React.FC = () => {
@@ -12,7 +13,7 @@ export const FilterSection: React.FC = () => {
         Filtri
       </div>
       <div className="flex flex-col px-6 mt-6 w-full max-md:px-5">
-        <div className="text-lg font-semibold leading-loose text-zinc-200">Livello</div>
+        <Typography variant='s1'>Livello</Typography>
         <div className="flex flex-col mt-2 w-full">
           <div className="flex flex-col w-full">
             <div className="flex py-2 pr-11 w-full max-md:pr-5">
@@ -43,11 +44,11 @@ export const FilterSection: React.FC = () => {
               <Typography variant="body1" className="self-center h-6">
                 Genere
               </Typography>
-              <div className="flex items-start self-center">
-                <SvgIcon className="flex flex-col self-center w-6 max-w-full min-h-[24px]" />
-              </div>
+              <ExpandMoreRoundedIcon />
             </AccordionSummary>
-            <AccordionDetails />
+            <AccordionDetails>
+              ciao
+            </AccordionDetails>
           </Accordion>
           <Accordion className="w-full">
             <AccordionSummary>

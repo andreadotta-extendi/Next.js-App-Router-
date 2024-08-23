@@ -6,7 +6,7 @@ import taiwindConfig from '../tailwind.config'
 import { CustomExtendConfig } from '@/tailwind.type';
 import { Config } from 'tailwindcss/types/config';
 import { colors } from "@mui/material";
-import { BorderColor } from "@mui/icons-material";
+import { BorderColor, Height, Margin } from "@mui/icons-material";
 
 declare module '@mui/material/styles' {
   interface TypeAction {
@@ -199,7 +199,7 @@ const theme = createTheme({
       opacity: 0.7,
     },
     gradient: {
-      main: "linear-gradient(45deg, #8590FF 0%, #5767FF 100% )", // Gradient
+      // main: "linear-gradient(45deg, #8590FF 0%, #5767FF 100% ) ", // Gradient
     },
   },
   typography: {
@@ -489,11 +489,31 @@ const theme = createTheme({
       styleOverrides: {
         root: ({ theme }) => ({
           borderRadius: theme.spacing(2),
-          backgroundColor:theme.palette.paper.main,
+          backgroundColor: theme.palette.paper.main,
           border: "1px solid #8C8D97",
+          "&.Mui-expanded": {
+            margin: "0px",
+          },
+          "&.filter-accordion": {
+            border: "none",
+            boxShadow: "none",
+          },
         }),
       },
     },
+    MuiAccordionSummary:  { 
+      styleOverrides: {
+        root: ({ theme }) => ({
+          minHeight: "auto",
+          "&.Mui-expanded": {
+            minHeight: "auto",
+          },
+        }),
+        content: ({ theme }) => ({
+           margin: "16px 0px !important",
+        }),
+      },
+    }, 
     MuiAppBar: {
       styleOverrides: {
         colorPrimary: ({ theme }) => ({
@@ -706,12 +726,8 @@ const theme = createTheme({
         },
         // checked  
         "& .MuiCheckbox-root.Mui-checked .MuiSvgIcon-root":{
-            fill: theme.palette.primary.light,
+            fill: theme.palette.primary.dark,
           },
-          "& .MuiCheckbox-root.Mui-checked .MuiSvgIcon-root path":{
-            strokeWidth: "2px",
-            stroke: theme.palette.primary.main,
-         }, 
        }),
       },
     },

@@ -5,6 +5,7 @@ import { Avatar, Button, Chip, FormLabel, StepIcon, SvgIcon, Theme, Typography }
 import Layout from "../Layout/Layout";
 import CatalogSearch from "./CatalogSearch";
 import { SwipableCatalogCarousel } from "./CatalogCarousel";
+import FilterContainer from "./Filter/FilterContainer";
 
 const CatalogPage = () => {
   return (
@@ -40,7 +41,7 @@ const CatalogPage = () => {
           ))}
         </div>
         <div className="flex flex-wrap gap-6 items-start mt-8 w-full">
-          <FilterSection />
+          <FilterContainer />
           <div className="flex flex-col flex-1 shrink justify-center basis-0 min-w-[240px] max-md:max-w-full">
             <CategorySection title="In evidenza" />
             <CategorySection title="Impara da zero" />
