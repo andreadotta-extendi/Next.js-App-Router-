@@ -101,8 +101,8 @@ export function SwipableCatalogCarousel() {
                     </div>
                 </div>
             </Grid>
-            <Grid item xs={12} md={6} className="min-h-[150px]">
-                <div className="min-h-[150px]" style={{ 
+            <Grid item xs={12} md={6} className="min-h-[250px]">
+                <div className="min-h-[250px]" style={{ 
                     backgroundImage: `url(${steps[activeStep].image})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',

@@ -735,6 +735,13 @@ const theme = createTheme({
           "& .MuiIconButton-root": {
             color: theme.palette.text.secondary,
           },
+
+          // creative checkbox
+            "&.creative-checkbox input": {
+              position: "absolute",
+              display: "none",
+          },
+
         }),
         
       },
