@@ -5,7 +5,7 @@ import Layout from "../Layout/Layout";
 import CatalogSearch from "./CatalogSearch";
 import { SwipableCatalogCarousel } from "./CatalogCarousel";
 import FilterContainer from "./Filter/FilterContainer";
-import CreativeCheckbox from "./CreativeCheckbox";
+import CreativeCheckbox from "../Shared/ui/CreativeCheckbox";
 
 const instruments = [
   {

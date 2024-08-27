@@ -1,9 +1,10 @@
 "use client";
 import { FormControl } from "@/app/mui-components";
 import { InputLabel, Typography } from "@mui/material";
-import React, { ChangeEvent } from "react";
+import Image from 'next/image';
+import React from "react";
 
-interface CreativeCheckboxProps {
+export interface CreativeCheckboxProps {
   imageSrc: string;
   altText: string;
   name: string;
@@ -38,7 +39,7 @@ const CreativeCheckbox: React.FC<CreativeCheckboxProps> = ({
             checked={isChecked}
             onChange={handleChange}
           />
-          <img
+          <Image
             loading="lazy"
             src={imageSrc}
             alt={altText}

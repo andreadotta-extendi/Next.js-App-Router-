@@ -182,6 +182,7 @@ import MUIZoom, { ZoomProps } from "@mui/material/Zoom";
 import MUISvgIcon, { SvgIconProps } from "@mui/material/SvgIcon";
 import { ModalMetadataProps } from "@/components/Catalog/ModalDetails/ModalMetadata";
 import CustomModalMetadata from "@/components/Catalog/ModalDetails/ModalMetadata";
+import CustomCreativeCheckbox, { CreativeCheckboxProps } from '@/components/Shared/ui/CreativeCheckbox';
 
 export const SvgIcon = (props: SvgIconProps) => <MUISvgIcon {...props} />;
 
@@ -405,3 +406,4 @@ export const Typography = (props: TypographyProps) => (
 );
 export const Zoom = (props: ZoomProps) => <MUIZoom {...props} />;
 export const ModalMetadata = (props: ModalMetadataProps) => <CustomModalMetadata {...props} />;
+export const CreativeCheckbox = (props: CreativeCheckboxProps) => <CustomCreativeCheckbox {...props} />;

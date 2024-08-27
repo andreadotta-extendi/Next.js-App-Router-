@@ -2,7 +2,7 @@
 import { builder, Builder, withChildren } from "@builder.io/react";
 import { Button, Input } from "./mui-components";
 import CustomModalMetadata from '../components/Catalog/ModalDetails/ModalMetadata';
-
+import CustomCreativeCheckbox from '../components/Shared/ui/CreativeCheckbox';
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
 
 
@@ -308,7 +308,15 @@ Builder.registerComponent(withChildren(Input), {
     },
   ],
 });
-
+Builder.registerComponent(CustomCreativeCheckbox, {
+  name: 'CreativeCheckbox',
+  inputs: [
+    { name: 'imageSrc', type: 'string', defaultValue: 'https://via.placeholder.com/72', required: true },
+    { name: 'altText', type: 'string', defaultValue: 'Image description' },
+    { name: 'name', type: 'string', defaultValue: 'Checkbox name', required: true },
+    { name: 'value', type: 'string', defaultValue: '' },
+  ],
+});
 Builder.registerComponent(CustomModalMetadata, {
   name: 'ModalMetadata',
   inputs: [
