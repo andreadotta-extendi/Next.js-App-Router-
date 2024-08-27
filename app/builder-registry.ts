@@ -1,6 +1,7 @@
 "use client";
 import { builder, Builder, withChildren } from "@builder.io/react";
 import { Button, Input } from "./mui-components";
+import CustomModalMetadata from '../components/Catalog/ModalDetails/ModalMetadata';
 
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
 
@@ -306,4 +307,28 @@ Builder.registerComponent(withChildren(Input), {
       },
     },
   ],
+});
+
+Builder.registerComponent(CustomModalMetadata, {
+  name: 'ModalMetadata',
+  inputs: [
+    { name: 'lessonCount', type: 'number', defaultValue: 0 },
+    { name: 'level', type: 'string', defaultValue: 'Beginner' },
+    { name: 'genre', type: 'string', defaultValue: 'General' },
+    { name: 'duration', type: 'string', defaultValue: '00:00' },
+    {
+      name: 'instructor',
+      type: 'object',
+      subFields: [
+        { name: 'name', type: 'string', defaultValue: 'Instructor Name' },
+        { name: 'avatarUrl', type: 'string', defaultValue: 'https://example.com/avatar.png' },
+      ],
+    },
+  ],
+  defaults: {
+    bindings: {
+      'component.options.title': 'state.product.title',
+      'style.background': 'state.theme.colors.primary',
+    },
+  },
 });
