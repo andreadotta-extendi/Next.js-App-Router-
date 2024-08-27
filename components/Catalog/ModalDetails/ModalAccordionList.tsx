@@ -15,13 +15,13 @@ export const ModalAccordionList: React.FC<ModalAccordionListProps> = ({ title, d
     <Box display="flex" alignItems="center" p={1} gap={2}>
       <Box flexGrow={1}>
         <Typography
-          variant="subtitle2"
+          variant="s2"
           component="h4"
           color={isCompleted ? 'textSecondary' : 'textPrimary'}
         >
           {title}
         </Typography>
-        <Typography variant="caption" component="p">
+        <Typography variant="caption" component="p" color="textSecondary">
           {duration} min
         </Typography>
       </Box>

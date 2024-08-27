@@ -585,7 +585,7 @@ const theme = createTheme({
     MuiDialog: {
       styleOverrides: {
         paper: ({ theme }) => ({
-          backgroundColor: theme.palette.background.default,
+          backgroundColor: theme.palette.paper.main,
           borderRadius: "0.5rem",
           boxShadow: theme.customShadows.default,
         }),
@@ -602,7 +602,7 @@ const theme = createTheme({
     MuiDialogContent: {
       styleOverrides: {
         root: ({ theme }) => ({
-          backgroundColor: theme.palette.background.default,
+          backgroundColor: theme.palette.paper.main,
         }),
       },
     },

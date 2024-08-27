@@ -17,7 +17,7 @@ interface ModalDetailsProps {
   lessonCount: number;
   duration: string;
   level: string;
-  genre: string;
+  genre: string[];
   progressValue: number;
   status: 'completed' | 'uncompleted';
   instructor: {

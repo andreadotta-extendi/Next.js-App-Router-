@@ -45,7 +45,7 @@ const tailwindConfig = {
         neutral:{
           main: "#54566870",
         },
-        background: { default: '#1C1D22', paper: '#15151A' },  // Sostituisci con il colore di sfondo
+        background: '#1C1D22',  // Sostituisci con il colore di sfondo
         paper: '#15151A', // Colore superfici
         button: '#5B21B6', // Colore del bottone "Accedi"
         buttonDisabled: '#D1D5DB', // Colore del bottone disabilitato

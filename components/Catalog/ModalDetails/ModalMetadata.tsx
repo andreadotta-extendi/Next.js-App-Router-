@@ -8,7 +8,7 @@ import { Typography } from "@mui/material";
 export interface ModalMetadataProps {
   lessonCount: number;
   level: string;
-  genre: string;
+  genre: string[];
   duration: string;
   instructor: {
     name: string;
@@ -24,7 +24,7 @@ const ModalMetadata: React.FC<ModalMetadataProps> = ({
   instructor,
 }) => {
   return (
-    <div className="flex flex-col self-start gap-4">
+    <div className="flex flex-col items-start gap-4">
       <Button
         size="small"
         variant="outlined"
@@ -35,14 +35,16 @@ const ModalMetadata: React.FC<ModalMetadataProps> = ({
         Aggiungi a preferiti
       </Button>
       <MetadataItem label="Numero video">
-        <Chip
-          label={`${lessonCount} video`}
-          size="medium"
-          color="primary"
-          variant="outlined"
-          className="self-start"
-          avatar={<Avatar />}
-        />
+        {lessonCount !== undefined && (
+            <Chip
+              label={`${lessonCount} video${lessonCount > 1 ? "s" : ""}`}
+              size="medium"
+              avatar={<Avatar src="/assets/play-arrow-filled.png" />}
+              sx={{
+                background: "#54566870",
+              }}
+            />
+          )}
       </MetadataItem>
       <MetadataItem label="Livello">
         <Chip
@@ -55,13 +57,19 @@ const ModalMetadata: React.FC<ModalMetadataProps> = ({
         />
       </MetadataItem>
       <MetadataItem label="Genere">
-        <Chip
-          label={genre}
-          size="medium"
-          color="primary"
-          variant="outlined"
-          className="self-start"
-        />
+        <span className="space-x-2">
+          {Array.isArray(genre) &&
+            genre.map((genre) => (
+              <Chip
+                label={genre}
+                size="medium"
+                color="default"
+                variant="outlined"
+                className="self-start"
+              />
+            )
+          )}
+        </span>
       </MetadataItem>
       <MetadataItem label="Durata">
         <Typography variant="caption-500" className="text-text-primary">

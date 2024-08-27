@@ -39,7 +39,7 @@ const CreativeCheckbox: React.FC<CreativeCheckboxProps> = ({
             checked={isChecked}
             onChange={handleChange}
           />
-          <Image
+          <img
             loading="lazy"
             src={imageSrc}
             alt={altText}
