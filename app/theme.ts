@@ -398,7 +398,7 @@ const theme = createTheme({
         }),
       },
     },
-   MuiIconButton: {
+    MuiIconButton: {
       styleOverrides: {
         root: ({ theme }) => ({
             color: theme.palette.primary.main,
@@ -594,8 +594,8 @@ const theme = createTheme({
     MuiDialogTitle: {
       styleOverrides: {
         root: ({ theme }) => ({
-          color: theme.palette.title.main,
-          fontWeight: 600,
+          color: theme.palette.text.primary,
+          padding: theme.spacing(3),
         }),
       },
     },
@@ -609,7 +609,8 @@ const theme = createTheme({
     MuiDialogActions: {
       styleOverrides: {
         root: ({ theme }) => ({
-          backgroundColor: theme.palette.background.default,
+          padding: theme.spacing(3),
+          borderTop: `1px solid ${theme.palette.neutral.main}`,
         }),
       },
     },
@@ -788,7 +789,19 @@ const theme = createTheme({
           backgroundColor: theme.palette.primary.main,
         }),
       },
-    }
+    },
+    MuiLinearProgress: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          height: theme.spacing(2),
+          borderRadius: theme.spacing(2),
+          backgroundColor: theme.palette.neutral.main,
+        }),
+        bar: ({ theme }) => ({
+          borderRadius: theme.spacing(2),
+        }),
+      },
+    },
   },
 });
 

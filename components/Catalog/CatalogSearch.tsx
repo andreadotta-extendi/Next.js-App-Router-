@@ -40,27 +40,31 @@ const CatalogSearch = () => {
                 />
             </FormControl>
         </form>
-        <div className="flex flex-wrap gap-4 justify-center w-full">
-            {[
-            "Chitarra",
-            "Batteria",
-            "Travis Barker",
-            "Assolo chitarra",
-            "Chitarra",
-            "Batteria",
-            "Travis Barker",
-            "Assolo chitarra",
-            ].map((label, index) => (
-            <Chip
-                key={index}
-                label={label}
-                size="medium"
-                variant="filled"
-                sx={{ backgroundColor: "#54566870" }}
-                // onClick={()=>{}}
-            />
-            ))}
-        </div>
+
+        {/* non previsti per ora */}
+        {/* 
+            <div className="flex flex-wrap gap-4 justify-center w-full">
+                {[
+                "Chitarra",
+                "Batteria",
+                "Travis Barker",
+                "Assolo chitarra",
+                "Chitarra",
+                "Batteria",
+                "Travis Barker",
+                "Assolo chitarra",
+                ].map((label, index) => (
+                <Chip
+                    key={index}
+                    label={label}
+                    size="medium"
+                    variant="filled"
+                    sx={{ backgroundColor: "#54566870" }}
+                    // onClick={()=>{}}
+                />
+                ))}
+            </div>
+        */}
     </div>
   )
 };

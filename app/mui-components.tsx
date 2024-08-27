@@ -180,6 +180,8 @@ import MUITooltip, { TooltipProps } from "@mui/material/Tooltip";
 import MUITypography, { TypographyProps } from "@mui/material/Typography";
 import MUIZoom, { ZoomProps } from "@mui/material/Zoom";
 import MUISvgIcon, { SvgIconProps } from "@mui/material/SvgIcon";
+import { ModalMetadataProps } from "@/components/Catalog/ModalDetails/ModalMetadata";
+import CustomModalMetadata from "@/components/Catalog/ModalDetails/ModalMetadata";
 
 export const SvgIcon = (props: SvgIconProps) => <MUISvgIcon {...props} />;
 
@@ -402,3 +404,4 @@ export const Typography = (props: TypographyProps) => (
   <MUITypography {...props} />
 );
 export const Zoom = (props: ZoomProps) => <MUIZoom {...props} />;
+export const ModalMetadata = (props: ModalMetadataProps) => <CustomModalMetadata {...props} />;
