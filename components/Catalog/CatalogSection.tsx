@@ -8,18 +8,28 @@ import { generateCourse } from "../Shared/mocks";
 interface CategorySectionProps {
   title: string;
   hasLink?: boolean;
+  hasNavigationButtons?: boolean;
+  hasNumberResults?: boolean;
+  resultsNumber?: number;
 }
 
 export const CatalogSection: React.FC<CategorySectionProps> = ({
   title,
   hasLink,
+  hasNavigationButtons,
+  hasNumberResults,
+  resultsNumber,
 }) => {
   const course = generateCourse();
   return (
     <section className="w-full">
       <div className="flex flex-wrap gap-4 justify-between items-center">
         <div className="flex items-center gap-2">
-          <Typography variant="h3" className="self-stretch my-auto">
+          <Typography
+            variant="h3"
+            className="self-stretch my-auto"
+            component="h3"
+          >
             {title}
           </Typography>
           {hasLink && (
@@ -28,14 +38,23 @@ export const CatalogSection: React.FC<CategorySectionProps> = ({
             </IconButton>
           )}
         </div>
-        <div className="flex gap-2 items-center self-stretch my-auto">
-          <IconButton color="inherit" disabled>
-            <ChevronLeftRounded />
-          </IconButton>
-          <IconButton color="inherit">
-            <ChevronRightRounded />
-          </IconButton>
-        </div>
+
+        {hasNavigationButtons && (
+          <div className="flex gap-2 items-center self-stretch my-auto">
+            <IconButton color="inherit" disabled>
+              <ChevronLeftRounded />
+            </IconButton>
+            <IconButton color="inherit">
+              <ChevronRightRounded />
+            </IconButton>
+          </div>
+        )}
+
+        {hasNumberResults && (
+          <div className="flex gap-2 items-center self-stretch my-auto">
+            <Typography variant="s1">{resultsNumber} risultati</Typography>
+          </div>
+        )}
       </div>
       <div className="flex gap-4 mt-6">
         <ModalDetails
@@ -51,7 +70,7 @@ export const CatalogSection: React.FC<CategorySectionProps> = ({
           duration={"2h 15min"}
           level={"base"}
           genres={["Jazz", "Pop"]}
-          instructor={{
+          instructors={{
             name: "Giuvazza Maggiore",
             avatarUrl:
               "https://images.unsplash.com/photo-1543610892-0b1f7e6d8ac1?q=80&w=1856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",

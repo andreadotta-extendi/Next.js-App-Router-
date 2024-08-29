@@ -33,7 +33,7 @@ export interface CourseData {
 export interface ModalMetadataProps
   extends Pick<
     CourseData,
-    "lessonCount" | "level" | "genres" | "duration" | "instructors"
+    "lessonCount" | "level" | "genres" | "duration" | "instructors" | "CourseCardProps" | "highlighted" | 
   > {}
 
 export interface ModalDetailsProps

@@ -117,6 +117,7 @@ import {
   Zoom,
 } from "./app/mui-components";
 import Counter from "./components/Counter/Counter";
+import CreativeCheckbox from "./components/Shared/ui/CreativeCheckbox";
 import StyledTextField from "./app/input_typography";
 
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
@@ -3701,6 +3702,31 @@ Builder.registerComponent(Counter, {
     {
       name: "initialCount",
       type: "number",
+    },
+  ],
+});
+
+Builder.registerComponent(CreativeCheckbox, {
+  name: "CreativeCheckbox",
+  inputs: [
+    {
+      name: "altText",
+      type: "string",
+      required: true,
+    },
+    {
+      name: "imageSrc",
+      type: "string",
+      required: true,
+    },
+    {
+      name: "name",
+      type: "string",
+      required: true,
+    },
+    {
+      name: "value",
+      type: "string",
     },
   ],
 });

@@ -1,11 +1,12 @@
 import React from "react";
 import { CatalogSection } from "./CatalogSection";
-import { FormLabel, Grid } from "@mui/material";
+import { FormLabel, Grid, Typography } from "@mui/material";
 import Layout from "../Shared/ui/Layout";
 import CatalogSearch from "./CatalogSearch";
 import { SwipableCatalogCarousel } from "./CatalogCarousel";
 import FilterContainer from "../Shared/ui/Filter/FilterContainer";
 import CreativeCheckbox from "../Shared/ui/CreativeCheckbox";
+import SubNavbar from "../Shared/ui/SubNavbar";
 
 const instruments = [
   {
@@ -54,9 +55,10 @@ const instruments = [
 
 const CatalogPage = () => {
   return (
-    <Layout isLogged>
-      <CatalogSearch />
-      <SwipableCatalogCarousel />
+    <Layout isLogged hasSubNavbar leftButtonSubNavbar>
+      <Typography component="h1" variant="h1">
+        Risultati per "chitarra"
+      </Typography>
       <div className="flex flex-col mt-10 w-full gap-12">
         <Grid container spacing={2}>
           {instruments.slice(0, 6).map((instrument, index) => (
@@ -69,11 +71,11 @@ const CatalogPage = () => {
         <div className="flex gap-6 items-start w-full">
           <FilterContainer />
           <div className="flex flex-1 flex-col gap-10">
-            <CatalogSection title="In evidenza" hasLink />
-            <CatalogSection title="Impara da zero" hasNavigationButtons />
-            <CatalogSection title="Ultime uscite" hasNavigationButtons />
-            <CatalogSection title="Più seguiti" hasLink hasNavigationButtons />
-            <CatalogSection title="Masterclass" hasLink hasNavigationButtons />
+            <CatalogSection
+              title="In evidenza"
+              hasNumberResults
+              resultsNumber={1}
+            />
           </div>
         </div>
       </div>
