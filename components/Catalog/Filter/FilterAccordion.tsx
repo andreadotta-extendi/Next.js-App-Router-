@@ -1,14 +1,21 @@
-
-import { Accordion, AccordionDetails, AccordionSummary, Typography } from "@mui/material";
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Typography,
+} from "@mui/material";
 import React from "react";
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 interface FilterAccordionProps {
   title: string;
   children: React.ReactNode;
 }
 
-const FilterAccordion: React.FC<FilterAccordionProps> = ({ title,children }) => {
+const FilterAccordion: React.FC<FilterAccordionProps> = ({
+  title,
+  children,
+}) => {
   return (
     <Accordion className="w-full filter-accordion px-2">
       <AccordionSummary expandIcon={<ExpandMoreIcon color="primary" />}>
@@ -16,9 +23,7 @@ const FilterAccordion: React.FC<FilterAccordionProps> = ({ title,children }) => 
           {title}
         </Typography>
       </AccordionSummary>
-      <AccordionDetails className="pt-0">
-        {children}
-      </AccordionDetails>
+      <AccordionDetails className="pt-0">{children}</AccordionDetails>
     </Accordion>
   );
 };

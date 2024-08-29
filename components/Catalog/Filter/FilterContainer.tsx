@@ -11,25 +11,22 @@ const FilterContainer: React.FC = () => {
   return (
     <section className="flex flex-col rounded-xl bg-paper min-w-[264px] py-6 gap-6">
       <FilterHeader />
-        <FilterAccordion title="Tipo chitarra">
+      <FilterAccordion title="Tipo chitarra">
+        <FormGroup>
+          {["Elettrica", "Acustica"].map((label, index) => (
+            <FormControlLabel
+              key={index}
+              label={label}
+              control={<Checkbox />}
+            />
+          ))}
+        </FormGroup>
+      </FilterAccordion>
+      <LevelSlider />
+      <div>
+        <FilterAccordion title="Genere">
           <FormGroup>
             {[
-            "Elettrica",
-            "Acustica",
-            ].map((label, index) => (
-            <FormControlLabel
-                key={index}
-                label={label}
-                control={<Checkbox />}
-            />
-            ))}
-          </FormGroup>
-        </FilterAccordion>
-        <LevelSlider />
-        <div>
-          <FilterAccordion title="Genere">
-            <FormGroup>
-              {[
               "Rock",
               "Blues",
               "Pop",
@@ -38,31 +35,29 @@ const FilterContainer: React.FC = () => {
               "Funk",
               "Hip Hop",
               "Pop",
-              ].map((label, index) => (
+            ].map((label, index) => (
               <FormControlLabel
+                key={index}
+                label={label}
+                control={<Checkbox />}
+              />
+            ))}
+          </FormGroup>
+        </FilterAccordion>
+        <FilterAccordion title="Argomento">
+          <FormGroup>
+            {["Argomento 1", "Argomento 2", "Argomento 3"].map(
+              (label, index) => (
+                <FormControlLabel
                   key={index}
                   label={label}
                   control={<Checkbox />}
-              />
-              ))}
-            </FormGroup>
-          </FilterAccordion>
-          <FilterAccordion title="Argomento">
-            <FormGroup>
-              {[
-              "Argomento 1",
-              "Argomento 2",
-              "Argomento 3",
-              ].map((label, index) => (
-              <FormControlLabel
-                  key={index}
-                  label={label}
-                  control={<Checkbox />}
-              />
-              ))}
-            </FormGroup>
-          </FilterAccordion>
-        </div>
+                />
+              )
+            )}
+          </FormGroup>
+        </FilterAccordion>
+      </div>
     </section>
   );
 };

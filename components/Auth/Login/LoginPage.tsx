@@ -11,13 +11,16 @@ import BottomSection from "@/components/Layout/BottomSection";
 const LoginPage: React.FC = () => {
   return (
     <Layout>
-      <main className="flex flex-col lg:justify-center items-center py-16 px-4" style={{height: `calc(100vh - 100px)`}}>
+      <main
+        className="flex flex-col lg:justify-center items-center py-16 px-4"
+        style={{ height: `calc(100vh - 100px)` }}
+      >
         <div className="flex z-10 flex-col self-center max-w-[600px] w-full gap-4">
           <LoginForm />
           <BottomSection title="Non hai un account" buttontext="Registrati" />
           <Footer />
         </div>
-        <BackgroundWaves wave="login"  />
+        <BackgroundWaves wave="login" />
       </main>
     </Layout>
   );

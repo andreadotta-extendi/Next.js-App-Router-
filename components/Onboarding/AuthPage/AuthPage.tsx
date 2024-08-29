@@ -8,12 +8,14 @@ import TopSection from "@/components/Layout/TopSection";
 import { Button } from "@mui/material";
 import Layout from "@/components/Layout/LayoutOunboarding";
 
-
 const AuthPage: React.FC = () => {
   return (
     <Layout headerLeftButton={true}>
       <section className="flex z-10 flex-col gap-4 self-center w-full max-w-[600px]">
-        <TopSection title="Entra a far parte della community" subtitle="Condimentum sit nunc in eros scelerisque sed. Commodo in viverra nunc, ullamcorper ut. Non, amet, ">
+        <TopSection
+          title="Entra a far parte della community"
+          subtitle="Condimentum sit nunc in eros scelerisque sed. Commodo in viverra nunc, ullamcorper ut. Non, amet, "
+        >
           <Button
             size="large"
             variant="contained"
@@ -23,7 +25,7 @@ const AuthPage: React.FC = () => {
             Iscriviti
           </Button>
         </TopSection>
-        <BottomSection title="Hai già un account" buttontext="Fai Login"  />
+        <BottomSection title="Hai già un account" buttontext="Fai Login" />
       </section>
       <BackgroundWaves wave="onboardingAuth" />
     </Layout>

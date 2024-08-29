@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Radio, RadioGroup } from "@mui/material";
 import React, { ChangeEvent } from "react";
 
@@ -15,15 +15,20 @@ const OptionCard: React.FC<OptionCardProps> = ({
   name,
   radioValue,
 }) => {
-
-  const [selectedValue, setSelectedValue] = React.useState("a"); 
+  const [selectedValue, setSelectedValue] = React.useState("a");
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedValue(event.target.value);
   };
 
   return (
-    <button className={`w-full p-2 rounded-lg border ${selectedValue === radioValue ? "border-primary-main bg-action-focus" : "border-action-divider bg-paper"}`}>
+    <button
+      className={`w-full p-2 rounded-lg border ${
+        selectedValue === radioValue
+          ? "border-primary-main bg-action-focus"
+          : "border-action-divider bg-paper"
+      }`}
+    >
       <div className="flex flex-row-reverse">
         <RadioGroup name="use-radio-group">
           <Radio
@@ -31,20 +36,20 @@ const OptionCard: React.FC<OptionCardProps> = ({
             onChange={handleChange}
             value={radioValue}
             name="radio-buttons"
-            inputProps={{ 'aria-label': radioValue }}
+            inputProps={{ "aria-label": radioValue }}
             className="w-[24px] h-[24px]"
           />
-          </RadioGroup>
-        </div>
-        <div className="flex flex-col items-center w-full text-base font-semibold whitespace-nowrap text-zinc-200">
-          <img
-            loading="lazy"
-            src={imageSrc}
-            alt={altText}
-            className="object-contain aspect-square w-[72px]"
-          />
-          <div className="mt-2 text-wrap">{name}</div>
-        </div>
+        </RadioGroup>
+      </div>
+      <div className="flex flex-col items-center w-full text-base font-semibold whitespace-nowrap text-zinc-200">
+        <img
+          loading="lazy"
+          src={imageSrc}
+          alt={altText}
+          className="object-contain aspect-square w-[72px]"
+        />
+        <div className="mt-2 text-wrap">{name}</div>
+      </div>
     </button>
   );
 };

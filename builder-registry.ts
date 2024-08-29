@@ -1,5 +1,5 @@
-'use client';
-import { builder, Builder, withChildren } from '@builder.io/react';
+"use client";
+import { builder, Builder, withChildren } from "@builder.io/react";
 import {
   Accordion,
   AccordionActions,
@@ -115,610 +115,610 @@ import {
   Tooltip,
   Typography,
   Zoom,
-} from './app/mui-components';
-import Counter from './components/Counter/Counter';
-import StyledTextField from './app/input_typography';
+} from "./app/mui-components";
+import Counter from "./components/Counter/Counter";
+import StyledTextField from "./app/input_typography";
 
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
 
 Builder.registerComponent(withChildren(Checkbox), {
-  name: 'Checkbox',
+  name: "Checkbox",
   inputs: [
     {
-      name: 'checked',
-      type: 'boolean',
+      name: "checked",
+      type: "boolean",
     },
     {
-      name: 'checkedIcon',
-      type: 'string',
+      name: "checkedIcon",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<CheckboxClasses>',
+        ts: "Partial<CheckboxClasses>",
       },
     },
     {
-      name: 'color',
-      type: 'string',
+      name: "color",
+      type: "string",
       meta: {
         ts: 'OverridableStringUnion<"primary" | "secondary" | "error" | "info" | "success" | "warning" | "default", CheckboxPropsColorOverrides>',
       },
     },
     {
-      name: 'disabled',
-      type: 'boolean',
+      name: "disabled",
+      type: "boolean",
     },
     {
-      name: 'disableRipple',
-      type: 'boolean',
+      name: "disableRipple",
+      type: "boolean",
     },
     {
-      name: 'icon',
-      type: 'string',
+      name: "icon",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'id',
-      type: 'string',
+      name: "id",
+      type: "string",
     },
     {
-      name: 'indeterminate',
-      type: 'boolean',
+      name: "indeterminate",
+      type: "boolean",
     },
     {
-      name: 'indeterminateIcon',
-      type: 'string',
+      name: "indeterminateIcon",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'inputProps',
-      type: 'object',
+      name: "inputProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'InputHTMLAttributes<HTMLInputElement>',
+        ts: "InputHTMLAttributes<HTMLInputElement>",
       },
     },
     {
-      name: 'inputRef',
-      type: 'object',
+      name: "inputRef",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Ref<HTMLInputElement>',
+        ts: "Ref<HTMLInputElement>",
       },
     },
     {
-      name: 'required',
-      type: 'boolean',
+      name: "required",
+      type: "boolean",
     },
     {
-      name: 'size',
-      type: 'string',
+      name: "size",
+      type: "string",
       meta: {
         ts: 'OverridableStringUnion<"small" | "medium" | "large", CheckboxPropsSizeOverrides>',
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
     {
-      name: 'value',
-      type: 'string',
+      name: "value",
+      type: "string",
       meta: {
-        ts: 'unknown',
+        ts: "unknown",
       },
     },
   ],
 });
 
 Builder.registerComponent(withChildren(FormControlLabel), {
-  name: 'FormControlLabel',
+  name: "FormControlLabel",
   inputs: [
     {
-      name: 'checked',
-      type: 'boolean',
+      name: "checked",
+      type: "boolean",
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<FormControlLabelClasses>',
+        ts: "Partial<FormControlLabelClasses>",
       },
     },
     {
-      name: 'componentsProps',
-      type: 'object',
+      name: "componentsProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: '{ typography?: any; }',
+        ts: "{ typography?: any; }",
       },
     },
     {
-      name: 'control',
-      type: 'string',
+      name: "control",
+      type: "string",
       meta: {
-        ts: 'ReactElement<any, any>',
+        ts: "ReactElement<any, any>",
       },
       required: true,
     },
     {
-      name: 'disabled',
-      type: 'boolean',
+      name: "disabled",
+      type: "boolean",
     },
     {
-      name: 'disableTypography',
-      type: 'boolean',
+      name: "disableTypography",
+      type: "boolean",
     },
     {
-      name: 'inputRef',
-      type: 'object',
+      name: "inputRef",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Ref<any>',
+        ts: "Ref<any>",
       },
     },
     {
-      name: 'label',
-      type: 'string',
+      name: "label",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
       required: true,
     },
     {
-      name: 'labelPlacement',
-      type: 'string',
-      enum: ['bottom', 'end', 'start', 'top'],
+      name: "labelPlacement",
+      type: "string",
+      enum: ["bottom", "end", "start", "top"],
     },
     {
-      name: 'name',
-      type: 'string',
+      name: "name",
+      type: "string",
     },
     {
-      name: 'required',
-      type: 'boolean',
+      name: "required",
+      type: "boolean",
     },
     {
-      name: 'slotProps',
-      type: 'object',
+      name: "slotProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: '{ typography?: any; }',
+        ts: "{ typography?: any; }",
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
     {
-      name: 'value',
-      type: 'string',
+      name: "value",
+      type: "string",
       meta: {
-        ts: 'unknown',
+        ts: "unknown",
       },
     },
   ],
 });
 
 Builder.registerComponent(FormHelperText, {
-  name: 'FormHelperText',
+  name: "FormHelperText",
 });
 
 Builder.registerComponent(FormLabel, {
-  name: 'FormLabel',
+  name: "FormLabel",
 });
 
 Builder.registerComponent(Input, {
-  name: 'Input',
+  name: "Input",
   inputs: [
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<InputClasses>',
+        ts: "Partial<InputClasses>",
       },
     },
     {
-      name: 'disableUnderline',
-      type: 'boolean',
+      name: "disableUnderline",
+      type: "boolean",
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
   ],
 });
 
 Builder.registerComponent(Link, {
-  name: 'Link',
+  name: "Link",
 });
 
 Builder.registerComponent(SvgIcon, {
-  name: 'SvgIcon',
+  name: "SvgIcon",
 });
 
 Builder.registerComponent(withChildren(TextField), {
-  name: 'TextField',
+  name: "TextField",
   inputs: [
     {
-      name: 'autoComplete',
-      type: 'string',
+      name: "autoComplete",
+      type: "string",
     },
     {
-      name: 'children',
-      type: 'string',
+      name: "children",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'any',
+        ts: "any",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<TextFieldClasses>',
+        ts: "Partial<TextFieldClasses>",
       },
     },
     {
-      name: 'color',
-      type: 'string',
+      name: "color",
+      type: "string",
       meta: {
         ts: 'OverridableStringUnion<"primary" | "secondary" | "error" | "info" | "success" | "warning", TextFieldPropsColorOverrides>',
       },
     },
     {
-      name: 'disabled',
-      type: 'boolean',
+      name: "disabled",
+      type: "boolean",
     },
     {
-      name: 'error',
-      type: 'boolean',
+      name: "error",
+      type: "boolean",
     },
     {
-      name: 'FormHelperTextProps',
-      type: 'object',
+      name: "FormHelperTextProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<any>',
+        ts: "Partial<any>",
       },
     },
     {
-      name: 'fullWidth',
-      type: 'boolean',
+      name: "fullWidth",
+      type: "boolean",
     },
     {
-      name: 'helperText',
-      type: 'string',
+      name: "helperText",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'id',
-      type: 'string',
+      name: "id",
+      type: "string",
     },
     {
-      name: 'InputLabelProps',
-      type: 'object',
+      name: "InputLabelProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<any>',
+        ts: "Partial<any>",
       },
     },
     {
-      name: 'InputProps',
-      type: 'object',
+      name: "InputProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<FilledInputProps>',
+        ts: "Partial<FilledInputProps>",
       },
     },
     {
-      name: 'inputProps',
-      type: 'object',
+      name: "inputProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'InputBaseComponentProps',
+        ts: "InputBaseComponentProps",
       },
     },
     {
-      name: 'inputRef',
-      type: 'object',
+      name: "inputRef",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Ref<any>',
+        ts: "Ref<any>",
       },
     },
     {
-      name: 'label',
-      type: 'string',
+      name: "label",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'maxRows',
-      type: 'string',
+      name: "maxRows",
+      type: "string",
       meta: {
-        ts: 'string | number',
+        ts: "string | number",
       },
     },
     {
-      name: 'minRows',
-      type: 'string',
+      name: "minRows",
+      type: "string",
       meta: {
-        ts: 'string | number',
+        ts: "string | number",
       },
     },
     {
-      name: 'multiline',
-      type: 'boolean',
+      name: "multiline",
+      type: "boolean",
     },
     {
-      name: 'name',
-      type: 'string',
+      name: "name",
+      type: "string",
     },
     {
-      name: 'placeholder',
-      type: 'string',
+      name: "placeholder",
+      type: "string",
     },
     {
-      name: 'required',
-      type: 'boolean',
+      name: "required",
+      type: "boolean",
     },
     {
-      name: 'rows',
-      type: 'string',
+      name: "rows",
+      type: "string",
       meta: {
-        ts: 'string | number',
+        ts: "string | number",
       },
     },
     {
-      name: 'select',
-      type: 'boolean',
+      name: "select",
+      type: "boolean",
     },
     {
-      name: 'SelectProps',
-      type: 'object',
+      name: "SelectProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<SelectProps>',
+        ts: "Partial<SelectProps>",
       },
     },
     {
-      name: 'size',
-      type: 'string',
+      name: "size",
+      type: "string",
       meta: {
         ts: 'OverridableStringUnion<"small" | "medium", TextFieldPropsSizeOverrides>',
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
     {
-      name: 'type',
-      type: 'string',
+      name: "type",
+      type: "string",
       meta: {
-        ts: 'HTMLInputTypeAttribute',
+        ts: "HTMLInputTypeAttribute",
       },
     },
     {
-      name: 'value',
-      type: 'string',
+      name: "value",
+      type: "string",
       meta: {
-        ts: 'unknown',
+        ts: "unknown",
       },
     },
     {
-      name: 'variant',
-      type: 'string',
-      enum: ['filled'],
+      name: "variant",
+      type: "string",
+      enum: ["filled"],
       required: true,
     },
   ],
 });
 
 Builder.registerComponent(Accordion, {
-  name: 'Accordion',
+  name: "Accordion",
 });
 
 Builder.registerComponent(withChildren(AccordionActions), {
-  name: 'AccordionActions',
+  name: "AccordionActions",
   inputs: [
     {
-      name: 'children',
-      type: 'string',
+      name: "children",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<AccordionActionsClasses>',
+        ts: "Partial<AccordionActionsClasses>",
       },
     },
     {
-      name: 'disableSpacing',
-      type: 'boolean',
+      name: "disableSpacing",
+      type: "boolean",
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
   ],
 });
 
 Builder.registerComponent(withChildren(AccordionDetails), {
-  name: 'AccordionDetails',
+  name: "AccordionDetails",
   inputs: [
     {
-      name: 'children',
-      type: 'string',
+      name: "children",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<AccordionDetailsClasses>',
+        ts: "Partial<AccordionDetailsClasses>",
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
   ],
 });
 
 Builder.registerComponent(AccordionSummary, {
-  name: 'AccordionSummary',
+  name: "AccordionSummary",
 });
 
 Builder.registerComponent(withChildren(Alert), {
-  name: 'Alert',
+  name: "Alert",
   inputs: [
     {
-      name: 'action',
-      type: 'string',
+      name: "action",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<AlertClasses>',
+        ts: "Partial<AlertClasses>",
       },
     },
     {
-      name: 'closeText',
-      type: 'string',
+      name: "closeText",
+      type: "string",
     },
     {
-      name: 'color',
-      type: 'string',
+      name: "color",
+      type: "string",
       meta: {
-        ts: 'OverridableStringUnion<AlertColor, AlertPropsColorOverrides>',
+        ts: "OverridableStringUnion<AlertColor, AlertPropsColorOverrides>",
       },
     },
     {
-      name: 'components',
-      type: 'string',
+      name: "components",
+      type: "string",
       meta: {
-        ts: '{ CloseButton?: ElementType<any, keyof IntrinsicElements>; CloseIcon?: ElementType<any, keyof IntrinsicElements>; }',
+        ts: "{ CloseButton?: ElementType<any, keyof IntrinsicElements>; CloseIcon?: ElementType<any, keyof IntrinsicElements>; }",
       },
     },
     {
-      name: 'componentsProps',
-      type: 'object',
+      name: "componentsProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: '{ closeButton?: any; closeIcon?: any; }',
+        ts: "{ closeButton?: any; closeIcon?: any; }",
       },
     },
     {
-      name: 'icon',
-      type: 'string',
+      name: "icon",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'iconMapping',
-      type: 'string',
+      name: "iconMapping",
+      type: "string",
       meta: {
-        ts: 'Partial<Record<OverridableStringUnion<AlertColor, AlertPropsColorOverrides>, ReactNode>>',
+        ts: "Partial<Record<OverridableStringUnion<AlertColor, AlertPropsColorOverrides>, ReactNode>>",
       },
     },
     {
-      name: 'severity',
-      type: 'string',
+      name: "severity",
+      type: "string",
       meta: {
-        ts: 'OverridableStringUnion<AlertColor, AlertPropsColorOverrides>',
+        ts: "OverridableStringUnion<AlertColor, AlertPropsColorOverrides>",
       },
     },
     {
-      name: 'slotProps',
-      type: 'object',
+      name: "slotProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: '{ [P in keyof K]?: K[P]; }',
+        ts: "{ [P in keyof K]?: K[P]; }",
       },
     },
     {
-      name: 'slots',
-      type: 'string',
+      name: "slots",
+      type: "string",
       meta: {
-        ts: 'Slots',
+        ts: "Slots",
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
     {
-      name: 'variant',
-      type: 'string',
+      name: "variant",
+      type: "string",
       meta: {
         ts: 'OverridableStringUnion<"standard" | "filled" | "outlined", AlertPropsVariantOverrides>',
       },
@@ -727,125 +727,125 @@ Builder.registerComponent(withChildren(Alert), {
 });
 
 Builder.registerComponent(Button, {
-  name: 'Button',
+  name: "Button",
 });
 
 Builder.registerComponent(Chip, {
-  name: 'Chip',
+  name: "Chip",
 });
 
 Builder.registerComponent(withChildren(AlertTitle), {
-  name: 'AlertTitle',
+  name: "AlertTitle",
   inputs: [
     {
-      name: 'children',
-      type: 'string',
+      name: "children",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<AlertTitleClasses>',
+        ts: "Partial<AlertTitleClasses>",
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
   ],
 });
 
 Builder.registerComponent(AppBar, {
-  name: 'AppBar',
+  name: "AppBar",
 });
 
 Builder.registerComponent(Avatar, {
-  name: 'Avatar',
+  name: "Avatar",
 });
 
 Builder.registerComponent(withChildren(AvatarGroup), {
-  name: 'AvatarGroup',
+  name: "AvatarGroup",
   inputs: [
     {
-      name: 'children',
-      type: 'string',
+      name: "children",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<AvatarGroupClasses>',
+        ts: "Partial<AvatarGroupClasses>",
       },
     },
     {
-      name: 'component',
-      type: 'string',
+      name: "component",
+      type: "string",
       meta: {
-        ts: 'ElementType<any, keyof IntrinsicElements>',
+        ts: "ElementType<any, keyof IntrinsicElements>",
       },
     },
     {
-      name: 'componentsProps',
-      type: 'object',
+      name: "componentsProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: '{ additionalAvatar?: any; }',
+        ts: "{ additionalAvatar?: any; }",
       },
     },
     {
-      name: 'max',
-      type: 'number',
+      name: "max",
+      type: "number",
     },
     {
-      name: 'renderSurplus',
-      type: 'string',
+      name: "renderSurplus",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'slotProps',
-      type: 'object',
+      name: "slotProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: '{ additionalAvatar?: any; }',
+        ts: "{ additionalAvatar?: any; }",
       },
     },
     {
-      name: 'spacing',
-      type: 'string',
-      enum: ['medium', 'small'],
+      name: "spacing",
+      type: "string",
+      enum: ["medium", "small"],
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
     {
-      name: 'total',
-      type: 'number',
+      name: "total",
+      type: "number",
     },
     {
-      name: 'variant',
-      type: 'string',
+      name: "variant",
+      type: "string",
       meta: {
         ts: 'OverridableStringUnion<"circular" | "rounded" | "square", AvatarGroupPropsVariantOverrides>',
       },
@@ -854,1111 +854,1111 @@ Builder.registerComponent(withChildren(AvatarGroup), {
 });
 
 Builder.registerComponent(Backdrop, {
-  name: 'Backdrop',
+  name: "Backdrop",
 });
 
 Builder.registerComponent(Badge, {
-  name: 'Badge',
+  name: "Badge",
 });
 
 Builder.registerComponent(BottomNavigation, {
-  name: 'BottomNavigation',
+  name: "BottomNavigation",
 });
 
 Builder.registerComponent(BottomNavigationAction, {
-  name: 'BottomNavigationAction',
+  name: "BottomNavigationAction",
 });
 
 Builder.registerComponent(Box, {
-  name: 'Box',
+  name: "Box",
 });
 
 Builder.registerComponent(Breadcrumbs, {
-  name: 'Breadcrumbs',
+  name: "Breadcrumbs",
 });
 
 Builder.registerComponent(Card, {
-  name: 'Card',
+  name: "Card",
 });
 
 Builder.registerComponent(CardActionArea, {
-  name: 'CardActionArea',
+  name: "CardActionArea",
 });
 
 Builder.registerComponent(withChildren(CardActions), {
-  name: 'CardActions',
+  name: "CardActions",
   inputs: [
     {
-      name: 'children',
-      type: 'string',
+      name: "children",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<CardActionsClasses>',
+        ts: "Partial<CardActionsClasses>",
       },
     },
     {
-      name: 'disableSpacing',
-      type: 'boolean',
+      name: "disableSpacing",
+      type: "boolean",
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
   ],
 });
 
 Builder.registerComponent(CardContent, {
-  name: 'CardContent',
+  name: "CardContent",
 });
 
 Builder.registerComponent(CardHeader, {
-  name: 'CardHeader',
+  name: "CardHeader",
 });
 
 Builder.registerComponent(CardMedia, {
-  name: 'CardMedia',
+  name: "CardMedia",
 });
 
 Builder.registerComponent(CircularProgress, {
-  name: 'CircularProgress',
+  name: "CircularProgress",
   inputs: [
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<CircularProgressClasses>',
+        ts: "Partial<CircularProgressClasses>",
       },
     },
     {
-      name: 'color',
-      type: 'string',
+      name: "color",
+      type: "string",
       meta: {
         ts: 'OverridableStringUnion<"primary" | "secondary" | "error" | "info" | "success" | "warning" | "inherit", CircularProgressPropsColorOverrides>',
       },
     },
     {
-      name: 'disableShrink',
-      type: 'boolean',
+      name: "disableShrink",
+      type: "boolean",
     },
     {
-      name: 'size',
-      type: 'string',
+      name: "size",
+      type: "string",
       meta: {
-        ts: 'string | number',
+        ts: "string | number",
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
     {
-      name: 'thickness',
-      type: 'number',
+      name: "thickness",
+      type: "number",
     },
     {
-      name: 'value',
-      type: 'number',
+      name: "value",
+      type: "number",
     },
     {
-      name: 'variant',
-      type: 'string',
-      enum: ['determinate', 'indeterminate'],
+      name: "variant",
+      type: "string",
+      enum: ["determinate", "indeterminate"],
     },
   ],
 });
 
 Builder.registerComponent(ClickAwayListener, {
-  name: 'ClickAwayListener',
+  name: "ClickAwayListener",
 });
 
 Builder.registerComponent(withChildren(Collapse), {
-  name: 'Collapse',
+  name: "Collapse",
   inputs: [
     {
-      name: 'children',
-      type: 'string',
+      name: "children",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<CollapseClasses>',
+        ts: "Partial<CollapseClasses>",
       },
     },
     {
-      name: 'className',
-      type: 'string',
+      name: "className",
+      type: "string",
     },
     {
-      name: 'collapsedSize',
-      type: 'string',
+      name: "collapsedSize",
+      type: "string",
       meta: {
-        ts: 'string | number',
+        ts: "string | number",
       },
     },
     {
-      name: 'component',
-      type: 'string',
+      name: "component",
+      type: "string",
       meta: {
-        ts: 'ElementType<TransitionProps, keyof IntrinsicElements>',
+        ts: "ElementType<TransitionProps, keyof IntrinsicElements>",
       },
     },
     {
-      name: 'easing',
-      type: 'string',
+      name: "easing",
+      type: "string",
       meta: {
-        ts: 'any',
+        ts: "any",
       },
     },
     {
-      name: 'in',
-      type: 'boolean',
+      name: "in",
+      type: "boolean",
     },
     {
-      name: 'orientation',
-      type: 'string',
-      enum: ['horizontal', 'vertical'],
+      name: "orientation",
+      type: "string",
+      enum: ["horizontal", "vertical"],
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
     {
-      name: 'timeout',
-      type: 'string',
+      name: "timeout",
+      type: "string",
       meta: {
-        ts: 'any',
+        ts: "any",
       },
     },
   ],
 });
 
 Builder.registerComponent(Container, {
-  name: 'Container',
+  name: "Container",
 });
 
 Builder.registerComponent(withChildren(Dialog), {
-  name: 'Dialog',
+  name: "Dialog",
   inputs: [
     {
-      name: 'children',
-      type: 'string',
+      name: "children",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<DialogClasses>',
+        ts: "Partial<DialogClasses>",
       },
     },
     {
-      name: 'disableEscapeKeyDown',
-      type: 'boolean',
+      name: "disableEscapeKeyDown",
+      type: "boolean",
     },
     {
-      name: 'fullScreen',
-      type: 'boolean',
+      name: "fullScreen",
+      type: "boolean",
     },
     {
-      name: 'fullWidth',
-      type: 'boolean',
+      name: "fullWidth",
+      type: "boolean",
     },
     {
-      name: 'maxWidth',
-      type: 'string',
+      name: "maxWidth",
+      type: "string",
       meta: {
-        ts: 'any',
+        ts: "any",
       },
     },
     {
-      name: 'open',
-      type: 'string',
+      name: "open",
+      type: "string",
       meta: {
-        ts: 'any',
+        ts: "any",
       },
       required: true,
     },
     {
-      name: 'PaperComponent',
-      type: 'string',
+      name: "PaperComponent",
+      type: "string",
       meta: {
-        ts: 'JSXElementConstructor<any>',
+        ts: "JSXElementConstructor<any>",
       },
     },
     {
-      name: 'PaperProps',
-      type: 'object',
+      name: "PaperProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<any>',
+        ts: "Partial<any>",
       },
     },
     {
-      name: 'scroll',
-      type: 'string',
-      enum: ['body', 'paper'],
+      name: "scroll",
+      type: "string",
+      enum: ["body", "paper"],
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
     {
-      name: 'TransitionComponent',
-      type: 'string',
+      name: "TransitionComponent",
+      type: "string",
       meta: {
-        ts: 'JSXElementConstructor<TransitionProps & { children: ReactElement<any, any>; }>',
+        ts: "JSXElementConstructor<TransitionProps & { children: ReactElement<any, any>; }>",
       },
     },
     {
-      name: 'transitionDuration',
-      type: 'string',
+      name: "transitionDuration",
+      type: "string",
       meta: {
-        ts: 'any',
+        ts: "any",
       },
     },
     {
-      name: 'TransitionProps',
-      type: 'object',
+      name: "TransitionProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'TransitionProps',
+        ts: "TransitionProps",
       },
     },
   ],
 });
 
 Builder.registerComponent(withChildren(DialogActions), {
-  name: 'DialogActions',
+  name: "DialogActions",
   inputs: [
     {
-      name: 'children',
-      type: 'string',
+      name: "children",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<DialogActionsClasses>',
+        ts: "Partial<DialogActionsClasses>",
       },
     },
     {
-      name: 'disableSpacing',
-      type: 'boolean',
+      name: "disableSpacing",
+      type: "boolean",
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
   ],
 });
 
 Builder.registerComponent(withChildren(DialogContent), {
-  name: 'DialogContent',
+  name: "DialogContent",
   inputs: [
     {
-      name: 'children',
-      type: 'string',
+      name: "children",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<DialogContentClasses>',
+        ts: "Partial<DialogContentClasses>",
       },
     },
     {
-      name: 'dividers',
-      type: 'boolean',
+      name: "dividers",
+      type: "boolean",
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
   ],
 });
 
 Builder.registerComponent(DialogContentText, {
-  name: 'DialogContentText',
+  name: "DialogContentText",
 });
 
 Builder.registerComponent(DialogTitle, {
-  name: 'DialogTitle',
+  name: "DialogTitle",
 });
 
 Builder.registerComponent(Divider, {
-  name: 'Divider',
+  name: "Divider",
 });
 
 Builder.registerComponent(withChildren(Drawer), {
-  name: 'Drawer',
+  name: "Drawer",
   inputs: [
     {
-      name: 'anchor',
-      type: 'string',
-      enum: ['bottom', 'left', 'right', 'top'],
+      name: "anchor",
+      type: "string",
+      enum: ["bottom", "left", "right", "top"],
     },
     {
-      name: 'children',
-      type: 'string',
+      name: "children",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<DrawerClasses>',
+        ts: "Partial<DrawerClasses>",
       },
     },
     {
-      name: 'elevation',
-      type: 'number',
+      name: "elevation",
+      type: "number",
     },
     {
-      name: 'ModalProps',
-      type: 'object',
+      name: "ModalProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<any>',
+        ts: "Partial<any>",
       },
     },
     {
-      name: 'open',
-      type: 'boolean',
+      name: "open",
+      type: "boolean",
     },
     {
-      name: 'PaperProps',
-      type: 'object',
+      name: "PaperProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<any>',
+        ts: "Partial<any>",
       },
     },
     {
-      name: 'SlideProps',
-      type: 'object',
+      name: "SlideProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<SlideProps>',
+        ts: "Partial<SlideProps>",
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
     {
-      name: 'transitionDuration',
-      type: 'string',
+      name: "transitionDuration",
+      type: "string",
       meta: {
-        ts: 'any',
+        ts: "any",
       },
     },
     {
-      name: 'variant',
-      type: 'string',
-      enum: ['permanent', 'persistent', 'temporary'],
+      name: "variant",
+      type: "string",
+      enum: ["permanent", "persistent", "temporary"],
     },
   ],
 });
 
 Builder.registerComponent(Fab, {
-  name: 'Fab',
+  name: "Fab",
 });
 
 Builder.registerComponent(withChildren(Fade), {
-  name: 'Fade',
+  name: "Fade",
   inputs: [
     {
-      name: 'appear',
-      type: 'boolean',
+      name: "appear",
+      type: "boolean",
     },
     {
-      name: 'children',
-      type: 'string',
+      name: "children",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactElement<any, any>',
+        ts: "ReactElement<any, any>",
       },
     },
     {
-      name: 'easing',
-      type: 'string',
+      name: "easing",
+      type: "string",
       meta: {
-        ts: 'any',
+        ts: "any",
       },
     },
     {
-      name: 'in',
-      type: 'boolean',
+      name: "in",
+      type: "boolean",
     },
     {
-      name: 'ref',
-      type: 'object',
+      name: "ref",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Ref<unknown>',
+        ts: "Ref<unknown>",
       },
     },
     {
-      name: 'timeout',
-      type: 'string',
+      name: "timeout",
+      type: "string",
       meta: {
-        ts: 'any',
+        ts: "any",
       },
     },
   ],
 });
 
 Builder.registerComponent(FilledInput, {
-  name: 'FilledInput',
+  name: "FilledInput",
   inputs: [
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<FilledInputClasses>',
+        ts: "Partial<FilledInputClasses>",
       },
     },
     {
-      name: 'disableUnderline',
-      type: 'boolean',
+      name: "disableUnderline",
+      type: "boolean",
     },
     {
-      name: 'hiddenLabel',
-      type: 'boolean',
+      name: "hiddenLabel",
+      type: "boolean",
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
   ],
 });
 
 Builder.registerComponent(FormControl, {
-  name: 'FormControl',
+  name: "FormControl",
 });
 
 Builder.registerComponent(withChildren(FormGroup), {
-  name: 'FormGroup',
+  name: "FormGroup",
   inputs: [
     {
-      name: 'children',
-      type: 'string',
+      name: "children",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<FormGroupClasses>',
+        ts: "Partial<FormGroupClasses>",
       },
     },
     {
-      name: 'row',
-      type: 'boolean',
+      name: "row",
+      type: "boolean",
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
   ],
 });
 
 Builder.registerComponent(Grid, {
-  name: 'Grid',
+  name: "Grid",
 });
 
 Builder.registerComponent(ImageList, {
-  name: 'ImageList',
+  name: "ImageList",
 });
 
 Builder.registerComponent(ImageListItem, {
-  name: 'ImageListItem',
+  name: "ImageListItem",
 });
 
 Builder.registerComponent(withChildren(ImageListItemBar), {
-  name: 'ImageListItemBar',
+  name: "ImageListItemBar",
   inputs: [
     {
-      name: 'actionIcon',
-      type: 'string',
+      name: "actionIcon",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'actionPosition',
-      type: 'string',
-      enum: ['left', 'right'],
+      name: "actionPosition",
+      type: "string",
+      enum: ["left", "right"],
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<ImageListItemBarClasses>',
+        ts: "Partial<ImageListItemBarClasses>",
       },
     },
     {
-      name: 'position',
-      type: 'string',
-      enum: ['below', 'bottom', 'top'],
+      name: "position",
+      type: "string",
+      enum: ["below", "bottom", "top"],
     },
     {
-      name: 'subtitle',
-      type: 'string',
+      name: "subtitle",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
     {
-      name: 'title',
-      type: 'string',
+      name: "title",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
   ],
 });
 
 Builder.registerComponent(InputAdornment, {
-  name: 'InputAdornment',
+  name: "InputAdornment",
 });
 
 Builder.registerComponent(InputLabel, {
-  name: 'InputLabel',
+  name: "InputLabel",
 });
 
 Builder.registerComponent(LinearProgress, {
-  name: 'LinearProgress',
+  name: "LinearProgress",
   inputs: [
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<LinearProgressClasses>',
+        ts: "Partial<LinearProgressClasses>",
       },
     },
     {
-      name: 'color',
-      type: 'string',
+      name: "color",
+      type: "string",
       meta: {
         ts: 'OverridableStringUnion<"primary" | "secondary" | "error" | "info" | "success" | "warning" | "inherit", LinearProgressPropsColorOverrides>',
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
     {
-      name: 'value',
-      type: 'number',
+      name: "value",
+      type: "number",
     },
     {
-      name: 'valueBuffer',
-      type: 'number',
+      name: "valueBuffer",
+      type: "number",
     },
     {
-      name: 'variant',
-      type: 'string',
-      enum: ['buffer', 'determinate', 'indeterminate', 'query'],
+      name: "variant",
+      type: "string",
+      enum: ["buffer", "determinate", "indeterminate", "query"],
     },
   ],
 });
 
 Builder.registerComponent(List, {
-  name: 'List',
+  name: "List",
 });
 
 Builder.registerComponent(ListItem, {
-  name: 'ListItem',
+  name: "ListItem",
 });
 
 Builder.registerComponent(withChildren(ListItemAvatar), {
-  name: 'ListItemAvatar',
+  name: "ListItemAvatar",
   inputs: [
     {
-      name: 'children',
-      type: 'string',
+      name: "children",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<ListItemAvatarClasses>',
+        ts: "Partial<ListItemAvatarClasses>",
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
   ],
 });
 
 Builder.registerComponent(ListItemButton, {
-  name: 'ListItemButton',
+  name: "ListItemButton",
 });
 
 Builder.registerComponent(withChildren(ListItemIcon), {
-  name: 'ListItemIcon',
+  name: "ListItemIcon",
   inputs: [
     {
-      name: 'children',
-      type: 'string',
+      name: "children",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<ListItemIconClasses>',
+        ts: "Partial<ListItemIconClasses>",
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
   ],
 });
 
 Builder.registerComponent(withChildren(ListItemSecondaryAction), {
-  name: 'ListItemSecondaryAction',
+  name: "ListItemSecondaryAction",
   inputs: [
     {
-      name: 'children',
-      type: 'string',
+      name: "children",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<ListItemSecondaryActionClasses>',
+        ts: "Partial<ListItemSecondaryActionClasses>",
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
   ],
 });
 
 Builder.registerComponent(withChildren(ListItemText), {
-  name: 'ListItemText',
+  name: "ListItemText",
   inputs: [
     {
-      name: 'children',
-      type: 'string',
+      name: "children",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<ListItemTextClasses>',
+        ts: "Partial<ListItemTextClasses>",
       },
     },
     {
-      name: 'disableTypography',
-      type: 'boolean',
+      name: "disableTypography",
+      type: "boolean",
     },
     {
-      name: 'inset',
-      type: 'boolean',
+      name: "inset",
+      type: "boolean",
     },
     {
-      name: 'primary',
-      type: 'string',
+      name: "primary",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'primaryTypographyProps',
-      type: 'string',
+      name: "primaryTypographyProps",
+      type: "string",
       meta: {
-        ts: 'any',
+        ts: "any",
       },
     },
     {
-      name: 'secondary',
-      type: 'string',
+      name: "secondary",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'secondaryTypographyProps',
-      type: 'string',
+      name: "secondaryTypographyProps",
+      type: "string",
       meta: {
-        ts: 'any',
+        ts: "any",
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
   ],
 });
 
 Builder.registerComponent(ListSubheader, {
-  name: 'ListSubheader',
+  name: "ListSubheader",
 });
 
 Builder.registerComponent(withChildren(Menu), {
-  name: 'Menu',
+  name: "Menu",
   inputs: [
     {
-      name: 'anchorEl',
-      type: 'object',
+      name: "anchorEl",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Element | (() => Element) | PopoverVirtualElement | (() => PopoverVirtualElement)',
+        ts: "Element | (() => Element) | PopoverVirtualElement | (() => PopoverVirtualElement)",
       },
     },
     {
-      name: 'children',
-      type: 'string',
+      name: "children",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<MenuClasses>',
+        ts: "Partial<MenuClasses>",
       },
     },
     {
-      name: 'disableAutoFocusItem',
-      type: 'boolean',
+      name: "disableAutoFocusItem",
+      type: "boolean",
     },
     {
-      name: 'MenuListProps',
-      type: 'object',
+      name: "MenuListProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<any>',
+        ts: "Partial<any>",
       },
     },
     {
-      name: 'open',
-      type: 'boolean',
+      name: "open",
+      type: "boolean",
       required: true,
     },
     {
-      name: 'PopoverClasses',
-      type: 'object',
+      name: "PopoverClasses",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<PopoverClasses>',
+        ts: "Partial<PopoverClasses>",
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
     {
-      name: 'transitionDuration',
-      type: 'string',
+      name: "transitionDuration",
+      type: "string",
       meta: {
-        ts: 'any',
+        ts: "any",
       },
     },
     {
-      name: 'TransitionProps',
-      type: 'object',
+      name: "TransitionProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'TransitionProps',
+        ts: "TransitionProps",
       },
     },
     {
-      name: 'variant',
-      type: 'string',
-      enum: ['menu', 'selectedMenu'],
+      name: "variant",
+      type: "string",
+      enum: ["menu", "selectedMenu"],
     },
   ],
 });
 
 Builder.registerComponent(MenuItem, {
-  name: 'MenuItem',
+  name: "MenuItem",
 });
 
 Builder.registerComponent(MenuList, {
-  name: 'MenuList',
+  name: "MenuList",
 });
 
 Builder.registerComponent(Modal, {
-  name: 'Modal',
+  name: "Modal",
 });
 
 Builder.registerComponent(withChildren(OutlinedInput), {
-  name: 'OutlinedInput',
+  name: "OutlinedInput",
   inputs: [
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<OutlinedInputClasses>',
+        ts: "Partial<OutlinedInputClasses>",
       },
     },
     {
-      name: 'label',
-      type: 'string',
+      name: "label",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'notched',
-      type: 'boolean',
+      name: "notched",
+      type: "boolean",
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
   ],
 });
 
 Builder.registerComponent(withChildren(Pagination), {
-  name: 'Pagination',
+  name: "Pagination",
   inputs: [
     {
-      name: 'boundaryCount',
-      type: 'number',
+      name: "boundaryCount",
+      type: "number",
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<PaginationClasses>',
+        ts: "Partial<PaginationClasses>",
       },
     },
     {
-      name: 'color',
-      type: 'string',
+      name: "color",
+      type: "string",
       meta: {
         ts: 'OverridableStringUnion<"primary" | "secondary" | "standard", PaginationPropsColorOverrides>',
       },
     },
     {
-      name: 'componentName',
-      type: 'string',
+      name: "componentName",
+      type: "string",
     },
     {
-      name: 'count',
-      type: 'number',
+      name: "count",
+      type: "number",
     },
     {
-      name: 'defaultPage',
-      type: 'number',
+      name: "defaultPage",
+      type: "number",
     },
     {
-      name: 'disabled',
-      type: 'boolean',
+      name: "disabled",
+      type: "boolean",
     },
     {
-      name: 'getItemAriaLabel',
-      type: 'object',
+      name: "getItemAriaLabel",
+      type: "object",
       hideFromUI: true,
       meta: {
         ts: '(type: "page" | "first" | "last" | "next" | "previous" | "start-ellipsis" | "end-ellipsis", page: number, selected: boolean) => string',
       },
     },
     {
-      name: 'hideNextButton',
-      type: 'boolean',
+      name: "hideNextButton",
+      type: "boolean",
     },
     {
-      name: 'hidePrevButton',
-      type: 'boolean',
+      name: "hidePrevButton",
+      type: "boolean",
     },
     {
-      name: 'page',
-      type: 'number',
+      name: "page",
+      type: "number",
     },
     {
-      name: 'renderItem',
-      type: 'string',
+      name: "renderItem",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'shape',
-      type: 'string',
-      enum: ['circular', 'rounded'],
+      name: "shape",
+      type: "string",
+      enum: ["circular", "rounded"],
     },
     {
-      name: 'showFirstButton',
-      type: 'boolean',
+      name: "showFirstButton",
+      type: "boolean",
     },
     {
-      name: 'showLastButton',
-      type: 'boolean',
+      name: "showLastButton",
+      type: "boolean",
     },
     {
-      name: 'siblingCount',
-      type: 'number',
+      name: "siblingCount",
+      type: "number",
     },
     {
-      name: 'size',
-      type: 'string',
+      name: "size",
+      type: "string",
       meta: {
         ts: 'OverridableStringUnion<"small" | "medium" | "large", PaginationPropsSizeOverrides>',
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
     {
-      name: 'variant',
-      type: 'string',
+      name: "variant",
+      type: "string",
       meta: {
         ts: 'OverridableStringUnion<"text" | "outlined", PaginationPropsVariantOverrides>',
       },
@@ -1967,1337 +1967,1337 @@ Builder.registerComponent(withChildren(Pagination), {
 });
 
 Builder.registerComponent(PaginationItem, {
-  name: 'PaginationItem',
+  name: "PaginationItem",
 });
 
 Builder.registerComponent(Paper, {
-  name: 'Paper',
+  name: "Paper",
 });
 
 Builder.registerComponent(withChildren(Popover), {
-  name: 'Popover',
+  name: "Popover",
   inputs: [
     {
-      name: 'action',
-      type: 'object',
+      name: "action",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Ref<PopoverActions>',
+        ts: "Ref<PopoverActions>",
       },
     },
     {
-      name: 'anchorEl',
-      type: 'object',
+      name: "anchorEl",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Element | (() => Element) | PopoverVirtualElement | (() => PopoverVirtualElement)',
+        ts: "Element | (() => Element) | PopoverVirtualElement | (() => PopoverVirtualElement)",
       },
     },
     {
-      name: 'anchorOrigin',
-      type: 'object',
+      name: "anchorOrigin",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'PopoverOrigin',
+        ts: "PopoverOrigin",
       },
     },
     {
-      name: 'anchorPosition',
-      type: 'object',
+      name: "anchorPosition",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'PopoverPosition',
+        ts: "PopoverPosition",
       },
     },
     {
-      name: 'anchorReference',
-      type: 'string',
-      enum: ['anchorEl', 'anchorPosition', 'none'],
+      name: "anchorReference",
+      type: "string",
+      enum: ["anchorEl", "anchorPosition", "none"],
     },
     {
-      name: 'children',
-      type: 'string',
+      name: "children",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<PopoverClasses>',
+        ts: "Partial<PopoverClasses>",
       },
     },
     {
-      name: 'container',
-      type: 'string',
+      name: "container",
+      type: "string",
       meta: {
-        ts: 'any',
+        ts: "any",
       },
     },
     {
-      name: 'elevation',
-      type: 'number',
+      name: "elevation",
+      type: "number",
     },
     {
-      name: 'marginThreshold',
-      type: 'number',
+      name: "marginThreshold",
+      type: "number",
     },
     {
-      name: 'open',
-      type: 'boolean',
+      name: "open",
+      type: "boolean",
       required: true,
     },
     {
-      name: 'PaperProps',
-      type: 'object',
+      name: "PaperProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<any>',
+        ts: "Partial<any>",
       },
     },
     {
-      name: 'slotProps',
-      type: 'object',
+      name: "slotProps",
+      type: "object",
       hideFromUI: true,
       meta: {
         ts: '{ root?: SlotComponentProps<OverridableComponent<ModalTypeMap<"div", {}>>, {}, ModalOwnerState>; paper?: SlotComponentProps<OverridableComponent<PaperTypeMap<{}, "div">>, {}, {}>; }',
       },
     },
     {
-      name: 'slots',
-      type: 'string',
+      name: "slots",
+      type: "string",
       meta: {
-        ts: '{ root?: ElementType<any, keyof IntrinsicElements>; paper?: ElementType<any, keyof IntrinsicElements>; }',
+        ts: "{ root?: ElementType<any, keyof IntrinsicElements>; paper?: ElementType<any, keyof IntrinsicElements>; }",
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
     {
-      name: 'transformOrigin',
-      type: 'object',
+      name: "transformOrigin",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'PopoverOrigin',
+        ts: "PopoverOrigin",
       },
     },
     {
-      name: 'TransitionComponent',
-      type: 'string',
+      name: "TransitionComponent",
+      type: "string",
       meta: {
-        ts: 'JSXElementConstructor<TransitionProps & { children: ReactElement<any, any>; }>',
+        ts: "JSXElementConstructor<TransitionProps & { children: ReactElement<any, any>; }>",
       },
     },
     {
-      name: 'transitionDuration',
-      type: 'string',
+      name: "transitionDuration",
+      type: "string",
       meta: {
-        ts: 'any',
+        ts: "any",
       },
     },
     {
-      name: 'TransitionProps',
-      type: 'object',
+      name: "TransitionProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'TransitionProps',
+        ts: "TransitionProps",
       },
     },
   ],
 });
 
 Builder.registerComponent(Popper, {
-  name: 'Popper',
+  name: "Popper",
   inputs: [
     {
-      name: 'component',
-      type: 'string',
+      name: "component",
+      type: "string",
       meta: {
-        ts: 'ElementType<any, keyof IntrinsicElements>',
+        ts: "ElementType<any, keyof IntrinsicElements>",
       },
     },
     {
-      name: 'components',
-      type: 'string',
+      name: "components",
+      type: "string",
       meta: {
-        ts: '{ Root?: ElementType<any, keyof IntrinsicElements>; }',
+        ts: "{ Root?: ElementType<any, keyof IntrinsicElements>; }",
       },
     },
     {
-      name: 'componentsProps',
-      type: 'string',
+      name: "componentsProps",
+      type: "string",
       meta: {
-        ts: 'BasePopperProps',
+        ts: "BasePopperProps",
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
   ],
 });
 
 Builder.registerComponent(Portal, {
-  name: 'Portal',
+  name: "Portal",
 });
 
 Builder.registerComponent(withChildren(Radio), {
-  name: 'Radio',
+  name: "Radio",
   inputs: [
     {
-      name: 'checkedIcon',
-      type: 'string',
+      name: "checkedIcon",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<RadioClasses>',
+        ts: "Partial<RadioClasses>",
       },
     },
     {
-      name: 'color',
-      type: 'string',
+      name: "color",
+      type: "string",
       meta: {
         ts: 'OverridableStringUnion<"primary" | "secondary" | "error" | "info" | "success" | "warning" | "default", RadioPropsColorOverrides>',
       },
     },
     {
-      name: 'disabled',
-      type: 'boolean',
+      name: "disabled",
+      type: "boolean",
     },
     {
-      name: 'icon',
-      type: 'string',
+      name: "icon",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'size',
-      type: 'string',
+      name: "size",
+      type: "string",
       meta: {
         ts: 'OverridableStringUnion<"small" | "medium", RadioPropsSizeOverrides>',
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
   ],
 });
 
 Builder.registerComponent(RadioGroup, {
-  name: 'RadioGroup',
+  name: "RadioGroup",
   inputs: [
     {
-      name: 'name',
-      type: 'string',
+      name: "name",
+      type: "string",
     },
     {
-      name: 'value',
-      type: 'string',
+      name: "value",
+      type: "string",
       meta: {
-        ts: 'any',
+        ts: "any",
       },
     },
   ],
 });
 
 Builder.registerComponent(withChildren(Rating), {
-  name: 'Rating',
+  name: "Rating",
   inputs: [
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<RatingClasses>',
+        ts: "Partial<RatingClasses>",
       },
     },
     {
-      name: 'disabled',
-      type: 'boolean',
+      name: "disabled",
+      type: "boolean",
     },
     {
-      name: 'emptyIcon',
-      type: 'string',
+      name: "emptyIcon",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'emptyLabelText',
-      type: 'string',
+      name: "emptyLabelText",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'getLabelText',
-      type: 'object',
+      name: "getLabelText",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: '(value: number) => string',
+        ts: "(value: number) => string",
       },
     },
     {
-      name: 'highlightSelectedOnly',
-      type: 'boolean',
+      name: "highlightSelectedOnly",
+      type: "boolean",
     },
     {
-      name: 'icon',
-      type: 'string',
+      name: "icon",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'IconContainerComponent',
-      type: 'string',
+      name: "IconContainerComponent",
+      type: "string",
       meta: {
-        ts: 'ElementType<IconContainerProps, keyof IntrinsicElements>',
+        ts: "ElementType<IconContainerProps, keyof IntrinsicElements>",
       },
     },
     {
-      name: 'max',
-      type: 'number',
+      name: "max",
+      type: "number",
     },
     {
-      name: 'name',
-      type: 'string',
+      name: "name",
+      type: "string",
     },
     {
-      name: 'precision',
-      type: 'number',
+      name: "precision",
+      type: "number",
     },
     {
-      name: 'readOnly',
-      type: 'boolean',
+      name: "readOnly",
+      type: "boolean",
     },
     {
-      name: 'size',
-      type: 'string',
+      name: "size",
+      type: "string",
       meta: {
         ts: 'OverridableStringUnion<"small" | "medium" | "large", RatingPropsSizeOverrides>',
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
     {
-      name: 'value',
-      type: 'number',
+      name: "value",
+      type: "number",
     },
   ],
 });
 
 Builder.registerComponent(withChildren(Select), {
-  name: 'Select',
+  name: "Select",
   inputs: [
     {
-      name: 'autoWidth',
-      type: 'boolean',
+      name: "autoWidth",
+      type: "boolean",
     },
     {
-      name: 'children',
-      type: 'string',
+      name: "children",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<SelectClasses>',
+        ts: "Partial<SelectClasses>",
       },
     },
     {
-      name: 'defaultOpen',
-      type: 'boolean',
+      name: "defaultOpen",
+      type: "boolean",
     },
     {
-      name: 'displayEmpty',
-      type: 'boolean',
+      name: "displayEmpty",
+      type: "boolean",
     },
     {
-      name: 'IconComponent',
-      type: 'string',
+      name: "IconComponent",
+      type: "string",
       meta: {
-        ts: 'ElementType<any, keyof IntrinsicElements>',
+        ts: "ElementType<any, keyof IntrinsicElements>",
       },
     },
     {
-      name: 'id',
-      type: 'string',
+      name: "id",
+      type: "string",
     },
     {
-      name: 'input',
-      type: 'string',
+      name: "input",
+      type: "string",
       meta: {
-        ts: 'ReactElement<any, any>',
+        ts: "ReactElement<any, any>",
       },
     },
     {
-      name: 'inputProps',
-      type: 'string',
+      name: "inputProps",
+      type: "string",
       meta: {
-        ts: 'any',
+        ts: "any",
       },
     },
     {
-      name: 'label',
-      type: 'string',
+      name: "label",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'labelId',
-      type: 'string',
+      name: "labelId",
+      type: "string",
     },
     {
-      name: 'MenuProps',
-      type: 'object',
+      name: "MenuProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<MenuProps>',
+        ts: "Partial<MenuProps>",
       },
     },
     {
-      name: 'multiple',
-      type: 'boolean',
+      name: "multiple",
+      type: "boolean",
     },
     {
-      name: 'native',
-      type: 'boolean',
+      name: "native",
+      type: "boolean",
     },
     {
-      name: 'open',
-      type: 'boolean',
+      name: "open",
+      type: "boolean",
     },
     {
-      name: 'renderValue',
-      type: 'string',
+      name: "renderValue",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'SelectDisplayProps',
-      type: 'object',
+      name: "SelectDisplayProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'HTMLAttributes<HTMLDivElement>',
+        ts: "HTMLAttributes<HTMLDivElement>",
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
     {
-      name: 'value',
-      type: 'string',
-      enum: [''],
+      name: "value",
+      type: "string",
+      enum: [""],
     },
     {
-      name: 'variant',
-      type: 'string',
-      enum: ['filled'],
+      name: "variant",
+      type: "string",
+      enum: ["filled"],
       required: true,
     },
   ],
 });
 
 Builder.registerComponent(Skeleton, {
-  name: 'Skeleton',
+  name: "Skeleton",
 });
 
 Builder.registerComponent(withChildren(Slide), {
-  name: 'Slide',
+  name: "Slide",
   inputs: [
     {
-      name: 'appear',
-      type: 'boolean',
+      name: "appear",
+      type: "boolean",
     },
     {
-      name: 'children',
-      type: 'string',
+      name: "children",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactElement<any, any>',
+        ts: "ReactElement<any, any>",
       },
     },
     {
-      name: 'container',
-      type: 'object',
+      name: "container",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Element | ((element: Element) => Element)',
+        ts: "Element | ((element: Element) => Element)",
       },
     },
     {
-      name: 'direction',
-      type: 'string',
-      enum: ['down', 'left', 'right', 'up'],
+      name: "direction",
+      type: "string",
+      enum: ["down", "left", "right", "up"],
     },
     {
-      name: 'easing',
-      type: 'string',
+      name: "easing",
+      type: "string",
       meta: {
-        ts: 'any',
+        ts: "any",
       },
     },
     {
-      name: 'in',
-      type: 'string',
+      name: "in",
+      type: "string",
       meta: {
-        ts: 'any',
+        ts: "any",
       },
     },
     {
-      name: 'ref',
-      type: 'object',
+      name: "ref",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Ref<unknown>',
+        ts: "Ref<unknown>",
       },
     },
     {
-      name: 'timeout',
-      type: 'string',
+      name: "timeout",
+      type: "string",
       meta: {
-        ts: 'any',
+        ts: "any",
       },
     },
   ],
 });
 
 Builder.registerComponent(Slider, {
-  name: 'Slider',
+  name: "Slider",
 });
 
 Builder.registerComponent(withChildren(Snackbar), {
-  name: 'Snackbar',
+  name: "Snackbar",
   inputs: [
     {
-      name: 'action',
-      type: 'string',
+      name: "action",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'anchorOrigin',
-      type: 'object',
+      name: "anchorOrigin",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SnackbarOrigin',
+        ts: "SnackbarOrigin",
       },
     },
     {
-      name: 'autoHideDuration',
-      type: 'number',
+      name: "autoHideDuration",
+      type: "number",
     },
     {
-      name: 'children',
-      type: 'string',
+      name: "children",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactElement<any, any>',
+        ts: "ReactElement<any, any>",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<SnackbarClasses>',
+        ts: "Partial<SnackbarClasses>",
       },
     },
     {
-      name: 'ClickAwayListenerProps',
-      type: 'string',
+      name: "ClickAwayListenerProps",
+      type: "string",
       meta: {
-        ts: 'ClickAwayListenerProps',
+        ts: "ClickAwayListenerProps",
       },
     },
     {
-      name: 'ContentProps',
-      type: 'object',
+      name: "ContentProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<SnackbarContentProps>',
+        ts: "Partial<SnackbarContentProps>",
       },
     },
     {
-      name: 'disableWindowBlurListener',
-      type: 'boolean',
+      name: "disableWindowBlurListener",
+      type: "boolean",
     },
     {
-      name: 'key',
-      type: 'string',
+      name: "key",
+      type: "string",
       meta: {
-        ts: 'any',
+        ts: "any",
       },
     },
     {
-      name: 'message',
-      type: 'string',
+      name: "message",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'open',
-      type: 'boolean',
+      name: "open",
+      type: "boolean",
     },
     {
-      name: 'resumeHideDuration',
-      type: 'number',
+      name: "resumeHideDuration",
+      type: "number",
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
     {
-      name: 'TransitionComponent',
-      type: 'string',
+      name: "TransitionComponent",
+      type: "string",
       meta: {
-        ts: 'JSXElementConstructor<TransitionProps & { children: ReactElement<any, any>; }>',
+        ts: "JSXElementConstructor<TransitionProps & { children: ReactElement<any, any>; }>",
       },
     },
     {
-      name: 'transitionDuration',
-      type: 'string',
+      name: "transitionDuration",
+      type: "string",
       meta: {
-        ts: 'any',
+        ts: "any",
       },
     },
     {
-      name: 'TransitionProps',
-      type: 'object',
+      name: "TransitionProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'TransitionProps',
+        ts: "TransitionProps",
       },
     },
   ],
 });
 
 Builder.registerComponent(withChildren(SnackbarContent), {
-  name: 'SnackbarContent',
+  name: "SnackbarContent",
   inputs: [
     {
-      name: 'action',
-      type: 'string',
+      name: "action",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<SnackbarContentClasses>',
+        ts: "Partial<SnackbarContentClasses>",
       },
     },
     {
-      name: 'message',
-      type: 'string',
+      name: "message",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
   ],
 });
 
 Builder.registerComponent(withChildren(SpeedDial), {
-  name: 'SpeedDial',
+  name: "SpeedDial",
   inputs: [
     {
-      name: 'children',
-      type: 'string',
+      name: "children",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<SpeedDialClasses>',
+        ts: "Partial<SpeedDialClasses>",
       },
     },
     {
-      name: 'direction',
-      type: 'string',
-      enum: ['down', 'left', 'right', 'up'],
+      name: "direction",
+      type: "string",
+      enum: ["down", "left", "right", "up"],
     },
     {
-      name: 'FabProps',
-      type: 'object',
+      name: "FabProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<any>',
+        ts: "Partial<any>",
       },
     },
     {
-      name: 'hidden',
-      type: 'boolean',
+      name: "hidden",
+      type: "boolean",
     },
     {
-      name: 'icon',
-      type: 'string',
+      name: "icon",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'open',
-      type: 'boolean',
+      name: "open",
+      type: "boolean",
     },
     {
-      name: 'openIcon',
-      type: 'string',
+      name: "openIcon",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
     {
-      name: 'TransitionComponent',
-      type: 'string',
+      name: "TransitionComponent",
+      type: "string",
       meta: {
-        ts: 'JSXElementConstructor<TransitionProps>',
+        ts: "JSXElementConstructor<TransitionProps>",
       },
     },
     {
-      name: 'transitionDuration',
-      type: 'string',
+      name: "transitionDuration",
+      type: "string",
       meta: {
-        ts: 'any',
+        ts: "any",
       },
     },
     {
-      name: 'TransitionProps',
-      type: 'object',
+      name: "TransitionProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'TransitionProps',
+        ts: "TransitionProps",
       },
     },
   ],
 });
 
 Builder.registerComponent(withChildren(SpeedDialAction), {
-  name: 'SpeedDialAction',
+  name: "SpeedDialAction",
   inputs: [
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<SpeedDialActionClasses>',
+        ts: "Partial<SpeedDialActionClasses>",
       },
     },
     {
-      name: 'delay',
-      type: 'number',
+      name: "delay",
+      type: "number",
     },
     {
-      name: 'FabProps',
-      type: 'object',
+      name: "FabProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<any>',
+        ts: "Partial<any>",
       },
     },
     {
-      name: 'icon',
-      type: 'string',
+      name: "icon",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
     {
-      name: 'TooltipClasses',
-      type: 'object',
+      name: "TooltipClasses",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<TooltipClasses>',
+        ts: "Partial<TooltipClasses>",
       },
     },
     {
-      name: 'tooltipOpen',
-      type: 'boolean',
+      name: "tooltipOpen",
+      type: "boolean",
     },
     {
-      name: 'tooltipPlacement',
-      type: 'string',
+      name: "tooltipPlacement",
+      type: "string",
       enum: [
-        'bottom',
-        'bottom-end',
-        'bottom-start',
-        'left',
-        'left-end',
-        'left-start',
-        'right',
-        'right-end',
-        'right-start',
-        'top',
-        'top-end',
-        'top-start',
+        "bottom",
+        "bottom-end",
+        "bottom-start",
+        "left",
+        "left-end",
+        "left-start",
+        "right",
+        "right-end",
+        "right-start",
+        "top",
+        "top-end",
+        "top-start",
       ],
     },
     {
-      name: 'tooltipTitle',
-      type: 'string',
+      name: "tooltipTitle",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
   ],
 });
 
 Builder.registerComponent(withChildren(SpeedDialIcon), {
-  name: 'SpeedDialIcon',
+  name: "SpeedDialIcon",
   inputs: [
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<SpeedDialIconClasses>',
+        ts: "Partial<SpeedDialIconClasses>",
       },
     },
     {
-      name: 'icon',
-      type: 'string',
+      name: "icon",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'open',
-      type: 'boolean',
+      name: "open",
+      type: "boolean",
     },
     {
-      name: 'openIcon',
-      type: 'string',
+      name: "openIcon",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
   ],
 });
 
 Builder.registerComponent(Stack, {
-  name: 'Stack',
+  name: "Stack",
 });
 
 Builder.registerComponent(Step, {
-  name: 'Step',
+  name: "Step",
 });
 
 Builder.registerComponent(StepButton, {
-  name: 'StepButton',
+  name: "StepButton",
 });
 
 Builder.registerComponent(StepConnector, {
-  name: 'StepConnector',
+  name: "StepConnector",
   inputs: [
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<StepConnectorClasses>',
+        ts: "Partial<StepConnectorClasses>",
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
   ],
 });
 
 Builder.registerComponent(withChildren(StepContent), {
-  name: 'StepContent',
+  name: "StepContent",
   inputs: [
     {
-      name: 'children',
-      type: 'string',
+      name: "children",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<StepContentClasses>',
+        ts: "Partial<StepContentClasses>",
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
     {
-      name: 'TransitionComponent',
-      type: 'string',
+      name: "TransitionComponent",
+      type: "string",
       meta: {
-        ts: 'JSXElementConstructor<TransitionProps & { children: ReactElement<any, any>; }>',
+        ts: "JSXElementConstructor<TransitionProps & { children: ReactElement<any, any>; }>",
       },
     },
     {
-      name: 'transitionDuration',
-      type: 'string',
+      name: "transitionDuration",
+      type: "string",
       meta: {
-        ts: 'any',
+        ts: "any",
       },
     },
     {
-      name: 'TransitionProps',
-      type: 'object',
+      name: "TransitionProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'TransitionProps',
+        ts: "TransitionProps",
       },
     },
   ],
 });
 
 Builder.registerComponent(withChildren(StepIcon), {
-  name: 'StepIcon',
+  name: "StepIcon",
   inputs: [
     {
-      name: 'active',
-      type: 'boolean',
+      name: "active",
+      type: "boolean",
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<StepIconClasses>',
+        ts: "Partial<StepIconClasses>",
       },
     },
     {
-      name: 'completed',
-      type: 'boolean',
+      name: "completed",
+      type: "boolean",
     },
     {
-      name: 'error',
-      type: 'boolean',
+      name: "error",
+      type: "boolean",
     },
     {
-      name: 'icon',
-      type: 'string',
+      name: "icon",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
       required: true,
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
   ],
 });
 
 Builder.registerComponent(withChildren(StepLabel), {
-  name: 'StepLabel',
+  name: "StepLabel",
   inputs: [
     {
-      name: 'children',
-      type: 'string',
+      name: "children",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<StepLabelClasses>',
+        ts: "Partial<StepLabelClasses>",
       },
     },
     {
-      name: 'componentsProps',
-      type: 'object',
+      name: "componentsProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: '{ label?: HTMLProps<HTMLSpanElement>; }',
+        ts: "{ label?: HTMLProps<HTMLSpanElement>; }",
       },
     },
     {
-      name: 'error',
-      type: 'boolean',
+      name: "error",
+      type: "boolean",
     },
     {
-      name: 'icon',
-      type: 'string',
+      name: "icon",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'optional',
-      type: 'string',
+      name: "optional",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'slotProps',
-      type: 'object',
+      name: "slotProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: '{ label?: HTMLProps<HTMLSpanElement>; }',
+        ts: "{ label?: HTMLProps<HTMLSpanElement>; }",
       },
     },
     {
-      name: 'StepIconComponent',
-      type: 'string',
+      name: "StepIconComponent",
+      type: "string",
       meta: {
-        ts: 'ElementType<StepIconProps, keyof IntrinsicElements>',
+        ts: "ElementType<StepIconProps, keyof IntrinsicElements>",
       },
     },
     {
-      name: 'StepIconProps',
-      type: 'object',
+      name: "StepIconProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<StepIconProps>',
+        ts: "Partial<StepIconProps>",
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
   ],
 });
 
 Builder.registerComponent(Stepper, {
-  name: 'Stepper',
+  name: "Stepper",
 });
 
 Builder.registerComponent(withChildren(StyledTextField), {
-  name: 'StyledTextField',
+  name: "StyledTextField",
   inputs: [
     {
-      name: 'children',
-      type: 'string',
+      name: "children",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'variant',
-      type: 'string',
+      name: "variant",
+      type: "string",
       meta: {
-        ts: 'Variant',
+        ts: "Variant",
       },
     },
   ],
 });
 
 Builder.registerComponent(SwipeableDrawer, {
-  name: 'SwipeableDrawer',
+  name: "SwipeableDrawer",
   inputs: [
     {
-      name: 'allowSwipeInChildren',
-      type: 'string',
+      name: "allowSwipeInChildren",
+      type: "string",
       meta: {
-        ts: 'boolean | ((e: TouchEvent, swipeArea: HTMLDivElement, paper: HTMLDivElement) => boolean)',
+        ts: "boolean | ((e: TouchEvent, swipeArea: HTMLDivElement, paper: HTMLDivElement) => boolean)",
       },
     },
     {
-      name: 'disableBackdropTransition',
-      type: 'boolean',
+      name: "disableBackdropTransition",
+      type: "boolean",
     },
     {
-      name: 'disableDiscovery',
-      type: 'boolean',
+      name: "disableDiscovery",
+      type: "boolean",
     },
     {
-      name: 'disableSwipeToOpen',
-      type: 'boolean',
+      name: "disableSwipeToOpen",
+      type: "boolean",
     },
     {
-      name: 'hysteresis',
-      type: 'number',
+      name: "hysteresis",
+      type: "number",
     },
     {
-      name: 'minFlingVelocity',
-      type: 'number',
+      name: "minFlingVelocity",
+      type: "number",
     },
     {
-      name: 'open',
-      type: 'boolean',
+      name: "open",
+      type: "boolean",
     },
     {
-      name: 'SwipeAreaProps',
-      type: 'object',
+      name: "SwipeAreaProps",
+      type: "object",
       hideFromUI: true,
     },
     {
-      name: 'swipeAreaWidth',
-      type: 'number',
+      name: "swipeAreaWidth",
+      type: "number",
     },
   ],
 });
 
 Builder.registerComponent(withChildren(Switch), {
-  name: 'Switch',
+  name: "Switch",
   inputs: [
     {
-      name: 'checkedIcon',
-      type: 'string',
+      name: "checkedIcon",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<SwitchClasses>',
+        ts: "Partial<SwitchClasses>",
       },
     },
     {
-      name: 'color',
-      type: 'string',
+      name: "color",
+      type: "string",
       meta: {
         ts: 'OverridableStringUnion<"primary" | "secondary" | "error" | "info" | "success" | "warning" | "default", SwitchPropsColorOverrides>',
       },
     },
     {
-      name: 'disabled',
-      type: 'boolean',
+      name: "disabled",
+      type: "boolean",
     },
     {
-      name: 'icon',
-      type: 'string',
+      name: "icon",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'size',
-      type: 'string',
+      name: "size",
+      type: "string",
       meta: {
         ts: 'OverridableStringUnion<"small" | "medium", SwitchPropsSizeOverrides>',
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
     {
-      name: 'value',
-      type: 'string',
+      name: "value",
+      type: "string",
       meta: {
-        ts: 'unknown',
+        ts: "unknown",
       },
     },
   ],
 });
 
 Builder.registerComponent(Tab, {
-  name: 'Tab',
+  name: "Tab",
 });
 
 Builder.registerComponent(Table, {
-  name: 'Table',
+  name: "Table",
 });
 
 Builder.registerComponent(TableBody, {
-  name: 'TableBody',
+  name: "TableBody",
 });
 
 Builder.registerComponent(withChildren(TableCell), {
-  name: 'TableCell',
+  name: "TableCell",
   inputs: [
     {
-      name: 'align',
-      type: 'string',
-      enum: ['center', 'inherit', 'justify', 'left', 'right'],
+      name: "align",
+      type: "string",
+      enum: ["center", "inherit", "justify", "left", "right"],
     },
     {
-      name: 'children',
-      type: 'string',
+      name: "children",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<TableCellClasses>',
+        ts: "Partial<TableCellClasses>",
       },
     },
     {
-      name: 'component',
-      type: 'string',
+      name: "component",
+      type: "string",
       meta: {
-        ts: 'ElementType<TableCellBaseProps, keyof IntrinsicElements>',
+        ts: "ElementType<TableCellBaseProps, keyof IntrinsicElements>",
       },
     },
     {
-      name: 'padding',
-      type: 'string',
-      enum: ['checkbox', 'none', 'normal'],
+      name: "padding",
+      type: "string",
+      enum: ["checkbox", "none", "normal"],
     },
     {
-      name: 'scope',
-      type: 'string',
+      name: "scope",
+      type: "string",
     },
     {
-      name: 'size',
-      type: 'string',
+      name: "size",
+      type: "string",
       meta: {
         ts: 'OverridableStringUnion<"small" | "medium", TableCellPropsSizeOverrides>',
       },
     },
     {
-      name: 'sortDirection',
-      type: 'string',
-      enum: ['asc', 'desc'],
+      name: "sortDirection",
+      type: "string",
+      enum: ["asc", "desc"],
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
     {
-      name: 'variant',
-      type: 'string',
+      name: "variant",
+      type: "string",
       meta: {
         ts: 'OverridableStringUnion<"body" | "footer" | "head", TableCellPropsVariantOverrides>',
       },
@@ -3306,401 +3306,401 @@ Builder.registerComponent(withChildren(TableCell), {
 });
 
 Builder.registerComponent(TableContainer, {
-  name: 'TableContainer',
+  name: "TableContainer",
 });
 
 Builder.registerComponent(TableFooter, {
-  name: 'TableFooter',
+  name: "TableFooter",
 });
 
 Builder.registerComponent(TableHead, {
-  name: 'TableHead',
+  name: "TableHead",
 });
 
 Builder.registerComponent(TablePagination, {
-  name: 'TablePagination',
+  name: "TablePagination",
 });
 
 Builder.registerComponent(TableRow, {
-  name: 'TableRow',
+  name: "TableRow",
 });
 
 Builder.registerComponent(TableSortLabel, {
-  name: 'TableSortLabel',
+  name: "TableSortLabel",
 });
 
 Builder.registerComponent(Tabs, {
-  name: 'Tabs',
+  name: "Tabs",
 });
 
 Builder.registerComponent(withChildren(TabScrollButton), {
-  name: 'TabScrollButton',
+  name: "TabScrollButton",
   inputs: [
     {
-      name: 'children',
-      type: 'string',
+      name: "children",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<TabScrollButtonClasses>',
+        ts: "Partial<TabScrollButtonClasses>",
       },
     },
     {
-      name: 'direction',
-      type: 'string',
-      enum: ['left', 'right'],
+      name: "direction",
+      type: "string",
+      enum: ["left", "right"],
       required: true,
     },
     {
-      name: 'disabled',
-      type: 'boolean',
+      name: "disabled",
+      type: "boolean",
     },
     {
-      name: 'orientation',
-      type: 'string',
-      enum: ['horizontal', 'vertical'],
+      name: "orientation",
+      type: "string",
+      enum: ["horizontal", "vertical"],
       required: true,
     },
     {
-      name: 'slotProps',
-      type: 'object',
+      name: "slotProps",
+      type: "object",
       hideFromUI: true,
       meta: {
         ts: '{ startScrollButtonIcon?: SlotComponentProps<OverridableComponent<SvgIconTypeMap<{}, "svg">> & { muiName: string; }, TabScrollButtonStartIconSlotPropsOverrides, TabScrollButtonOwnerState>; endScrollButtonIcon?: SlotComponentProps<...>; }',
       },
     },
     {
-      name: 'slots',
-      type: 'string',
+      name: "slots",
+      type: "string",
       meta: {
-        ts: '{ StartScrollButtonIcon?: ElementType<any, keyof IntrinsicElements>; EndScrollButtonIcon?: ElementType<any, keyof IntrinsicElements>; }',
+        ts: "{ StartScrollButtonIcon?: ElementType<any, keyof IntrinsicElements>; EndScrollButtonIcon?: ElementType<any, keyof IntrinsicElements>; }",
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
   ],
 });
 
 Builder.registerComponent(TextareaAutosize, {
-  name: 'TextareaAutosize',
+  name: "TextareaAutosize",
 });
 
 Builder.registerComponent(ToggleButton, {
-  name: 'ToggleButton',
+  name: "ToggleButton",
 });
 
 Builder.registerComponent(withChildren(ToggleButtonGroup), {
-  name: 'ToggleButtonGroup',
+  name: "ToggleButtonGroup",
   inputs: [
     {
-      name: 'children',
-      type: 'string',
+      name: "children",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<ToggleButtonGroupClasses>',
+        ts: "Partial<ToggleButtonGroupClasses>",
       },
     },
     {
-      name: 'color',
-      type: 'string',
+      name: "color",
+      type: "string",
       meta: {
         ts: 'OverridableStringUnion<"standard" | "primary" | "secondary" | "error" | "info" | "success" | "warning", ToggleButtonGroupPropsColorOverrides>',
       },
     },
     {
-      name: 'disabled',
-      type: 'boolean',
+      name: "disabled",
+      type: "boolean",
     },
     {
-      name: 'exclusive',
-      type: 'boolean',
+      name: "exclusive",
+      type: "boolean",
     },
     {
-      name: 'fullWidth',
-      type: 'boolean',
+      name: "fullWidth",
+      type: "boolean",
     },
     {
-      name: 'orientation',
-      type: 'string',
-      enum: ['horizontal', 'vertical'],
+      name: "orientation",
+      type: "string",
+      enum: ["horizontal", "vertical"],
     },
     {
-      name: 'size',
-      type: 'string',
+      name: "size",
+      type: "string",
       meta: {
         ts: 'OverridableStringUnion<"small" | "medium" | "large", ToggleButtonGroupPropsSizeOverrides>',
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
     {
-      name: 'value',
-      type: 'string',
+      name: "value",
+      type: "string",
       meta: {
-        ts: 'any',
+        ts: "any",
       },
     },
   ],
 });
 
 Builder.registerComponent(Toolbar, {
-  name: 'Toolbar',
+  name: "Toolbar",
 });
 
 Builder.registerComponent(withChildren(Tooltip), {
-  name: 'Tooltip',
+  name: "Tooltip",
   inputs: [
     {
-      name: 'arrow',
-      type: 'boolean',
+      name: "arrow",
+      type: "boolean",
     },
     {
-      name: 'children',
-      type: 'string',
+      name: "children",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactElement<any, any>',
+        ts: "ReactElement<any, any>",
       },
     },
     {
-      name: 'classes',
-      type: 'object',
+      name: "classes",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<TooltipClasses>',
+        ts: "Partial<TooltipClasses>",
       },
     },
     {
-      name: 'components',
-      type: 'string',
+      name: "components",
+      type: "string",
       meta: {
-        ts: '{ Popper?: ElementType<PopperProps, keyof IntrinsicElements>; Transition?: ElementType<any, keyof IntrinsicElements>; Tooltip?: ElementType<...>; Arrow?: ElementType<...>; }',
+        ts: "{ Popper?: ElementType<PopperProps, keyof IntrinsicElements>; Transition?: ElementType<any, keyof IntrinsicElements>; Tooltip?: ElementType<...>; Arrow?: ElementType<...>; }",
       },
     },
     {
-      name: 'componentsProps',
-      type: 'object',
+      name: "componentsProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: '{ popper?: Partial<PopperProps> & TooltipComponentsPropsOverrides; transition?: TransitionProps & TooltipComponentsPropsOverrides; tooltip?: HTMLProps<...> & ... 1 more ... & TooltipComponentsPropsOverrides; arrow?: HTMLProps<...> & ... 1 more ... & TooltipComponentsPropsOverrides; }',
+        ts: "{ popper?: Partial<PopperProps> & TooltipComponentsPropsOverrides; transition?: TransitionProps & TooltipComponentsPropsOverrides; tooltip?: HTMLProps<...> & ... 1 more ... & TooltipComponentsPropsOverrides; arrow?: HTMLProps<...> & ... 1 more ... & TooltipComponentsPropsOverrides; }",
       },
     },
     {
-      name: 'describeChild',
-      type: 'boolean',
+      name: "describeChild",
+      type: "boolean",
     },
     {
-      name: 'disableFocusListener',
-      type: 'boolean',
+      name: "disableFocusListener",
+      type: "boolean",
     },
     {
-      name: 'disableHoverListener',
-      type: 'boolean',
+      name: "disableHoverListener",
+      type: "boolean",
     },
     {
-      name: 'disableInteractive',
-      type: 'boolean',
+      name: "disableInteractive",
+      type: "boolean",
     },
     {
-      name: 'disableTouchListener',
-      type: 'boolean',
+      name: "disableTouchListener",
+      type: "boolean",
     },
     {
-      name: 'enterDelay',
-      type: 'number',
+      name: "enterDelay",
+      type: "number",
     },
     {
-      name: 'enterNextDelay',
-      type: 'number',
+      name: "enterNextDelay",
+      type: "number",
     },
     {
-      name: 'enterTouchDelay',
-      type: 'number',
+      name: "enterTouchDelay",
+      type: "number",
     },
     {
-      name: 'followCursor',
-      type: 'boolean',
+      name: "followCursor",
+      type: "boolean",
     },
     {
-      name: 'id',
-      type: 'string',
+      name: "id",
+      type: "string",
     },
     {
-      name: 'leaveDelay',
-      type: 'number',
+      name: "leaveDelay",
+      type: "number",
     },
     {
-      name: 'leaveTouchDelay',
-      type: 'number',
+      name: "leaveTouchDelay",
+      type: "number",
     },
     {
-      name: 'open',
-      type: 'boolean',
+      name: "open",
+      type: "boolean",
     },
     {
-      name: 'placement',
-      type: 'string',
+      name: "placement",
+      type: "string",
       enum: [
-        'bottom',
-        'bottom-end',
-        'bottom-start',
-        'left',
-        'left-end',
-        'left-start',
-        'right',
-        'right-end',
-        'right-start',
-        'top',
-        'top-end',
-        'top-start',
+        "bottom",
+        "bottom-end",
+        "bottom-start",
+        "left",
+        "left-end",
+        "left-start",
+        "right",
+        "right-end",
+        "right-start",
+        "top",
+        "top-end",
+        "top-start",
       ],
     },
     {
-      name: 'PopperComponent',
-      type: 'string',
+      name: "PopperComponent",
+      type: "string",
       meta: {
-        ts: 'JSXElementConstructor<PopperProps>',
+        ts: "JSXElementConstructor<PopperProps>",
       },
     },
     {
-      name: 'PopperProps',
-      type: 'object',
+      name: "PopperProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Partial<PopperProps>',
+        ts: "Partial<PopperProps>",
       },
     },
     {
-      name: 'slotProps',
-      type: 'object',
+      name: "slotProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: '{ popper?: Partial<PopperProps> & TooltipComponentsPropsOverrides; transition?: TransitionProps & TooltipComponentsPropsOverrides; tooltip?: HTMLProps<...> & ... 1 more ... & TooltipComponentsPropsOverrides; arrow?: HTMLProps<...> & ... 1 more ... & TooltipComponentsPropsOverrides; }',
+        ts: "{ popper?: Partial<PopperProps> & TooltipComponentsPropsOverrides; transition?: TransitionProps & TooltipComponentsPropsOverrides; tooltip?: HTMLProps<...> & ... 1 more ... & TooltipComponentsPropsOverrides; arrow?: HTMLProps<...> & ... 1 more ... & TooltipComponentsPropsOverrides; }",
       },
     },
     {
-      name: 'slots',
-      type: 'string',
+      name: "slots",
+      type: "string",
       meta: {
-        ts: '{ popper?: ElementType<PopperProps, keyof IntrinsicElements>; transition?: ElementType<any, keyof IntrinsicElements>; tooltip?: ElementType<...>; arrow?: ElementType<...>; }',
+        ts: "{ popper?: ElementType<PopperProps, keyof IntrinsicElements>; transition?: ElementType<any, keyof IntrinsicElements>; tooltip?: ElementType<...>; arrow?: ElementType<...>; }",
       },
     },
     {
-      name: 'sx',
-      type: 'object',
+      name: "sx",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'SxProps<Theme>',
+        ts: "SxProps<Theme>",
       },
     },
     {
-      name: 'title',
-      type: 'string',
+      name: "title",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactNode',
+        ts: "ReactNode",
       },
       required: true,
     },
     {
-      name: 'TransitionComponent',
-      type: 'string',
+      name: "TransitionComponent",
+      type: "string",
       meta: {
-        ts: 'JSXElementConstructor<TransitionProps & { children: ReactElement<any, any>; }>',
+        ts: "JSXElementConstructor<TransitionProps & { children: ReactElement<any, any>; }>",
       },
     },
     {
-      name: 'TransitionProps',
-      type: 'object',
+      name: "TransitionProps",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'TransitionProps',
+        ts: "TransitionProps",
       },
     },
   ],
 });
 
 Builder.registerComponent(Typography, {
-  name: 'Typography',
+  name: "Typography",
 });
 
 Builder.registerComponent(withChildren(Zoom), {
-  name: 'Zoom',
+  name: "Zoom",
   inputs: [
     {
-      name: 'appear',
-      type: 'boolean',
+      name: "appear",
+      type: "boolean",
     },
     {
-      name: 'children',
-      type: 'string',
+      name: "children",
+      type: "string",
       hideFromUI: true,
       meta: {
-        ts: 'ReactElement<any, any>',
+        ts: "ReactElement<any, any>",
       },
     },
     {
-      name: 'easing',
-      type: 'string',
+      name: "easing",
+      type: "string",
       meta: {
-        ts: 'any',
+        ts: "any",
       },
     },
     {
-      name: 'in',
-      type: 'boolean',
+      name: "in",
+      type: "boolean",
     },
     {
-      name: 'ref',
-      type: 'object',
+      name: "ref",
+      type: "object",
       hideFromUI: true,
       meta: {
-        ts: 'Ref<unknown>',
+        ts: "Ref<unknown>",
       },
     },
     {
-      name: 'timeout',
-      type: 'string',
+      name: "timeout",
+      type: "string",
       meta: {
-        ts: 'any',
+        ts: "any",
       },
     },
   ],
 });
 
 Builder.registerComponent(Counter, {
-  name: 'Counter',
+  name: "Counter",
   inputs: [
     {
-      name: 'initialCount',
-      type: 'number',
+      name: "initialCount",
+      type: "number",
     },
   ],
 });

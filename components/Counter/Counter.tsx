@@ -1,6 +1,6 @@
-'use client';
-import React, { useState } from 'react';
-import styles from './styles.module.css';
+"use client";
+import React, { useState } from "react";
+import styles from "./styles.module.css";
 
 interface CounterProps {
   initialCount?: number;
@@ -10,11 +10,11 @@ function Counter({ initialCount = 99 }: CounterProps) {
   const [count, setCount] = useState(initialCount);
 
   const increment = () => {
-    setCount(prevCount => prevCount + 1);
+    setCount((prevCount) => prevCount + 1);
   };
 
   const decrement = () => {
-    setCount(prevCount => prevCount - 1);
+    setCount((prevCount) => prevCount - 1);
   };
 
   return (

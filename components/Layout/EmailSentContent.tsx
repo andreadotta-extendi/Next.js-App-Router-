@@ -10,7 +10,7 @@ type EmailSentContentProps = {
   mail?: string;
   description?: string;
   footer?: React.ReactNode;
-  imgSrc?: string; 
+  imgSrc?: string;
 };
 
 const EmailSentContent: React.FC<EmailSentContentProps> = ({
@@ -34,12 +34,16 @@ const EmailSentContent: React.FC<EmailSentContentProps> = ({
           <Typography variant="h3" component="h1">
             {title}
           </Typography>
-          {mailfield && 
+          {mailfield && (
             <Typography variant="s1" component="h2">
               {mail}
             </Typography>
-          }
-          <Typography variant="body-400" component="p" className="text-gray-400">
+          )}
+          <Typography
+            variant="body-400"
+            component="p"
+            className="text-gray-400"
+          >
             {description}
           </Typography>
         </div>
@@ -48,6 +52,5 @@ const EmailSentContent: React.FC<EmailSentContentProps> = ({
     </section>
   );
 };
-
 
 export default EmailSentContent;

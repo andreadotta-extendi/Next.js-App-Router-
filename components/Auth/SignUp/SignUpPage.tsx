@@ -10,7 +10,7 @@ const SignUpPage: React.FC = () => {
   return (
     <Layout>
       <section className="flex z-10 flex-col gap-4 self-center w-full max-w-[600px]">
-          <SignUpForm />
+        <SignUpForm />
       </section>
       <BackgroundWaves wave="registration" />
     </Layout>

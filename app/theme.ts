@@ -2,23 +2,18 @@
 import { Poppins } from "next/font/google";
 import { SimplePaletteColorOptions, createTheme } from "@mui/material/styles";
 import { TypographyStyleOptions } from "@mui/material/styles/createTypography";
-import taiwindConfig from '../tailwind.config'
-import { CustomExtendConfig } from '@/tailwind.type';
-import { Config } from 'tailwindcss/types/config';
-import { colors } from "@mui/material";
-import { BorderColor, Height, Margin } from "@mui/icons-material";
-
-declare module '@mui/material/styles' {
+import taiwindConfig from "../tailwind.config";
+import { CustomExtendConfig } from "@/tailwind.type";
+declare module "@mui/material/styles" {
   interface TypeAction {
     divider?: string;
   }
 }
 
-const tc:any = taiwindConfig;
+const tc: any = taiwindConfig;
 const extendConfig: CustomExtendConfig = tc.theme?.extend as CustomExtendConfig;
 
-
-declare module '@mui/material/styles' {
+declare module "@mui/material/styles" {
   interface Theme {
     customShadows: { default: string };
   }
@@ -56,9 +51,9 @@ declare module '@mui/material/styles' {
     h3: TypographyStyleOptions;
     h4: TypographyStyleOptions;
     h5: TypographyStyleOptions;
-    "s1": TypographyStyleOptions;
-    "s2": TypographyStyleOptions;
-    "body-500":  TypographyStyleOptions;
+    s1: TypographyStyleOptions;
+    s2: TypographyStyleOptions;
+    "body-500": TypographyStyleOptions;
     "body-400": TypographyStyleOptions;
     "title-cta": TypographyStyleOptions;
     "title-small": TypographyStyleOptions;
@@ -69,6 +64,7 @@ declare module '@mui/material/styles' {
     "caption-500": TypographyStyleOptions;
     "caption-400": TypographyStyleOptions;
     "caption-small-500": TypographyStyleOptions;
+    "caption-small": TypographyStyleOptions;
     "button-xl": TypographyStyleOptions;
     "button-l": TypographyStyleOptions;
     "button-m": TypographyStyleOptions;
@@ -83,9 +79,9 @@ declare module '@mui/material/styles' {
     h3: TypographyStyleOptions;
     h4: TypographyStyleOptions;
     h5: TypographyStyleOptions;
-    "s1": TypographyStyleOptions;
-    "s2": TypographyStyleOptions;
-    "body-500":  TypographyStyleOptions;
+    s1: TypographyStyleOptions;
+    s2: TypographyStyleOptions;
+    "body-500": TypographyStyleOptions;
     "body-400": TypographyStyleOptions;
     "title-cta": TypographyStyleOptions;
     "title-small": TypographyStyleOptions;
@@ -96,6 +92,7 @@ declare module '@mui/material/styles' {
     "caption-500": TypographyStyleOptions;
     "caption-400": TypographyStyleOptions;
     "caption-small-500": TypographyStyleOptions;
+    "caption-small": TypographyStyleOptions;
     "button-xl": TypographyStyleOptions;
     "button-l": TypographyStyleOptions;
     "button-m": TypographyStyleOptions;
@@ -105,15 +102,15 @@ declare module '@mui/material/styles' {
   }
 }
 
-declare module '@mui/material/Typography' {
+declare module "@mui/material/Typography" {
   interface TypographyPropsVariantOverrides {
     h1: true;
     h2: true;
     h3: true;
     h4: true;
     h5: true;
-    "s1": true;
-    "s2": true;
+    s1: true;
+    s2: true;
     "body-500": true;
     "body-400": true;
     "title-cta": true;
@@ -125,6 +122,7 @@ declare module '@mui/material/Typography' {
     "caption-500": true;
     "caption-400": true;
     "caption-small-500": true;
+    "caption-small": true;
     "button-xl": true;
     "button-l": true;
     "button-m": true;
@@ -133,7 +131,6 @@ declare module '@mui/material/Typography' {
     details: true;
   }
 }
-
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
@@ -179,8 +176,8 @@ const theme = createTheme({
     background: {
       default: "#1C1D22", // Colore di sfondo
     },
-    neutral:{
-      main: "#54566870"
+    neutral: {
+      main: "#54566870",
     },
     placeholder: {
       main: "#818084", // Placeholder
@@ -230,71 +227,71 @@ const theme = createTheme({
       fontWeight: 600,
       lineHeight: "28px",
     },
-    "s1": {
+    s1: {
       fontSize: "18px",
       fontWeight: 600,
       lineHeight: "28px",
     },
-    "s2": {
+    s2: {
       fontSize: "16px",
       fontWeight: 600,
       lineHeight: "24px",
     },
-    "body-500":{
+    "body-500": {
       fontSize: "16px",
       fontWeight: 500,
       lineHeight: "24px",
     },
-    "body-400":{
+    "body-400": {
       fontSize: "16px",
       fontWeight: 400,
       lineHeight: "24px",
     },
-    "body-small-500":{
+    "body-small-500": {
       fontSize: "14px",
       fontWeight: 500,
       lineHeight: "20px",
     },
-    "body-small-400":{
+    "body-small-400": {
       fontSize: "14px",
       fontWeight: 400,
       lineHeight: "20px",
     },
-    "caption-500":{
+    "caption-500": {
       fontSize: "12px",
       fontWeight: 500,
       lineHeight: "16px",
     },
-    "caption-400":{
+    "caption-400": {
       fontSize: "12px",
       fontWeight: 400,
       lineHeight: "16px",
     },
-    "caption-small-500":{
+    "caption-small-500": {
       fontSize: "10px",
       fontWeight: 400,
       lineHeight: "14px",
     },
-    "button-xl":{
+    "button-xl": {
       fontSize: "18px",
       fontWeight: 600,
       lineHeight: "24px",
     },
-    "button-l":{
+    "button-l": {
       fontSize: "16px",
       fontWeight: 600,
       lineHeight: "20px",
     },
-    "button-m":{
+    "button-m": {
       fontSize: "14px",
       fontWeight: 600,
       lineHeight: "16px",
     },
-    "button-s":{
+    "button-s": {
       fontSize: "12px",
       fontWeight: 600,
       lineHeight: "16px",
-    } ,
+    },
     "title-cta": {
       fontSize: "16px",
       fontWeight: 600,
@@ -325,6 +322,11 @@ const theme = createTheme({
       fontWeight: 500,
       lineHeight: "130%",
     },
+    "caption-small": {
+      fontSize: "10px",
+      fontWeight: 400,
+      lineHeight: "120%",
+    },
   },
   customShadows: {
     default: "0px 4px 20px rgba(0, 0, 0, 0.5)",
@@ -336,10 +338,10 @@ const theme = createTheme({
       },
       styleOverrides: {
         root: ({ theme }) => ({
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center', 
-          justifyContent: 'center',
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
         }),
       },
     },
@@ -350,7 +352,7 @@ const theme = createTheme({
           borderRadius: "8px",
 
           // size
-         "&.MuiButton-sizeLarge": {
+          "&.MuiButton-sizeLarge": {
             padding: "16px 32px",
           },
 
@@ -363,46 +365,44 @@ const theme = createTheme({
           },
 
           // color
-         "&.MuiButton-containedPrimary":{
+          "&.MuiButton-containedPrimary": {
             background: theme.palette.gradient.main,
             color: theme.palette.text.primary,
             boxShadow: "0 0 0 5px #6C7AFF25",
           },
 
-          "&.MuiButton-containedSecondary":{
+          "&.MuiButton-containedSecondary": {
             background: theme.palette.secondary.main,
             color: theme.palette.secondary.contrastText,
           },
 
-          "&.MuiButton-containedPrimary:hover":{
+          "&.MuiButton-containedPrimary:hover": {
             background: theme.palette.primary.dark,
           },
 
-          "&.MuiButton-containedSecondary:hover":{
+          "&.MuiButton-containedSecondary:hover": {
             background: theme.palette.secondary.dark,
             color: theme.palette.secondary.contrastText,
           },
 
-
-          "&.MuiButton-text":{
+          "&.MuiButton-text": {
             color: theme.palette.primary.dark,
           },
 
           // disabled
-         "&.Mui-disabled": {
+          "&.Mui-disabled": {
             background: theme.palette.text.disabled,
             color: theme.palette.secondary.contrastText,
             boxShadow: "none",
           },
-          
         }),
       },
     },
     MuiIconButton: {
       styleOverrides: {
         root: ({ theme }) => ({
-            color: theme.palette.primary.main,
-            "&.Mui-disabled": {
+          color: theme.palette.primary.main,
+          "&.Mui-disabled": {
             color: theme.palette.text.disabled,
           },
         }),
@@ -411,9 +411,9 @@ const theme = createTheme({
           color: theme.palette.primary.main,
           border: `1px solid ${theme.palette.primary.main}`,
           "&.Mui-disabled": {
-          border: `1px solid ${theme.palette.text.disabled}`,
-          color: theme.palette.text.disabled,
-        },
+            border: `1px solid ${theme.palette.text.disabled}`,
+            color: theme.palette.text.disabled,
+          },
         }),
       },
     },
@@ -482,9 +482,9 @@ const theme = createTheme({
       styleOverrides: {
         root: ({ theme }) => ({
           borderRadius: theme.spacing(2),
-          backgroundColor:theme.palette.paper.main,
+          backgroundColor: theme.palette.paper.main,
           "&.MuiPaper-outlined": {
-             borderColor: "#8C8D97", // Action Divider
+            borderColor: "#8C8D97", // Action Divider
           },
         }),
       },
@@ -527,7 +527,7 @@ const theme = createTheme({
         }),
       },
     },
-    MuiAccordionSummary:  { 
+    MuiAccordionSummary: {
       styleOverrides: {
         root: ({ theme }) => ({
           minHeight: "auto",
@@ -536,10 +536,10 @@ const theme = createTheme({
           },
         }),
         content: ({ theme }) => ({
-           margin: "16px 0px !important",
+          margin: "16px 0px !important",
         }),
       },
-    }, 
+    },
     MuiAppBar: {
       styleOverrides: {
         colorPrimary: ({ theme }) => ({
@@ -620,42 +620,43 @@ const theme = createTheme({
           color: theme.palette.text.primary,
 
           // Focused
-          '& .Mui-focused .MuiOutlinedInput-root': {
+          "& .Mui-focused .MuiOutlinedInput-root": {
             color: theme.palette.text.primary,
           },
-          '& .Mui-focused .MuiInputLabel-root': {
+          "& .Mui-focused .MuiInputLabel-root": {
             color: theme.palette.text.primary,
             marginBottom: theme.spacing(0.5),
           },
-          '& .Mui-focused .MuiOutlinedInput-notchedOutline': {
-            borderColor: '#6C7AFF !important', // primary main
+          "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
+            borderColor: "#6C7AFF !important", // primary main
           },
           // Nascondi il notchedOutline
-          '& .MuiInputBase-root-MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline': {
-            borderColor: theme.palette.text.secondary,
+          "& .MuiInputBase-root-MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline":
+            {
+              borderColor: theme.palette.text.secondary,
+            },
+          "& .MuiOutlinedInput-notchedOutline legend": {
+            display: "none !important",
           },
-          '& .MuiOutlinedInput-notchedOutline legend': {
-            display: 'none !important',
-          },
-          '.MuiOutlinedInput-notchedOutline': {
-            borderColor: '#8C8D97 !important', // Action Divider
-            top: '0',
+          ".MuiOutlinedInput-notchedOutline": {
+            borderColor: "#8C8D97 !important", // Action Divider
+            top: "0",
           },
 
-          '& input:-webkit-autofill': {
-            WebkitBoxShadow: '0 0 0 100px #1C1D22 inset !important', // Sfondo specifico
-            WebkitTextFillColor: '#fff !important', // Colore del testo
-            caretColor: '#fff !important',
+          "& input:-webkit-autofill": {
+            WebkitBoxShadow: "0 0 0 100px #1C1D22 inset !important", // Sfondo specifico
+            WebkitTextFillColor: "#fff !important", // Colore del testo
+            caretColor: "#fff !important",
           },
-          '& input:-webkit-autofill:focus': {
-            WebkitBoxShadow: '0 0 0 100px #1C1D22 inset !important',
-            WebkitTextFillColor: '#fff !important',
-            caretColor: '#fff !important',
+          "& input:-webkit-autofill:focus": {
+            WebkitBoxShadow: "0 0 0 100px #1C1D22 inset !important",
+            WebkitTextFillColor: "#fff !important",
+            caretColor: "#fff !important",
           },
           '& input[type="password"]:-webkit-autofill': {
-            WebkitBoxShadow: '0 0 0 100px #1C1D22 inset !important', // Background color fix for password field
-            WebkitTextFillColor: '#fff !important', // Text color inside autofill
-            caretColor: '#fff !important',
+            WebkitBoxShadow: "0 0 0 100px #1C1D22 inset !important", // Background color fix for password field
+            WebkitTextFillColor: "#fff !important", // Text color inside autofill
+            caretColor: "#fff !important",
           },
         }),
       },
@@ -663,10 +664,10 @@ const theme = createTheme({
     MuiOutlinedInput: {
       styleOverrides: {
         root: {
-          '& input:-webkit-autofill': {
-            WebkitBoxShadow: '0 0 0 100px #1C1D22 inset !important', // Sfondo specifico
-            WebkitTextFillColor: '#fff !important', // Colore del testo
-            caretColor: '#fff !important',
+          "& input:-webkit-autofill": {
+            WebkitBoxShadow: "0 0 0 100px #1C1D22 inset !important", // Sfondo specifico
+            WebkitTextFillColor: "#fff !important", // Colore del testo
+            caretColor: "#fff !important",
           },
         },
       },
@@ -676,26 +677,26 @@ const theme = createTheme({
         root: ({ theme }) => ({
           color: theme.palette.text.primary,
           // Input
-          "& .MuiInputBase-input":{
+          "& .MuiInputBase-input": {
             padding: theme.spacing(2),
             fontSize: "14px",
             border: "none",
           },
-          "& .MuiInputBase-formControl":{
+          "& .MuiInputBase-formControl": {
             color: theme.palette.text.primary,
             border: "1px inset #8C8D97", // Action Divider
             borderRadius: theme.spacing(1),
           },
 
           // Variant Outlined
-          "& .MuiOutlinedInput-root":{
+          "& .MuiOutlinedInput-root": {
             color: theme.palette.text.primary,
             border: "none",
             backgroundColor: "transparent !important",
           },
 
           // Label
-          "& .MuiInputLabel-root":{
+          "& .MuiInputLabel-root": {
             color: theme.palette.text.primary,
             position: "relative",
             transform: "none",
@@ -708,29 +709,27 @@ const theme = createTheme({
           // },
 
           // Focused
-          "& .Mui-focused.MuiOutlinedInput-root":{
+          "& .Mui-focused.MuiOutlinedInput-root": {
             color: theme.palette.text.primary, // text primary
             backgroundColor: "#393A47 !important", // Action focus
-            
           },
-          "& .Mui-focused .MuiInputLabel-root":{
+          "& .Mui-focused .MuiInputLabel-root": {
             color: (theme.palette.text.primary, "!important"),
             marginBottom: theme.spacing(0.5),
           },
           "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-             borderColor: (theme.palette.primary.main, "!important"),
-             top: "0",
+            borderColor: (theme.palette.primary.main, "!important"),
+            top: "0",
           },
 
           // hide notchedOutline
-          "& .MuiOutlinedInput-notchedOutline legend":{
+          "& .MuiOutlinedInput-notchedOutline legend": {
             display: "none !important",
           },
           "& .MuiOutlinedInput-notchedOutline": {
-             borderColor: "#8C8D97", // Action Divider
-             top: "0",
+            borderColor: "#8C8D97", // Action Divider
+            top: "0",
           },
-          
 
           // adornment color
           "& .MuiIconButton-root": {
@@ -738,49 +737,47 @@ const theme = createTheme({
           },
 
           // creative checkbox
-            "&.creative-checkbox input": {
-              position: "absolute",
-              display: "none",
+          "&.creative-checkbox input": {
+            position: "absolute",
+            display: "none",
           },
-
         }),
-        
       },
     },
     MuiFormControlLabel: {
       styleOverrides: {
-       root: ({ theme }) => ({
-        color: theme.palette.text.primary,
-        "& .MuiTypography-root": {
-          fontWeight: "500",
-        },
-        // size small 
-        "& .MuiCheckbox-sizeSmall ~ .MuiTypography-root": {
-          fontSize: "14px", // button-m
-        },
-        // checked  
-        "& .MuiCheckbox-root.Mui-checked .MuiSvgIcon-root": {
+        root: ({ theme }) => ({
+          color: theme.palette.text.primary,
+          "& .MuiTypography-root": {
+            fontWeight: "500",
+          },
+          // size small
+          "& .MuiCheckbox-sizeSmall ~ .MuiTypography-root": {
+            fontSize: "14px", // button-m
+          },
+          // checked
+          "& .MuiCheckbox-root.Mui-checked .MuiSvgIcon-root": {
             fill: theme.palette.primary.dark,
           },
-       }),
+        }),
       },
     },
-    MuiFormHelperText:{
+    MuiFormHelperText: {
       styleOverrides: {
-       root: ({ theme }) => ({
+        root: ({ theme }) => ({
           marginLeft: "0px",
         }),
       },
     },
-    MuiMobileStepper:{
+    MuiMobileStepper: {
       styleOverrides: {
-       root: ({ theme }) => ({
-        color: theme.palette.neutral.main,
-        "&.Mui-disabled" : {
+        root: ({ theme }) => ({
+          color: theme.palette.neutral.main,
+          "&.Mui-disabled": {
             color: theme.palette.neutral.main,
-        },
-       }),
-       dot: ({ theme }) => ({
+          },
+        }),
+        dot: ({ theme }) => ({
           height: theme.spacing(2),
           width: theme.spacing(2),
           backgroundColor: theme.palette.neutral.main,
@@ -799,6 +796,13 @@ const theme = createTheme({
         }),
         bar: ({ theme }) => ({
           borderRadius: theme.spacing(2),
+        }),
+      },
+    },
+    MuiDivider: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          backgroundColor: theme.palette.action.divider,
         }),
       },
     },

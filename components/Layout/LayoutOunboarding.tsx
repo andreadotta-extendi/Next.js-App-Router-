@@ -11,11 +11,24 @@ interface LayoutProps {
   stepsPage?: boolean;
 }
 
-const Layout: React.FC<LayoutProps> = ({ headerLeftButton, headerRightButton, stepsPage, children }) => {
+const Layout: React.FC<LayoutProps> = ({
+  headerLeftButton,
+  headerRightButton,
+  stepsPage,
+  children,
+}) => {
   return (
     <div className="flex flex-col lg:h-screen">
-      <HeaderOnboarding leftButton={headerLeftButton} rightButton={headerRightButton} />
-        <main className={`${!stepsPage && 'flex flex-col lg:justify-center items-center'} py-16 px-4`} style={{height: `calc(100vh - 100px)`}}>
+      <HeaderOnboarding
+        leftButton={headerLeftButton}
+        rightButton={headerRightButton}
+      />
+      <main
+        className={`${
+          !stepsPage && "flex flex-col lg:justify-center items-center"
+        } py-16 px-4`}
+        style={{ height: `calc(100vh - 100px)` }}
+      >
         {children}
       </main>
     </div>

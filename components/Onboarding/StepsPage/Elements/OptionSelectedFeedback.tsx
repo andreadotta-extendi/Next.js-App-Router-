@@ -11,15 +11,15 @@ interface OptionSelectedFeedbackProps {
   className?: string;
 }
 
-const OptionSelectedFeedback: React.FC<OptionSelectedFeedbackProps> = ({ imageSrc, text, alt, className }) => {
+const OptionSelectedFeedback: React.FC<OptionSelectedFeedbackProps> = ({
+  imageSrc,
+  text,
+  alt,
+  className,
+}) => {
   return (
     <article className="flex gap-6 items-center p-6 rounded-2xl bg-neutral-900 text-zinc-50 w-[450px]">
-      <img
-        loading="lazy"
-        src={imageSrc}
-        alt={alt}
-        className={`${className}`}
-      />
+      <img loading="lazy" src={imageSrc} alt={alt} className={`${className}`} />
       <Typography variant="s1" component="p" className="text-left">
         {text}
       </Typography>

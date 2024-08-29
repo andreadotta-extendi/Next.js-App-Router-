@@ -1,4 +1,4 @@
-import { Config } from 'tailwindcss/types/config';
+import { Config } from "tailwindcss/types/config";
 
 export interface CustomExtendConfig {
   colors: {
@@ -15,7 +15,7 @@ export interface CustomExtendConfig {
       dark: string;
       contrastText: string;
     };
-     complementary: {
+    complementary: {
       light: string;
       main: string;
       dark: string;
@@ -33,7 +33,7 @@ export interface CustomExtendConfig {
     action: {
       divider: string;
       focus: string;
-    }
+    };
     background: string;
     paper: string;
     button: string;

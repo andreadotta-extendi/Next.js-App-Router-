@@ -14,23 +14,23 @@ const PasswordUpdatedPage: React.FC = () => {
         <EmailSentContent
           imgSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/6f1b491146bfcc29cbec4fe302dc401fa973dc97da679d040da4132ac26393dd?placeholderIfAbsent=true&apiKey=ae92917785e7425fbb91907da8ebf914"
           title="Password aggiornata"
-          mailfield={false} 
+          mailfield={false}
           description="La password è stata aggiornata. Adesso puoi accedere alla piattaforma"
-          footer={ 
-          <div className="flex flex-col mt-6 w-full">
-            <Button
-              size="large"
-              variant="contained"
-              color="primary"
-              className="w-full max-md:max-w-full"
-            >
-              Torna al login
-            </Button>
-          </div>
+          footer={
+            <div className="flex flex-col mt-6 w-full">
+              <Button
+                size="large"
+                variant="contained"
+                color="primary"
+                className="w-full max-md:max-w-full"
+              >
+                Torna al login
+              </Button>
+            </div>
           }
         />
-        </section>
-        <BackgroundWaves wave="login" />
+      </section>
+      <BackgroundWaves wave="login" />
     </Layout>
   );
 };

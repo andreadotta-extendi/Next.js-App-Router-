@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Box, Slider, Typography } from "@mui/material";
 import React from "react";
 
@@ -7,11 +7,11 @@ const MIN = 0;
 const marks = [
   {
     value: MIN,
-    label: '',
+    label: "",
   },
   {
     value: MAX,
-    label: '',
+    label: "",
   },
 ];
 
@@ -23,7 +23,9 @@ const LevelSlider: React.FC = () => {
 
   return (
     <div className="flex flex-col px-6 w-full">
-      <Typography variant="s1" component="p" className="mb-2">Livello</Typography>
+      <Typography variant="s1" component="p" className="mb-2">
+        Livello
+      </Typography>
       <div className="w-full px-1">
         <Slider
           orientation="horizontal"
@@ -38,10 +40,16 @@ const LevelSlider: React.FC = () => {
           min={MIN}
           max={MAX}
         />
-        <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-          <img src="assets/catalog/levels/mai-suonato-gray.png" className="h-[18px]" />
+        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+          <img
+            src="assets/catalog/levels/mai-suonato-gray.png"
+            className="h-[18px]"
+          />
           <img src="assets/catalog/levels/base-gray.png" className="h-[18px]" />
-          <img src="assets/catalog/levels/intermedio-gray.png" className="h-[18px]" />
+          <img
+            src="assets/catalog/levels/intermedio-gray.png"
+            className="h-[18px]"
+          />
           <img src="assets/catalog/levels/avanzato.png" className="h-[18px]" />
         </Box>
       </div>

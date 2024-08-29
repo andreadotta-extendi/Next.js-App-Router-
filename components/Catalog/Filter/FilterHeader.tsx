@@ -7,7 +7,9 @@ import React from "react";
 const FilterHeader: React.FC = () => {
   return (
     <header className="px-6">
-      <Typography variant="h3" component="h3">Filtri</Typography>
+      <Typography variant="h3" component="h3">
+        Filtri
+      </Typography>
     </header>
   );
 };

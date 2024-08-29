@@ -1,36 +1,30 @@
-'use client'
-import { CourseType, DifficultyLevel } from "@/components/types/Catalog";
-import { Avatar, AvatarGroup, Card, CardContent, CardMedia, Chip, Theme, Typography, useTheme } from "@mui/material";
+"use client";
+import { CourseCardProps } from "@/components/types/Course";
+import {
+  Avatar as MUIAvatar,
+  Card,
+  CardContent,
+  CardMedia,
+  Chip,
+  Typography,
+} from "@mui/material";
 
 import React from "react";
-import { getCardColors } from "../utils";
+import { getCardColors, getInstructorName } from "../utils";
 import DifficultyLevelChip from "./DifficultyLevelChip";
-
-export interface CourseCardProps {
-  imageSrc?: string;
-  videoCount?: number;
-  title?: string;
-  tags?: string[];
-  avatar?: string[];
-  instructor?: string;
-  courseType?: CourseType;
-  level?: DifficultyLevel;
-  highlighted?: boolean;
-}
+import Avatar from "@/components/Shared/ui/Avatar";
 
 const CourseCard: React.FC<CourseCardProps> = ({
   imageSrc,
   videoCount,
   title,
-  tags = [],
-  avatar = [],
-  instructor,
+  genres = [],
+  instructors,
   courseType,
   level,
-  highlighted
+  highlighted,
 }) => {
   const chipTextColor = courseType === "percorsi" ? "#15151A" : "#E2E3E9";
-
 
   return (
     <Card
@@ -50,12 +44,14 @@ const CourseCard: React.FC<CourseCardProps> = ({
           />
           {courseType && (
             <Chip
-              label={<Typography variant="caption-500">{courseType}</Typography>}
+              label={
+                <Typography variant="caption-500">{courseType}</Typography>
+              }
               size="small"
               variant="filled"
               className="absolute top-4 left-4 min-h-[24px]"
               sx={{
-                backgroundColor:  getCardColors(courseType, highlighted)?.cardBg,
+                backgroundColor: getCardColors(courseType, highlighted)?.cardBg,
                 color: chipTextColor,
               }}
             />
@@ -65,7 +61,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
               label={`${videoCount} video${videoCount > 1 ? "s" : ""}`}
               size="medium"
               className="absolute bottom-[19px] right-[17px]"
-              avatar={<Avatar src="/assets/play-arrow-filled.png" />}
+              avatar={<MUIAvatar src="/assets/play-arrow-filled.png" />}
               sx={{
                 background: "#54566870",
               }}
@@ -74,33 +70,51 @@ const CourseCard: React.FC<CourseCardProps> = ({
         </div>
         <CardContent
           className="w-full space-y-2"
-          style={{ color: courseType === "percorsi" ? "#15151A" : "#E2E3E9" }}
+          style={{
+            color: courseType === "percorsi" ? "#15151A" : "#E2E3E9",
+          }}
         >
-          <Typography variant="h5" color={getCardColors(courseType, highlighted)?.textColor} className="gap-2.5 self-stretch w-full">
+          <Typography
+            variant="h5"
+            color={getCardColors(courseType, highlighted)?.textColor}
+            className="gap-2.5 self-stretch w-full"
+          >
             {title}
           </Typography>
           <div className="flex flex-wrap gap-1">
-            <DifficultyLevelChip courseType={courseType} level={level} highlighted={highlighted}/>
-            {Array.isArray(tags) &&
-              tags.map((tag, index) => (
+            <DifficultyLevelChip
+              courseType={courseType}
+              level={level}
+              highlighted={highlighted}
+            />
+            {Array.isArray(genres) &&
+              genres.map((genre, index) => (
                 <Chip
                   key={index}
-                  label={<Typography variant="caption-500" sx={{color: chipTextColor}}>{tag}</Typography>}
+                  label={
+                    <Typography
+                      variant="caption-500"
+                      sx={{ color: chipTextColor }}
+                    >
+                      {genre}
+                    </Typography>
+                  }
                   size="small"
                   color="default"
                   variant="outlined"
-                  sx={{ color: chipTextColor, borderColor: chipTextColor }}
+                  sx={{
+                    color: chipTextColor,
+                    borderColor: chipTextColor,
+                  }}
                 />
               ))}
           </div>
           <div className="flex items-center mt-4">
-            <AvatarGroup max={2}>
-              {Array.isArray(avatar) &&
-                avatar.map((avatar) => (
-                <Avatar src={avatar} alt="Avatar" className="mr-2" sx={{ height: "32px", width: "32px", borderColor:  getCardColors(courseType, highlighted)?.cardBg  }} />
-              ))}
-            </AvatarGroup>
-            <Typography variant="body2">{instructor}</Typography>
+            <Avatar
+              instructors={instructors}
+              courseType={courseType}
+              highlighted={highlighted}
+            />
           </div>
         </CardContent>
       </div>

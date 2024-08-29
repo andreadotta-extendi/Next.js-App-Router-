@@ -42,15 +42,42 @@ const featuredContents = [
   // Add more featured content items as needed
 ];
 
-const latestContents: { image: string; type: string; title: string; level: string; genre?: string; instructor: { name: string; avatar: string; }; videoCount: number; typeColor: string; }[] = [
+const latestContents: {
+  image: string;
+  type: string;
+  title: string;
+  level: string;
+  genre?: string;
+  instructor: { name: string; avatar: string };
+  videoCount: number;
+  typeColor: string;
+}[] = [
   // Similar structure as featuredContents, but with different data
 ];
 
-const popularContents: { image: string; type: string; title: string; level: string; genre?: string; instructor: { name: string; avatar: string; }; videoCount: number; typeColor: string; }[] = [
+const popularContents: {
+  image: string;
+  type: string;
+  title: string;
+  level: string;
+  genre?: string;
+  instructor: { name: string; avatar: string };
+  videoCount: number;
+  typeColor: string;
+}[] = [
   // Similar structure as featuredContents, but with different data
 ];
 
-const staticCategory1Contents: { image: string; type: string; title: string; level: string; genre?: string; instructor: { name: string; avatar: string; }; videoCount: number; typeColor: string; }[] = [
+const staticCategory1Contents: {
+  image: string;
+  type: string;
+  title: string;
+  level: string;
+  genre?: string;
+  instructor: { name: string; avatar: string };
+  videoCount: number;
+  typeColor: string;
+}[] = [
   // Similar structure as featuredContents, but with different data
 ];
 

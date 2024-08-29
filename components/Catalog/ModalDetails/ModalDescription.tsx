@@ -1,7 +1,12 @@
-"use client"
+"use client";
 import React from "react";
-import { Chip, Typography, LinearProgress, linearProgressClasses } from '@mui/material';
-import { styled } from '@mui/material/styles';
+import {
+  Chip,
+  Typography,
+  LinearProgress,
+  linearProgressClasses,
+} from "@mui/material";
+import { styled } from "@mui/material/styles";
 
 interface ModalDescriptionProps {
   description: string;
@@ -21,8 +26,10 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   },
 }));
 
-
-const ModalDescription: React.FC<ModalDescriptionProps> = ({ description, progressValue }) => {
+const ModalDescription: React.FC<ModalDescriptionProps> = ({
+  description,
+  progressValue,
+}) => {
   return (
     <div className="flex flex-col gap-6 w-full">
       <Chip
@@ -41,8 +48,14 @@ const ModalDescription: React.FC<ModalDescriptionProps> = ({ description, progre
           Completato
         </Typography>
         <span className="flex items-center gap-2">
-          <LinearProgress variant="determinate" value={progressValue} className="w-[160px]" />
-          <Typography variant="s2" component="p">{progressValue}%</Typography>
+          <LinearProgress
+            variant="determinate"
+            value={progressValue}
+            className="w-[160px]"
+          />
+          <Typography variant="s2" component="p">
+            {progressValue}%
+          </Typography>
         </span>
       </div>
     </div>

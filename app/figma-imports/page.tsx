@@ -1,6 +1,5 @@
-import { RenderBuilderContent } from '@/components/builder';
+import { RenderBuilderContent } from "@/components/builder";
 import { builder } from "@builder.io/sdk";
-
 
 // Builder Public API Key set in .env file
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
@@ -25,7 +24,7 @@ export default async function Page(props: PageProps) {
     // Convert the result to a promise
     .toPromise();
 
-    console.log("FIGMA IMPORT")
+  console.log("FIGMA IMPORT");
   return (
     <>
       {/* Render the Builder page */}

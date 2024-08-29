@@ -3,7 +3,7 @@ import { ComponentProps } from "react";
 import { builder } from "@builder.io/sdk";
 import { BuilderComponent, useIsPreviewing } from "@builder.io/react";
 
-// Replace with your Public API Key 
+// Replace with your Public API Key
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
 
 type BuilderPageProps = ComponentProps<typeof BuilderComponent>;
@@ -17,7 +17,7 @@ export function RenderBuilderContent(props: BuilderPageProps) {
   if (props.content || isPreviewing) {
     return <BuilderComponent {...props} />;
   }
-  console.log("BUILDER")
+  console.log("BUILDER");
 
   return null;
 }

@@ -15,10 +15,7 @@ const ProgressIndicator: React.FC<ProgressIndicatorProps> = ({
   return (
     <React.Fragment>
       {Array.from({ length: steps }, (_, index) => (
-        <div
-          key={index}
-          className="w-full"
-        >
+        <div key={index} className="w-full">
           <div
             className={`flex rounded-3xl min-h-[16px] ${
               index + 1 === currentStep

@@ -58,28 +58,27 @@ const CatalogPage = () => {
       <CatalogSearch />
       <SwipableCatalogCarousel />
       <div className="flex flex-col mt-10 w-full gap-12">
-
         <Grid container spacing={2}>
-            {/* Esempio strumento selezionato */}
-            {instruments.slice(0, 6).map((instrument, index) => (
-              <Grid item xs={4} lg={2}>
-                <CreativeCheckbox key={index} {...instrument}/>
-              </Grid>
-            ))}
-          </Grid>
+          {/* Esempio strumento selezionato */}
+          {instruments.slice(0, 6).map((instrument, index) => (
+            <Grid item xs={4} lg={2}>
+              <CreativeCheckbox key={index} {...instrument} />
+            </Grid>
+          ))}
+        </Grid>
 
         <div className="flex gap-6 items-start w-full">
           <FilterContainer />
           <div className="flex flex-1 flex-col gap-10">
-            <CatalogSection title="In evidenza" hasLink/>
+            <CatalogSection title="In evidenza" hasLink />
             <CatalogSection title="Impara da zero" />
-            <CatalogSection title="Ultime uscite"/>
+            <CatalogSection title="Ultime uscite" />
             <CatalogSection title="Più seguiti" hasLink />
-            <CatalogSection title="Categoria statica 1" hasLink/>
+            <CatalogSection title="Masterclass" hasLink />
           </div>
         </div>
       </div>
-     </Layout>
+    </Layout>
   );
 };
 

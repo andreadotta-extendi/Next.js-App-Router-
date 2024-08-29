@@ -14,11 +14,13 @@
     "@builder.io/sdk": "^2.2.4",
     "@emotion/react": "11.11.4",
     "@emotion/styled": "11.11.5",
+    "@faker-js/faker": "^8.4.1",
     "@mui/icons-material": "^5.15.20",
     "@mui/material": "5.15.20",
     "@mui/material-nextjs": "^5.15.11",
     "@mui/styled-engine": "^5.15.14",
     "@mui/system": "^5.15.20",
+    "chance": "^1.1.12",
     "next": "14.1.0",
     "postcss-js": "^4.0.1",
     "react": "^18.3.1",
@@ -26,6 +28,7 @@
     "styled-components": "6.1.11"
   },
   "devDependencies": {
+    "@types/chance": "^1.1.6",
     "@types/node": "^20.14.2",
     "@types/postcss-js": "^4.0.4",
     "@types/react": "^18.3.3",

@@ -1,7 +1,7 @@
 "use client";
 import { FormControl } from "@/app/mui-components";
 import { InputLabel, Typography } from "@mui/material";
-import Image from 'next/image';
+import Image from "next/image";
 import React from "react";
 
 export interface CreativeCheckboxProps {
@@ -45,7 +45,9 @@ const CreativeCheckbox: React.FC<CreativeCheckboxProps> = ({
             alt={altText}
             className="object-contain aspect-square w-[72px]"
           />
-          <InputLabel className={`mt-2 ${isChecked ? "text-primary-main" : "text-white"}`}>
+          <InputLabel
+            className={`mt-2 ${isChecked ? "text-primary-main" : "text-white"}`}
+          >
             <Typography variant="s1">{name}</Typography>
           </InputLabel>
         </label>

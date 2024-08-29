@@ -7,19 +7,21 @@ import TopSection from "@/components/Layout/TopSection";
 import { Button } from "@mui/material";
 import Layout from "@/components/Layout/LayoutOunboarding";
 
-
 const WelcomePage: React.FC = () => {
   return (
     <Layout>
       <section className="flex z-10 flex-col gap-4 self-center w-full max-w-[600px]">
-        <TopSection title="Benvenuto in Vibly!" subtitle="Dicci qualcosa in più su di te! Rispondi a queste poche domande per permetterci di offrirti l’esperienza migliore">
-            <Button
-          size="large"
-          variant="contained"
-          color="primary"
-          className="w-full"
+        <TopSection
+          title="Benvenuto in Vibly!"
+          subtitle="Dicci qualcosa in più su di te! Rispondi a queste poche domande per permetterci di offrirti l’esperienza migliore"
+        >
+          <Button
+            size="large"
+            variant="contained"
+            color="primary"
+            className="w-full"
           >
-              Iscriviti
+            Iscriviti
           </Button>
         </TopSection>
       </section>

@@ -1,10 +1,9 @@
 "use client";
 import { builder, Builder, withChildren } from "@builder.io/react";
 import { Button, Input } from "./mui-components";
-import CustomModalMetadata from '../components/Catalog/ModalDetails/ModalMetadata';
-import CustomCreativeCheckbox from '../components/Shared/ui/CreativeCheckbox';
+import CustomModalMetadata from "../components/Catalog/ModalDetails/ModalMetadata";
+import CustomCreativeCheckbox from "../components/Shared/ui/CreativeCheckbox";
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
-
 
 Builder.registerComponent(withChildren(Button), {
   name: "Button",
@@ -309,34 +308,52 @@ Builder.registerComponent(withChildren(Input), {
   ],
 });
 Builder.registerComponent(CustomCreativeCheckbox, {
-  name: 'CreativeCheckbox',
+  name: "CreativeCheckbox",
   inputs: [
-    { name: 'imageSrc', type: 'string', defaultValue: 'https://via.placeholder.com/72', required: true },
-    { name: 'altText', type: 'string', defaultValue: 'Image description' },
-    { name: 'name', type: 'string', defaultValue: 'Checkbox name', required: true },
-    { name: 'value', type: 'string', defaultValue: '' },
+    {
+      name: "imageSrc",
+      type: "string",
+      defaultValue: "https://via.placeholder.com/72",
+      required: true,
+    },
+    { name: "altText", type: "string", defaultValue: "Image description" },
+    {
+      name: "name",
+      type: "string",
+      defaultValue: "Checkbox name",
+      required: true,
+    },
+    { name: "value", type: "string", defaultValue: "" },
   ],
 });
 Builder.registerComponent(CustomModalMetadata, {
-  name: 'ModalMetadata',
+  name: "ModalMetadata",
   inputs: [
-    { name: 'lessonCount', type: 'number', defaultValue: 0 },
-    { name: 'level', type: 'string', defaultValue: 'Beginner' },
-    { name: 'genre', type: 'string', defaultValue: 'General' },
-    { name: 'duration', type: 'string', defaultValue: '00:00' },
+    { name: "lessonCount", type: "number", defaultValue: 0 },
+    { name: "level", type: "string", defaultValue: "Beginner" },
+    { name: "genre", type: "string", defaultValue: "General" },
+    { name: "duration", type: "string", defaultValue: "00:00" },
     {
-      name: 'instructor',
-      type: 'object',
+      name: "instructor",
+      type: "object",
       subFields: [
-        { name: 'name', type: 'string', defaultValue: 'Instructor Name' },
-        { name: 'avatarUrl', type: 'string', defaultValue: 'https://example.com/avatar.png' },
+        {
+          name: "name",
+          type: "string",
+          defaultValue: "Instructor Name",
+        },
+        {
+          name: "avatarUrl",
+          type: "string",
+          defaultValue: "https://example.com/avatar.png",
+        },
       ],
     },
   ],
   defaults: {
     bindings: {
-      'component.options.title': 'state.product.title',
-      'style.background': 'state.theme.colors.primary',
+      "component.options.title": "state.product.title",
+      "style.background": "state.theme.colors.primary",
     },
   },
 });

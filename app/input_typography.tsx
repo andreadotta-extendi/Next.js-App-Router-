@@ -13,7 +13,11 @@ type StyledTextFieldProps = React.ComponentProps<typeof TextField> & {
 
 // Componente StyledTextField che utilizza PreStyledTextField
 const StyledTextField = ({ children, ...props }: StyledTextFieldProps) => {
-  return <PreStyledTextField {...props} className="text-red-700">{children}</PreStyledTextField>;
+  return (
+    <PreStyledTextField {...props} className="text-red-700">
+      {children}
+    </PreStyledTextField>
+  );
 };
 
 export default StyledTextField;
