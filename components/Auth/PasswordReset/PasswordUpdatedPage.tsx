@@ -10,7 +10,7 @@ import Layout from "@/components/Layout/LayoutOunboarding";
 const PasswordUpdatedPage: React.FC = () => {
   return (
     <Layout>
-      <section className="flex z-10 flex-col self-center max-w-[600px] px-6 py-8 md:px-16 md:py-12 rounded-xl bg-neutral-900">
+      <section className="flex z-10 flex-col self-center max-w-[600px] px-6 py-8 md:px-16 md:py-12 rounded-xl bg-paper">
         <EmailSentContent
           imgSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/6f1b491146bfcc29cbec4fe302dc401fa973dc97da679d040da4132ac26393dd?placeholderIfAbsent=true&apiKey=ae92917785e7425fbb91907da8ebf914"
           title="Password aggiornata"

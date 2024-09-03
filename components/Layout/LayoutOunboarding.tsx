@@ -26,8 +26,7 @@ const Layout: React.FC<LayoutProps> = ({
       <main
         className={`${
           !stepsPage && "flex flex-col lg:justify-center items-center"
-        } py-16 px-4`}
-        style={{ height: `calc(100vh - 100px)` }}
+        } py-16 px-4 m-auto w-full`}
       >
         {children}
       </main>

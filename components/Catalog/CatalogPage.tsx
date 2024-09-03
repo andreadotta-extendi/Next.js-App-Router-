@@ -9,43 +9,37 @@ import CreativeCheckbox from "../Shared/ui/CreativeCheckbox";
 
 const instruments = [
   {
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/a9f01c79b578f715b459251417837ada39421f498679215632897a35cb74a861?apiKey=ab14136582c84aab8af41f16349d0438&&apiKey=ab14136582c84aab8af41f16349d0438",
+    imageSrc: "assets/instruments/chitarra.svg",
     altText: "Guitar icon",
     name: "Chitarra",
     value: "a",
   },
   {
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/558487ca2355b45bd61fbc7dc3a5c91d6f085498186a6bf5775f8404e8445ca3?apiKey=ab14136582c84aab8af41f16349d0438&&apiKey=ab14136582c84aab8af41f16349d0438",
+    imageSrc: "assets/instruments/batteria.svg",
     altText: "Drums icon",
     name: "Batteria",
     value: "b",
   },
   {
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/8fc704ae23d18f0b9a1b877ffe6b2982bc865dc95ec174d4d948d3c8bb3fc1ab?apiKey=ab14136582c84aab8af41f16349d0438&&apiKey=ab14136582c84aab8af41f16349d0438",
+    imageSrc: "assets/instruments/strumento.svg",
     altText: "Music production icon",
     name: "Produzione musicale",
     value: "c",
   },
   {
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/9a79385cac6dfd9bee1a13a56b86c76dc2dfd8ff2efb5930e6220f5ebf84dd47?apiKey=ab14136582c84aab8af41f16349d0438&&apiKey=ab14136582c84aab8af41f16349d0438",
+    imageSrc: "assets/instruments/piano-e-tastiera.svg",
     altText: "Piano and keyboard icon",
     name: "Piano e tastiera",
     value: "d",
   },
   {
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/921aa9828e9a3933467471100fecb692c9b1a2c7ddaa773cc3ed4bbabc64588a?apiKey=ab14136582c84aab8af41f16349d0438&&apiKey=ab14136582c84aab8af41f16349d0438",
+    imageSrc: "assets/instruments/ukulle.svg",
     altText: "Ukulele icon",
     name: "Ukulele",
     value: "e",
   },
   {
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/43fd97e731124e26acb223602590dc8987e8e4c34ef23a88ab50eb66ad69d40c?apiKey=ab14136582c84aab8af41f16349d0438&&apiKey=ab14136582c84aab8af41f16349d0438",
+    imageSrc: "assets/instruments/basso.svg",
     altText: "Bass icon",
     name: "Basso",
     value: "f",
@@ -66,7 +60,7 @@ const CatalogPage = () => {
           ))}
         </Grid>
 
-        <div className="flex gap-6 items-start w-full">
+        <div className="sm:flex gap-x-6 space-y-8 items-start w-full">
           <FilterContainer />
           <div className="flex flex-1 flex-col gap-10">
             <CatalogSection title="In evidenza" hasLink />

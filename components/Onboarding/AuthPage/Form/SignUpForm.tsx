@@ -29,7 +29,7 @@ export default function SignUpForm() {
   };
 
   return (
-    <form className="px-6 py-8 md:px-16 md:py-12 rounded-xl bg-neutral-900">
+    <form className="px-6 py-8 md:px-16 md:py-12 rounded-xl bg-paper">
       <div className="flex flex-col items-center justify-center gap-2">
         <Typography variant="h3" component="h1" className="text-zinc-200">
           Crea nuovo account

@@ -17,21 +17,21 @@ const BackgroundWaves: React.FC<WaveProps> = ({ wave }) => {
     <React.Fragment>
       {wave === "login" && (
         <img
-          className="hidden md:block absolute right-0 left-0 bottom-[17%] -z-10 w-full"
+          className="hidden md:block fixed right-0 left-0 bottom-[17%] -z-10 w-full"
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/9531b10c43356882ac65cbb0899ef304dfa57338d6efaef08c09042517863232?placeholderIfAbsent=true&apiKey=ae92917785e7425fbb91907da8ebf914"
         />
       )}
 
       {wave === "registration" && (
         <img
-          className="hidden md:block absolute h-[600px] left-0 bottom-0 -z-10"
+          className="hidden md:block fixed h-[600px] left-0 bottom-0 -z-10"
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/90a95ef11a182eeb87f3509c32f84330c8cf820bf52fc56a37fd0746c26975eb?placeholderIfAbsent=true&apiKey=ae92917785e7425fbb91907da8ebf914"
         />
       )}
 
       {wave === "onboardingAuth" && (
         <img
-          className="hidden md:block absolute right-0 left-0 m-auto -z-10 w-full opacity-40"
+          className="hidden md:block fixed right-0 left-0 m-auto -z-10 w-full opacity-40"
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/357d33b70b2b4d63ffdda48426aaa6b75d5b7555fab2fc7ca7a749e7d0a89c5c?placeholderIfAbsent=true&apiKey=ae92917785e7425fbb91907da8ebf914"
         />
       )}

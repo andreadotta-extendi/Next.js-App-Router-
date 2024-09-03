@@ -45,9 +45,7 @@ const CreativeCheckbox: React.FC<CreativeCheckboxProps> = ({
             alt={altText}
             className="object-contain aspect-square w-[72px]"
           />
-          <InputLabel
-            className={`mt-2 ${isChecked ? "text-primary-main" : "text-white"}`}
-          >
+          <InputLabel className="mt-2 text-white">
             <Typography variant="s1">{name}</Typography>
           </InputLabel>
         </label>

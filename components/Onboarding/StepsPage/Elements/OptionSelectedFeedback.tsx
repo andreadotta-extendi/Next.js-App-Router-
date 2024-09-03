@@ -18,7 +18,7 @@ const OptionSelectedFeedback: React.FC<OptionSelectedFeedbackProps> = ({
   className,
 }) => {
   return (
-    <article className="flex gap-6 items-center p-6 rounded-2xl bg-neutral-900 text-zinc-50 w-[450px]">
+    <article className="flex gap-6 items-center p-6 rounded-2xl bg-paper text-zinc-50 w-[450px]">
       <img loading="lazy" src={imageSrc} alt={alt} className={`${className}`} />
       <Typography variant="s1" component="p" className="text-left">
         {text}

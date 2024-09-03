@@ -543,7 +543,10 @@ const theme = createTheme({
     MuiAppBar: {
       styleOverrides: {
         colorPrimary: ({ theme }) => ({
-          backgroundColor: theme.palette.primary.main,
+          backgroundColor: theme.palette.paper.main,
+          borderRadius: "0px",
+          boxShadow: "none",
+          borderBottom: `1px solid ${theme.palette.neutral.main}`,
         }),
       },
     },

@@ -1,12 +1,9 @@
 import React from "react";
 import { CatalogSection } from "./CatalogSection";
-import { FormLabel, Grid, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import Layout from "../Shared/ui/Layout";
-import CatalogSearch from "./CatalogSearch";
-import { SwipableCatalogCarousel } from "./CatalogCarousel";
 import FilterContainer from "../Shared/ui/Filter/FilterContainer";
 import CreativeCheckbox from "../Shared/ui/CreativeCheckbox";
-import SubNavbar from "../Shared/ui/SubNavbar";
 
 const instruments = [
   {

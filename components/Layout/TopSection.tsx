@@ -16,7 +16,7 @@ const TopSection: React.FC<TopSectionProps> = ({
   subtitle,
 }) => {
   return (
-    <section className="px-6 py-8 md:px-16 md:py-12 rounded-xl bg-neutral-900">
+    <section className="px-6 py-8 md:px-16 md:py-12 rounded-xl bg-paper">
       <div className="flex flex-col gap-4 w-full text-center mb-6">
         <Typography variant="h3" component="h1" className="text-zinc-200">
           {title}
