@@ -2,6 +2,7 @@ import { Config } from "tailwindcss/types/config";
 
 export interface CustomExtendConfig {
   colors: {
+    success: any;
     error: any;
     header: string;
     primary: {

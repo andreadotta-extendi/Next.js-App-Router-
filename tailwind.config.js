@@ -33,6 +33,11 @@ const tailwindConfig = {
           main: "#B91C1C",
           dark: "#9B1717",
         },
+        success: {
+          light: "#DDF7DC",
+          main: "#15803D",
+          dark: "#10602E",
+        },
         text: {
           primary: "#E2E3E9",
           secondary: "#9597AC",

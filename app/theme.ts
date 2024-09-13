@@ -140,6 +140,11 @@ const poppins = Poppins({
 
 const theme = createTheme({
   palette: {
+    success: {
+      light: extendConfig.colors?.success.light,
+      main: extendConfig.colors?.success.main,
+      dark: extendConfig.colors?.success.dark,
+    },
     primary: {
       light: extendConfig.colors?.primary.light,
       main: extendConfig.colors?.primary.main, // Colore primario
