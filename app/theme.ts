@@ -562,6 +562,13 @@ const theme = createTheme({
         }),
       },
     },
+    MuiTab: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          minHeight: theme.spacing(5),
+        }),
+      },
+    },
     MuiTable: {
       styleOverrides: {
         root: ({ theme }) => ({

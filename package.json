@@ -16,6 +16,7 @@
     "@emotion/styled": "11.11.5",
     "@faker-js/faker": "^8.4.1",
     "@mui/icons-material": "^5.15.20",
+    "@mui/lab": "6.0.0-beta.9",
     "@mui/material": "5.15.20",
     "@mui/material-nextjs": "^5.15.11",
     "@mui/styled-engine": "^5.15.14",
