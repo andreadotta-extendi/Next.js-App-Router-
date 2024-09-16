@@ -31,7 +31,7 @@ const EmailSentContent: React.FC<EmailSentContentProps> = ({
           alt="Email sent icon"
         />
         <div className="flex flex-col gap-2 w-full text-center">
-          <Typography variant="h3" component="h1">
+          <Typography variant="h3" component="h1" color="successLight">
             {title}
           </Typography>
           {mailfield && (

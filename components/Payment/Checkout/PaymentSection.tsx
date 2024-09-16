@@ -1,8 +1,8 @@
 import React from "react";
-import PersonalDataForm from "./PersonalDataForm";
-import PaymentMethodForm from "./PaymentMethodForm";
+import PersonalDataForm from "../Form/PersonalDataForm";
+import PaymentMethodForm from "../Form/PaymentMethodForm";
 import SubscriptionSummary from "./SubscriptionSummary";
-import { Button, Grid, Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 
 const PaymentSection: React.FC = () => {
   return (
