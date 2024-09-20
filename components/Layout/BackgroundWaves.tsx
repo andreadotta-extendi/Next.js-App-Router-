@@ -31,7 +31,7 @@ const BackgroundWaves: React.FC<WaveProps> = ({ wave }) => {
 
       {wave === "onboardingAuth" && (
         <img
-          className="hidden md:block fixed right-0 left-0 m-auto -z-10 w-full opacity-40"
+          className="hidden md:block fixed right-0 left-0 m-auto -z-10 w-full opacity-40 bottom-[40%]"
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/357d33b70b2b4d63ffdda48426aaa6b75d5b7555fab2fc7ca7a749e7d0a89c5c?placeholderIfAbsent=true&apiKey=ae92917785e7425fbb91907da8ebf914"
         />
       )}

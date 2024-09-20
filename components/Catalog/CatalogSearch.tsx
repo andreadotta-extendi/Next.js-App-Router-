@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Typography,
-  Chip,
   IconButton,
   Button,
   FormControl,
@@ -13,10 +12,6 @@ import { CancelRounded, SearchRounded } from "@mui/icons-material";
 const CatalogSearch = () => {
   return (
     <div className="flex flex-col p-8 gap-8 w-full rounded-xl bg-paper relative">
-      <img
-        src="assets/catalog/sole.svg"
-        className="hidden md:block absolute top-[20px] right-[20px]"
-      />
       <Typography variant="h1" className="w-full text-center z-[2]">
         Esplora il catalogo
       </Typography>

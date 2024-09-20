@@ -1,7 +1,6 @@
 "use client";
 import { FormControl } from "@/app/mui-components";
 import { InputLabel, Typography } from "@mui/material";
-import Image from "next/image";
 import React from "react";
 
 export interface CreativeCheckboxProps {
@@ -27,7 +26,7 @@ const CreativeCheckbox: React.FC<CreativeCheckboxProps> = ({
     <div
       className={`w-full p-2 rounded-lg border ${
         isChecked
-          ? "border-primary-main bg-action-focus"
+          ? "ring ring-2 ring-primary-main bg-action-focus border-transparent"
           : "border-action-divider bg-paper"
       }`}
     >

@@ -16,14 +16,14 @@ const HeaderOnboarding: React.FC<HeaderProps> = ({
   rightButton,
 }) => {
   return (
-    <header className="flex justify-center items-center px-4 py-6 w-full bg-paper z-10 justify-between h-[100px]">
-      <div className="md:w-[136px]">
+    <header className="flex justify-center items-center px-4 py-4 md:py-6 w-full bg-paper z-10 justify-between h-[60px] md:h-[100px]">
+      <div className="min-w-[56px] md:w-[136px]">
         {leftButton && (
           <Button
             size="large"
             variant="text"
             color="primary"
-            className="flex-1 shrink my-auto w-full min-w-[240px] max-md:max-w-full"
+            className="flex-1 shrink my-auto w-full px-2"
           >
             <ChevronLeftFilled />
             <span className="hidden md:block">Indietro</span>
@@ -32,17 +32,17 @@ const HeaderOnboarding: React.FC<HeaderProps> = ({
       </div>
       <img
         loading="lazy"
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/f4b7ead5bbd68b16be08f000a11d8756e4f91099498b58d4c478b1b6ba608ac8?apiKey=ab14136582c84aab8af41f16349d0438&&apiKey=ab14136582c84aab8af41f16349d0438"
+        src="assets/logo.png"
         alt="Company logo"
-        className="object-contain self-stretch my-auto aspect-[3.62] w-[152px]"
+        className="h-[35px] md:h-[41px] w-auto"
       />
-      <div className="md:w-[136px]">
+      <div className="min-w-[56px] md:w-[136px]">
         {rightButton && (
           <Button
             size="large"
             variant="text"
             color="primary"
-            className="flex-1 shrink my-auto w-full min-w-[240px] max-md:max-w-full"
+            className="flex-1 shrink my-auto w-full"
           >
             <span className="hidden md:block">Avanti</span>
             <ChevronRightFilled />

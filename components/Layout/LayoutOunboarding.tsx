@@ -25,8 +25,10 @@ const Layout: React.FC<LayoutProps> = ({
       />
       <main
         className={`${
-          !stepsPage && "flex flex-col lg:justify-center items-center"
-        } py-16 px-4 m-auto w-full`}
+          !stepsPage
+            ? "flex flex-col lg:justify-center items-center"
+            : "flex-auto"
+        } py-12 md:py-16 px-4 m-auto w-full`}
       >
         {children}
       </main>

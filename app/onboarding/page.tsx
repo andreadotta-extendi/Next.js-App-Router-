@@ -7,7 +7,6 @@ import React from "react";
 export default async function Page(props: { params: { page: any[] } }) {
   return (
     <>
-      {/* Render the Builder page */}
       <AuthPage />
     </>
   );

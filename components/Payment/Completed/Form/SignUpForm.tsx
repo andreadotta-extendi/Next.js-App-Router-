@@ -19,7 +19,8 @@ export default function SignUpForm() {
 
   const handleClickShowPassword = () => setShowPassword((prev) => !prev);
 
-  const handleMouseDownPassword = (event) => event.preventDefault();
+  const handleMouseDownPassword = (event: { preventDefault: () => any }) =>
+    event.preventDefault();
 
   return (
     <form>

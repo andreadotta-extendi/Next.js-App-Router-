@@ -1,6 +1,10 @@
 "use client";
 import { Poppins } from "next/font/google";
-import { SimplePaletteColorOptions, createTheme } from "@mui/material/styles";
+import {
+  SimplePaletteColorOptions,
+  createTheme,
+  Theme,
+} from "@mui/material/styles";
 import { TypographyStyleOptions } from "@mui/material/styles/createTypography";
 import taiwindConfig from "../tailwind.config";
 import { CustomExtendConfig } from "@/tailwind.type";
@@ -17,6 +21,7 @@ declare module "@mui/material/styles" {
   interface Theme {
     customShadows: { default: string };
   }
+
   interface ThemeOptions {
     customShadows: { default: string };
   }
@@ -211,31 +216,51 @@ const theme = createTheme({
       fontSize: "48px",
       fontWeight: 600,
       lineHeight: "58px",
+      "@media (max-width:640px)": {
+        fontSize: "38.4px",
+        lineHeight: "120%",
+      },
     },
     h2: {
       fontSize: "40px",
       fontWeight: 600,
       lineHeight: "40px",
+      "@media (max-width:640px)": {
+        fontSize: "32px",
+        lineHeight: "120%",
+      },
     },
     h3: {
       fontSize: "32px",
       fontWeight: 600,
       lineHeight: "38px",
+      "@media (max-width:640px)": {
+        fontSize: "32px",
+      },
     },
     h4: {
       fontSize: "28px",
       fontWeight: 600,
       lineHeight: "34px",
+      "@media (max-width:640px)": {
+        fontSize: "22.4px",
+      },
     },
     h5: {
       fontSize: "24px",
       fontWeight: 600,
       lineHeight: "28px",
+      "@media (max-width:640px)": {
+        fontSize: "19.2px",
+      },
     },
     s1: {
       fontSize: "18px",
       fontWeight: 600,
       lineHeight: "28px",
+      "@media (max-width:640px)": {
+        fontSize: "17px",
+      },
     },
     s2: {
       fontSize: "16px",
