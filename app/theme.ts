@@ -812,6 +812,7 @@ const theme = createTheme({
     MuiMobileStepper: {
       styleOverrides: {
         root: ({ theme }) => ({
+          padding: "0px",
           color: theme.palette.neutral.main,
           "&.Mui-disabled": {
             color: theme.palette.neutral.main,
@@ -821,9 +822,10 @@ const theme = createTheme({
           height: theme.spacing(2),
           width: theme.spacing(2),
           backgroundColor: theme.palette.neutral.main,
+          margin: `0 ${theme.spacing(1 / 2)}`,
         }),
         dotActive: ({ theme }) => ({
-          backgroundColor: theme.palette.primary.main,
+          backgroundColor: theme.palette.primary.dark,
         }),
       },
     },

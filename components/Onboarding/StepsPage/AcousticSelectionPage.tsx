@@ -62,7 +62,7 @@ const AcousticSelection: React.FC = () => {
 
         {/* Radio Group with Grow animation */}
         <Grow in={true} style={{ transformOrigin: "center center" }}>
-          <div className="w-full">
+          <div className="w-full space-y-4">
             <div className="space-y-4 w-full">
               {/* Pass the selected value and the change handler */}
               <RadioOptionGroup
@@ -74,12 +74,9 @@ const AcousticSelection: React.FC = () => {
               />
             </div>
 
-            {/* Progress Indicator with Grow animation */}
-            <Grow in={true} style={{ transformOrigin: "center center" }}>
-              <div className="flex mx-auto mt-4 gap-2 justify-center w-[40px]">
-                <ProgressIndicator steps={2} currentStep={1} />
-              </div>
-            </Grow>
+            <div className="flex mx-auto mt-4 gap-2 justify-center w-[40px]">
+              <ProgressIndicator steps={2} currentStep={1} />
+            </div>
           </div>
         </Grow>
 

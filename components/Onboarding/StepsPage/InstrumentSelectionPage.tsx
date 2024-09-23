@@ -103,36 +103,37 @@ const InstrumentSelection: React.FC = () => {
         </Fade>
 
         {/* Instrument Options */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-[600px] w-full">
-          {instruments.map((instrument, index) => (
-            <Grow
-              key={instrument.value}
-              in={true}
-              style={{
-                transformOrigin: "center center",
-                transitionDelay: `${20 * index}ms`,
-              }}
-            >
-              <div>
-                <CreativeRadio
-                  imageSrc={instrument.imageSrc}
-                  altText={instrument.altText}
-                  name={instrument.name}
-                  value={instrument.value}
-                  checked={selectedValue === instrument.value}
-                  onChange={handleRadioChange}
-                />
-              </div>
-            </Grow>
-          ))}
-        </div>
-
-        {/* Progress Indicator */}
-        <Grow in={true} style={{ transformOrigin: "center center" }}>
-          <div className="flex mx-auto mt-4 gap-2 justify-center w-[40px]">
-            <ProgressIndicator steps={2} currentStep={1} />
+        <div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-[600px] w-full">
+            {instruments.map((instrument, index) => (
+              <Grow
+                key={instrument.value}
+                in={true}
+                style={{
+                  transformOrigin: "center center",
+                  transitionDelay: `${20 * index}ms`,
+                }}
+              >
+                <div>
+                  <CreativeRadio
+                    imageSrc={instrument.imageSrc}
+                    altText={instrument.altText}
+                    name={instrument.name}
+                    value={instrument.value}
+                    checked={selectedValue === instrument.value}
+                    onChange={handleRadioChange}
+                  />
+                </div>
+              </Grow>
+            ))}
           </div>
-        </Grow>
+          {/* Progress Indicator */}
+          <Grow in={true} style={{ transformOrigin: "center center" }}>
+            <div className="flex mx-auto mt-4 gap-2 justify-center w-[40px]">
+              <ProgressIndicator steps={2} currentStep={1} />
+            </div>
+          </Grow>
+        </div>
 
         {/* Continue Button */}
         <Grow in={true} style={{ transformOrigin: "center center" }}>
