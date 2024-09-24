@@ -420,10 +420,16 @@ const theme = createTheme({
           },
 
           // disabled
-          "&.Mui-disabled": {
+          "&.MuiButton-contained.Mui-disabled": {
             background: theme.palette.text.disabled,
             color: theme.palette.secondary.contrastText,
             boxShadow: "none",
+          },
+
+          "&.MuiButton-outlined.Mui-disabled": {
+            background: "transparent !important",
+            color: theme.palette.text.disabled,
+            border: `1px solid ${theme.palette.text.disabled}`,
           },
         }),
       },
@@ -659,6 +665,12 @@ const theme = createTheme({
         root: ({ theme }: any) => ({
           color: theme.palette.text.primary,
 
+          // Size Small
+          "& .MuiInputBase-inputSizeSmall": {
+            padding: ` ${theme.spacing(1.5)} ${theme.spacing(2)}`,
+            fontSize: "12px !important",
+          },
+
           // Focused
           "& .Mui-focused .MuiOutlinedInput-root": {
             color: theme.palette.text.primary,
@@ -703,13 +715,22 @@ const theme = createTheme({
     },
     MuiOutlinedInput: {
       styleOverrides: {
-        root: {
+        root: ({ theme }: any) => ({
           "& input:-webkit-autofill": {
             WebkitBoxShadow: "0 0 0 100px #1C1D22 inset !important", // Sfondo specifico
             WebkitTextFillColor: "#fff !important", // Colore del testo
             caretColor: "#fff !important",
           },
-        },
+
+          "&.MuiInputBase-sizeSmall .MuiInputBase-input": {
+            padding: `11px ${theme.spacing(2)}`,
+            fontSize: "10px !important",
+          },
+
+          "&.MuiOutlinedInput-notchedOutline": {
+            borderColor: theme.palette.action.divider,
+          },
+        }),
       },
     },
     MuiFormControl: {

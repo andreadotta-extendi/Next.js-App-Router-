@@ -10,15 +10,6 @@ const PaymentSection: React.FC = () => {
       <div className="w-full max-w-[600px]">
         <PersonalDataForm />
         <PaymentMethodForm />
-        <Button
-          size="large"
-          variant="contained"
-          color="primary"
-          className="mt-2 w-full max-md:max-w-full"
-          disabled
-        >
-          Paga in modo sicuro
-        </Button>
         <div className="flex flex-wrap gap-2 justify-center items-center mt-2 w-full">
           <img
             loading="lazy"
