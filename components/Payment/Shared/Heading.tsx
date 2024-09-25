@@ -13,7 +13,7 @@ const Heading: React.FC<HeaderProps> = ({ title, subtitle }) => {
         {title}
       </Typography>
       {subtitle && (
-        <Typography variant="subtitle1" component="h2" color="textSecondary">
+        <Typography variant="s1" component="h2" color="textSecondary">
           {subtitle}
         </Typography>
       )}

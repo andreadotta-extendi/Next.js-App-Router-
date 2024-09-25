@@ -43,7 +43,7 @@ export default function LoginForm() {
             placeholder="Il tuo nome utente o indirizzo email"
             variant="outlined"
             size="medium"
-            className="mt-12 max-md:mt-10 max-md:max-w-full"
+            className="max-md:max-w-full"
             InputProps={{}}
             label="Nome utente o e-mail"
           />

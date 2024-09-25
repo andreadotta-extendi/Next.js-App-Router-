@@ -235,7 +235,8 @@ const theme = createTheme({
       fontWeight: 600,
       lineHeight: "38px",
       "@media (max-width:640px)": {
-        fontSize: "32px",
+        fontSize: "25.6px",
+        lineHeight: "120%",
       },
     },
     h4: {
@@ -244,6 +245,7 @@ const theme = createTheme({
       lineHeight: "34px",
       "@media (max-width:640px)": {
         fontSize: "22.4px",
+        lineHeight: "120%",
       },
     },
     h5: {
@@ -252,6 +254,7 @@ const theme = createTheme({
       lineHeight: "28px",
       "@media (max-width:640px)": {
         fontSize: "19.2px",
+        lineHeight: "120%",
       },
     },
     s1: {
@@ -260,6 +263,7 @@ const theme = createTheme({
       lineHeight: "28px",
       "@media (max-width:640px)": {
         fontSize: "17px",
+        lineHeight: "120%",
       },
     },
     s2: {

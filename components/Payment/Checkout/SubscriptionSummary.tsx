@@ -62,14 +62,20 @@ const SubscriptionSummary: React.FC = () => {
       <Box gap={2} display="flex" flexDirection="column">
         <div>
           <Box
-            display="flex"
             justifyContent="space-between"
             alignItems="center"
+            className="sm:flex"
+            gap={4}
           >
-            <Typography color="textSecondary" variant="body-500">
+            <Typography
+              color="textSecondary"
+              variant="body-500"
+              className="w-full"
+              component="p"
+            >
               Subtotale
             </Typography>
-            <Typography color="textPrimary" variant="body-500">
+            <Typography color="textPrimary" variant="body-500" component="p">
               {subtotal} {/* Use the subtotal variable */}
             </Typography>
           </Box>
@@ -135,15 +141,23 @@ const SubscriptionSummary: React.FC = () => {
         {appliedCoupon && (
           <Box>
             <Box
-              display="flex"
               justifyContent="space-between"
               alignItems="center"
+              className="sm:flex"
+              gap={4}
             >
-              <Typography color="textSecondary" variant="body-500">
+              <Typography
+                color="textSecondary"
+                variant="body-500"
+                className="w-full"
+              >
                 Codice sconto
               </Typography>
-              <Typography color="textPrimary" variant="body-500">
-                -{discountPercentage} ({discountedPrice}){" "}
+              <Typography color="textPrimary" variant="body-500" component="p">
+                <span className="flex flex-nowrap text-nowrap">
+                  {" "}
+                  -{discountPercentage} ({discountedPrice}){" "}
+                </span>
                 {/* Use variables for discount */}
               </Typography>
             </Box>
@@ -169,9 +183,14 @@ const SubscriptionSummary: React.FC = () => {
           </Box>
         )}
 
-        <Box display="flex" justifyContent="space-between" alignItems="center">
+        <Box
+          justifyContent="space-between"
+          alignItems="center"
+          className="sm:flex"
+          columnGap={2}
+        >
           <Typography variant="s1" color="textSecondary">
-            Totale pagamento <br /> (tasse incluse)
+            Totale pagamento <br className="lg:block" /> (tasse incluse)
           </Typography>
           <Typography variant="h3" component="h3" color="textPrimary">
             {appliedCoupon ? discountedPrice : originalPrice}{" "}
