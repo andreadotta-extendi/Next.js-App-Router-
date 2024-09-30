@@ -40,13 +40,15 @@ export const CatalogSection: React.FC<CategorySectionProps> = ({
         </div>
 
         {hasNavigationButtons && (
-          <div className="flex gap-2 items-center self-stretch my-auto">
-            <IconButton color="inherit" disabled>
-              <ChevronLeftRounded />
-            </IconButton>
-            <IconButton color="inherit">
-              <ChevronRightRounded />
-            </IconButton>
+          <div className="hidden md:inline-block">
+            <div className="flex gap-2 items-center self-stretch my-auto">
+              <IconButton color="inherit" disabled>
+                <ChevronLeftRounded />
+              </IconButton>
+              <IconButton color="inherit">
+                <ChevronRightRounded />
+              </IconButton>
+            </div>
           </div>
         )}
 

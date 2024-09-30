@@ -15,14 +15,18 @@ const marks = [
   },
 ];
 
-const LevelSlider: React.FC = () => {
+interface LevelSliderProps {
+  className?: string; // La classe è opzionale
+}
+
+const LevelSlider: React.FC<LevelSliderProps> = ({ className }) => {
   const [val, setVal] = React.useState<number>(MIN);
   const handleChange = (_: Event, newValue: number | number[]) => {
     setVal(newValue as number);
   };
 
   return (
-    <div className="flex flex-col px-6 w-full">
+    <div className={`flex flex-col w-full ${className}`}>
       <Typography variant="s1" component="p" className="mb-2">
         Livello
       </Typography>

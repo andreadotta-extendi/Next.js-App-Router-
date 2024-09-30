@@ -45,7 +45,12 @@ const CreativeCheckbox: React.FC<CreativeCheckboxProps> = ({
             className="object-contain aspect-square w-[72px]"
           />
           <InputLabel className="mt-2 text-white">
-            <Typography variant="s1">{name}</Typography>
+            <Typography variant="s1" className="hidden md:inline-block">
+              {name}
+            </Typography>
+            <Typography variant="captin-500" className="inline-block md:hidden">
+              {name}
+            </Typography>
           </InputLabel>
         </label>
       </FormControl>

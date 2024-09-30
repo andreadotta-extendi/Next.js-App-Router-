@@ -76,12 +76,7 @@ export function SwipableCatalogCarousel() {
               <Typography variant="h2" className="mt-4" component="h2">
                 {steps[activeStep].title}
               </Typography>
-              <img
-                loading="lazy"
-                className="w-[80px] mx-auto"
-                src="assets/catalog/separator.svg"
-                alt="separator"
-              />
+              <div className="w-[80px] mx-auto h-[2px] bg-complementary-main" />
               <Typography variant="s1" component="h3">
                 con {steps[activeStep].insegnante}
               </Typography>
@@ -107,7 +102,7 @@ export function SwipableCatalogCarousel() {
                 color="primary"
                 className="mt-4 w-full"
               >
-                Accedi alla live
+                <Typography variant="button-l">Accedi alla live</Typography>
               </Button>
             </div>
           </div>

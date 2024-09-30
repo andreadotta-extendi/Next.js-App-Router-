@@ -57,7 +57,7 @@ const CatalogPage = () => {
         Risultati per "chitarra"
       </Typography>
       <div className="flex flex-col mt-10 w-full gap-12">
-        <Grid container spacing={2}>
+        <Grid container spacing={2} className="lg:block hidden">
           {instruments.slice(0, 6).map((instrument, index) => (
             <Grid item xs={4} lg={2}>
               <CreativeCheckbox key={index} {...instrument} />
@@ -66,7 +66,9 @@ const CatalogPage = () => {
         </Grid>
 
         <div className="flex gap-6 items-start w-full">
-          <FilterContainer />
+          <div className="lg:block hidden">
+            <FilterContainer />
+          </div>
           <div className="flex flex-1 flex-col gap-10">
             <CatalogSection
               title="In evidenza"
