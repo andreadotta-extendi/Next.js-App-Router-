@@ -7,6 +7,7 @@ export interface Instrument {
 
 export interface FilterData {
   instruments: Instrument[];
+  instrumentSubCategories: string[];
   genres: string[];
   topics: string[];
 }

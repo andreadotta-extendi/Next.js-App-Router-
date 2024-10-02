@@ -40,6 +40,7 @@ const filterData: FilterMetadata = {
     },
   ],
 
+  instrumentSubCategories: ["Acoustic", "Electric"],
   genres: ["Rock", "Blues", "Pop", "Metal", "Jazz-fusion", "Funk", "Hip Hop"],
   topics: ["Argomento 1", "Argomento 2", "Argomento 3"],
 };

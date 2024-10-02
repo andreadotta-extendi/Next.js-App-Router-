@@ -93,6 +93,23 @@ const FilterMobile = () => {
                     ))}
                   </Grid>
                 </div>
+                <FilterAccordion
+                  title="Tipo Chitarra"
+                  accordionSummaryClassName="px-0"
+                  accordionDetailsClassName="px-0"
+                >
+                  <FormGroup>
+                    {filterData.instrumentSubCategories.map(
+                      (instrumentSubCategory, index) => (
+                        <FormControlLabel
+                          key={index}
+                          label={instrumentSubCategory}
+                          control={<Checkbox />}
+                        />
+                      )
+                    )}
+                  </FormGroup>
+                </FilterAccordion>
                 <div>
                   <LevelSlider />
                 </div>
