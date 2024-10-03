@@ -1,5 +1,5 @@
 "use client";
-import { Poppins } from "next/font/google";
+import { Work_Sans } from "next/font/google";
 import {
   SimplePaletteColorOptions,
   createTheme,
@@ -137,9 +137,9 @@ declare module "@mui/material/Typography" {
   }
 }
 
-const poppins = Poppins({
-  weight: ["300", "400", "500", "600", "700"],
+const workSans = Work_Sans({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
   display: "swap",
 });
 
@@ -211,7 +211,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Poppins, sans-serif",
+    fontFamily: `${workSans.style.fontFamily}, sans-serif`,
     h1: {
       fontSize: "48px",
       fontWeight: 600,
