@@ -81,6 +81,10 @@ export const CatalogSection: React.FC<CategorySectionProps> = ({
           status={"completed"}
         />
         <CourseCard {...course} />
+        <CourseCard {...course} />
+        <CourseCard {...course} />
+        <CourseCard {...course} />
+        <CourseCard isCourseStarted {...course} />
       </div>
     </section>
   );

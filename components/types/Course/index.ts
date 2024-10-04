@@ -1,3 +1,4 @@
+// Interfaces and Types
 export type Courses = CourseData[];
 
 export type CategoryTags =
@@ -9,6 +10,8 @@ export type CategoryTags =
   | string;
 
 export interface CourseData {
+  isCourseStarted?: boolean;
+  courseHighlight?: CourseHighlight;
   title?: string;
   level?: DifficultyLevel;
   genres?: string[];
@@ -25,6 +28,7 @@ export interface CourseData {
   status: "completed" | "uncompleted";
   imageSrc?: string;
   videoCount?: number;
+  videoPercentage?: number;
   categoryTags?: CategoryTags[];
   courseType?: CourseType;
   highlighted?: boolean;
@@ -69,9 +73,11 @@ export interface CourseCardProps
     | "instructors"
     | "imageSrc"
     | "videoCount"
+    | "videoPercentage"
     | "categoryTags"
     | "courseType"
     | "highlighted"
+    | "courseHighlight"
   > {}
 
 export type CourseType = "program" | "percorsi" | "serie";

@@ -7,12 +7,16 @@ import {
   CourseData,
 } from "../types/Course";
 
+// Helper to add "!important" to a string
 const setImportant = (string: string) => `${string} !important`;
-console.log("//////////////////////// THEME ", theme);
+
+// Updated color mapping with separated `isCoureStarted` logic
 const colorMapping: Record<
   CourseHighlight,
   Record<CourseType, CardColorsMetadata>
-> = {
+> & {
+  isCourseStarted: CardColorsMetadata;
+} = {
   highlightedCourses: {
     program: {
       cardBg: theme.palette.primary.main,
@@ -53,27 +57,45 @@ const colorMapping: Record<
       chipTextColor: theme.palette.primary.contrastText,
     },
   },
+  isCourseStarted: {
+    cardBg: theme.palette.paper.main,
+    chipBg: theme.palette.neutral.main,
+    textColor: theme.palette.primary.contrastText,
+    chipTextColor: theme.palette.primary.contrastText,
+  },
 };
+
+// Utility to apply "!important" to all styles in CardColorsMetadata
+const applyImportantToMetadata = (
+  metadata: CardColorsMetadata
+): CardColorsMetadata => ({
+  cardBg: setImportant(metadata.cardBg),
+  chipBg: setImportant(metadata.chipBg),
+  textColor: setImportant(metadata.textColor),
+  chipTextColor: setImportant(metadata.chipTextColor),
+});
 
 export const getCardColors = (
   courseType?: CourseType,
-  courseHighlight?: boolean
+  courseHighlight?: boolean,
+  isCoureStarted?: boolean
 ): CardColorsMetadata | undefined => {
-  const metadata =
-    courseType && courseHighlight
-      ? colorMapping[
-          courseHighlight ? "highlightedCourses" : "regularCourses"
-        ]?.[courseType]
-      : undefined;
+  // Handle "isCoureStarted" as the highest priority
+  if (isCoureStarted) {
+    return applyImportantToMetadata(colorMapping.isCourseStarted);
+  }
 
-  return metadata
-    ? {
-        chipTextColor: setImportant(metadata.chipTextColor),
-        cardBg: setImportant(metadata.cardBg),
-        chipBg: setImportant(metadata.chipBg),
-        textColor: setImportant(metadata.textColor),
-      }
-    : undefined;
+  const highlightType: CourseHighlight = courseHighlight
+    ? "highlightedCourses"
+    : "regularCourses";
+
+  // If courseType is undefined, return undefined
+  if (!courseType) return undefined;
+
+  const metadata = colorMapping[highlightType]?.[courseType];
+
+  // Apply !important to all styles if metadata is found, otherwise return undefined
+  return metadata ? applyImportantToMetadata(metadata) : undefined;
 };
 
 export const getInstructorName = (instructors: CourseData["instructors"]) => {

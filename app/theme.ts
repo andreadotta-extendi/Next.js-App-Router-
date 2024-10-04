@@ -8,6 +8,7 @@ import {
 import { TypographyStyleOptions } from "@mui/material/styles/createTypography";
 import taiwindConfig from "../tailwind.config";
 import { CustomExtendConfig } from "@/tailwind.type";
+import { Height } from "@mui/icons-material";
 declare module "@mui/material/styles" {
   interface TypeAction {
     divider?: string;
@@ -53,9 +54,13 @@ declare module "@mui/material/styles" {
   interface TypographyVariants {
     h1: TypographyStyleOptions;
     h2: TypographyStyleOptions;
+    "mac-sans-h2": TypographyStyleOptions;
     h3: TypographyStyleOptions;
+    "mac-sans-h3": TypographyStyleOptions;
     h4: TypographyStyleOptions;
+    "mac-sans-h4": TypographyStyleOptions;
     h5: TypographyStyleOptions;
+    "mac-sans-h5": TypographyStyleOptions;
     s1: TypographyStyleOptions;
     s2: TypographyStyleOptions;
     "body-500": TypographyStyleOptions;
@@ -81,9 +86,13 @@ declare module "@mui/material/styles" {
   interface TypographyVariantsOptions {
     h1: TypographyStyleOptions;
     h2: TypographyStyleOptions;
+    "mac-sans-h2": TypographyStyleOptions;
     h3: TypographyStyleOptions;
+    "mac-sans-h3": TypographyStyleOptions;
     h4: TypographyStyleOptions;
+    "mac-sans-h4": TypographyStyleOptions;
     h5: TypographyStyleOptions;
+    "mac-sans-h5": TypographyStyleOptions;
     s1: TypographyStyleOptions;
     s2: TypographyStyleOptions;
     "body-500": TypographyStyleOptions;
@@ -111,9 +120,13 @@ declare module "@mui/material/Typography" {
   interface TypographyPropsVariantOverrides {
     h1: true;
     h2: true;
+    "mac-sans-h2": true;
     h3: true;
+    "mac-sans-h3": true;
     h4: true;
+    "mac-sans-h4": true;
     h5: true;
+    "mac-sans-h5": true;
     s1: true;
     s2: true;
     "body-500": true;
@@ -213,155 +226,193 @@ const theme = createTheme({
   typography: {
     fontFamily: `${workSans.style.fontFamily}, sans-serif`,
     h1: {
-      fontSize: "48px",
-      fontWeight: 600,
+      fontFamily: "'Mac Sans', sans-serif",
+      fontSize: "3rem", // 48px
+      fontWeight: 700,
       lineHeight: "58px",
       "@media (max-width:640px)": {
-        fontSize: "38.4px",
+        fontSize: "2.4rem", // 38.4px
         lineHeight: "120%",
       },
     },
     h2: {
-      fontSize: "40px",
+      fontSize: "2.5rem", // 40px
       fontWeight: 600,
-      lineHeight: "40px",
+      lineHeight: "110%",
       "@media (max-width:640px)": {
-        fontSize: "32px",
+        fontSize: "2rem", // 32px
+        lineHeight: "120%",
+      },
+    },
+    "mac-sans-h2": {
+      fontSize: "2.5rem", // 40px
+      fontWight: 700,
+      lineHeight: "48px",
+      "@media (max-width:640px)": {
+        fontSize: "2rem", // 32px
         lineHeight: "120%",
       },
     },
     h3: {
-      fontSize: "32px",
+      fontSize: "2rem", // 32px
       fontWeight: 600,
       lineHeight: "38px",
       "@media (max-width:640px)": {
-        fontSize: "25.6px",
+        fontSize: "1.6rem", // 25.6px
+        lineHeight: "120%",
+      },
+    },
+    "mac-sans-h3": {
+      fontSize: "2rem", // 32px
+      fontWight: 700,
+      lineHeight: "38px",
+      "@media (max-width:640px)": {
+        fontSize: "1.6rem", // 25.6px
         lineHeight: "120%",
       },
     },
     h4: {
-      fontSize: "28px",
+      fontSize: "1.75rem", // 28px
       fontWeight: 600,
       lineHeight: "34px",
       "@media (max-width:640px)": {
-        fontSize: "22.4px",
+        fontSize: "1.4rem", // 22.4px
+        lineHeight: "120%",
+      },
+    },
+    "mac-sans-h4": {
+      fontSize: "1.75rem", // 28px
+      fontWight: 700,
+      lineHeight: "34px",
+      "@media (max-width:640px)": {
+        fontSize: "1.4rem", // 22.4px
         lineHeight: "120%",
       },
     },
     h5: {
-      fontSize: "24px",
+      fontSize: "1.5rem", // 24px
       fontWeight: 600,
       lineHeight: "28px",
       "@media (max-width:640px)": {
-        fontSize: "19.2px",
+        fontSize: "1.2rem", // 19.2px
+        lineHeight: "120%",
+      },
+    },
+    "mac-sans-h5": {
+      fontSize: "1.5rem", // 24px
+      fontWight: 700,
+      lineHeight: "28px",
+      "@media (max-width:640px)": {
+        fontSize: "1.2rem", // 19.2px
         lineHeight: "120%",
       },
     },
     s1: {
-      fontSize: "18px",
+      fontSize: "1.125rem", // 18px
       fontWeight: 600,
       lineHeight: "28px",
       "@media (max-width:640px)": {
-        fontSize: "17px",
+        fontSize: "1.0625rem", // 17px
         lineHeight: "120%",
       },
     },
     s2: {
-      fontSize: "16px",
+      fontSize: "1rem", // 16px
       fontWeight: 600,
       lineHeight: "24px",
     },
     "body-500": {
-      fontSize: "16px",
+      fontSize: "1rem", // 16px
       fontWeight: 500,
       lineHeight: "24px",
     },
     "body-400": {
-      fontSize: "16px",
+      fontSize: "1rem", // 16px
       fontWeight: 400,
       lineHeight: "24px",
     },
     "body-small-500": {
-      fontSize: "14px",
+      fontSize: "0.875rem", // 14px
       fontWeight: 500,
       lineHeight: "20px",
     },
     "body-small-400": {
-      fontSize: "14px",
+      fontSize: "0.875rem", // 14px
       fontWeight: 400,
       lineHeight: "20px",
     },
     "caption-500": {
-      fontSize: "12px",
+      fontSize: "0.75rem", // 12px
       fontWeight: 500,
       lineHeight: "16px",
     },
     "caption-400": {
-      fontSize: "12px",
+      fontSize: "0.75rem", // 12px
       fontWeight: 400,
       lineHeight: "16px",
     },
     "caption-small-500": {
-      fontSize: "10px",
+      fontSize: "0.625rem", // 10px
       fontWeight: 400,
       lineHeight: "14px",
     },
     "button-xl": {
-      fontSize: "18px",
+      fontSize: "1.125rem", // 18px
       fontWeight: 600,
       lineHeight: "24px",
     },
     "button-l": {
-      fontSize: "16px",
+      fontSize: "1rem", // 16px
       fontWeight: 600,
       lineHeight: "20px",
     },
     "button-m": {
-      fontSize: "14px",
+      fontSize: "0.875rem", // 14px
       fontWeight: 600,
       lineHeight: "16px",
     },
     "button-s": {
-      fontSize: "12px",
+      fontSize: "0.75rem", // 12px
       fontWeight: 600,
       lineHeight: "16px",
     },
     "title-cta": {
-      fontSize: "16px",
+      fontSize: "1rem", // 16px
       fontWeight: 600,
       lineHeight: "150%",
     },
     "paragraph-big": {
-      fontSize: "16px",
+      fontSize: "1rem", // 16px
       fontWeight: 500,
       lineHeight: "150%",
     },
     "title-small": {
-      fontSize: "14px",
+      fontSize: "0.875rem", // 14px
       fontWeight: 600,
       lineHeight: "140%",
     },
     placeholder: {
-      fontSize: "14px",
+      fontSize: "0.875rem", // 14px
       fontWeight: 500,
       lineHeight: "140%",
     },
     details: {
-      fontSize: "12px",
+      fontSize: "0.75rem", // 12px
       fontWeight: 600,
       lineHeight: "130%",
     },
     "paragraph-small": {
-      fontSize: "12px",
+      fontSize: "0.75rem", // 12px
       fontWeight: 500,
       lineHeight: "130%",
     },
     "caption-small": {
-      fontSize: "10px",
+      fontSize: "0.625rem", // 10px
       fontWeight: 400,
       lineHeight: "120%",
     },
   },
+
   customShadows: {
     default: "0px 4px 20px rgba(0, 0, 0, 0.5)",
   },
@@ -444,6 +495,16 @@ const theme = createTheme({
           color: theme.palette.primary.main,
           "&.Mui-disabled": {
             color: theme.palette.text.disabled,
+          },
+          "&.button-icon-contained": {
+            width: "44px",
+            height: "44px",
+            borderRadius: `${theme.spacing(1)}`,
+          },
+          "&.button-icon-contained.button-icon-primary": {
+            background: theme.palette.primary.main,
+            color: theme.palette.primary.contrastText,
+            boxShadow: "0 0 0 5px #6C7AFF25",
           },
         }),
         colorInherit: ({ theme }) => ({

@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* font base */
+html {
+  font-size: 16px;
+}
+
+/* fonts MAC */
+@font-face {
+  font-family: "Mac Sans";
+  src: url("/fonts/MacSans-Regular.woff2") format("woff2");
+  font-weight: 400; /* Regular weight */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mac Sans";
+  src: url("/fonts/MacSans-Medium.woff2") format("woff2");
+  font-weight: 500; /* Medium weight */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mac Sans";
+  src: url("/fonts/MacSans-SemiBold.woff2") format("woff2");
+  font-weight: 600; /* SemiBold weight */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mac Sans";
+  src: url("/fonts/MacSans-Bold.woff2") format("woff2");
+  font-weight: 700; /* Bold weight */
+  font-style: normal;
+  font-display: swap;
+}
