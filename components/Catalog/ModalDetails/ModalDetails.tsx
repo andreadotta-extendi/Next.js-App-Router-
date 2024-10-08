@@ -14,7 +14,6 @@ import ModalDescription from "./ModalDescription";
 import ModalMetadata from "./ModalMetadata";
 import { CancelRounded, PlayArrowRounded } from "@mui/icons-material";
 import ModalVideo from "./ModalVideo";
-import useModal from "@/hooks/useModal";
 import { ModalDetailsProps } from "@/components/types/Course";
 
 const ModalDetails: React.FC<ModalDetailsProps> = ({

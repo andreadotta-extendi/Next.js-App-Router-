@@ -24,7 +24,7 @@ interface UpdatedCourseCardProps extends CourseCardProps {
 const CourseCard: React.FC<UpdatedCourseCardProps> = ({
   imageSrc,
   videoCount,
-  videoPercentage,
+  coursePercentage,
   title,
   genres = [],
   instructors,
@@ -76,9 +76,9 @@ const CourseCard: React.FC<UpdatedCourseCardProps> = ({
               avatar={<MUIAvatar src="/assets/play-arrow-filled.png" />}
             />
           )}
-          {isCourseStarted && videoPercentage !== undefined && (
+          {isCourseStarted && coursePercentage !== undefined && (
             <Chip
-              label={`${videoPercentage}%`}
+              label={`${coursePercentage}%`}
               size="medium"
               className="absolute top-[16px] right-[17px] bg-neutral-main"
               sx={{ padding: "0", height: "30px" }}
@@ -117,7 +117,7 @@ const CourseCard: React.FC<UpdatedCourseCardProps> = ({
               <LinearProgress
                 className="mt-2 h-[8px] bg-neutral-main"
                 variant="determinate"
-                value={videoPercentage || 0} // Reflect actual progress
+                value={coursePercentage || 0} // Reflect actual progress
                 sx={{ backgroundColor: "#E2E3E9" }}
               />
             </div>

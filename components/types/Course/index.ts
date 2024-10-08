@@ -28,7 +28,7 @@ export interface CourseData {
   status: "completed" | "uncompleted";
   imageSrc?: string;
   videoCount?: number;
-  videoPercentage?: number;
+  coursePercentage?: number;
   categoryTags?: CategoryTags[];
   courseType?: CourseType;
   highlighted?: boolean;
@@ -73,12 +73,28 @@ export interface CourseCardProps
     | "instructors"
     | "imageSrc"
     | "videoCount"
-    | "videoPercentage"
+    | "coursePercentage"
     | "categoryTags"
     | "courseType"
     | "highlighted"
     | "courseHighlight"
   > {}
+
+export interface DetailEduPathProps
+  extends Pick<
+    CourseData,
+    | "title"
+    | "lessonCount"
+    | "level"
+    | "genres"
+    | "duration"
+    | "instructors"
+    | "courseType"
+    | "lessonCount"
+  > {
+  description: string;
+  requirements: string;
+}
 
 export type CourseType = "program" | "percorsi" | "serie";
 export type DifficultyLevel =

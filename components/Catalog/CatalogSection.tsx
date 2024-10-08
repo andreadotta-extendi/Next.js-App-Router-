@@ -1,5 +1,5 @@
 import React from "react";
-import { IconButton, Modal, Typography } from "@mui/material";
+import { IconButton, Typography } from "@mui/material";
 import CourseCard from "./CourseCard";
 import { ChevronLeftRounded, ChevronRightRounded } from "@mui/icons-material";
 import ModalDetails from "./ModalDetails/ModalDetails";

@@ -2,6 +2,7 @@ import {
   CourseData,
   Courses,
   CourseHighlight,
+  DetailEduPathProps,
 } from "@/components/types/Course"; // Ensure these types are defined appropriately
 import { faker } from "@faker-js/faker";
 import { Chance } from "chance";
@@ -57,11 +58,66 @@ export function generateCourse(): CourseData {
   };
 }
 
-// Function to generate an array of courses
-export function generateCourses(numberOfCourses: number): Courses {
-  return Array.from({ length: numberOfCourses }, generateCourse); // Generate a specified number of courses
+// Function to generate a single DetailEduPathProps with richer content
+export function generateDetailEduPathProps(): DetailEduPathProps {
+  const course = generateCourse(); // Get a generated course
+
+  return {
+    title: `${course.title} - A Deep Dive into ${chance.pickone(
+      course.genres
+    )}`, // Enhanced course title with genre
+    lessonCount: course.lessonCount, // Total number of lessons
+    level: `${course.level} - Suitable for ${
+      course.level === "base"
+        ? "beginners"
+        : course.level === "intermedio"
+        ? "intermediate learners"
+        : "advanced musicians"
+    }`, // Enhanced level with details
+    genres: course.genres, // Selected genres
+    duration: `${course.duration} - Over ${course.lessonCount} lessons and ${course.videoCount} videos`, // Duration with extra detail
+    instructors: course.instructors.map((instructor) => ({
+      ...instructor,
+      bio: faker.lorem.sentences(2), // Adding a short bio for each instructor
+      expertise: chance.pickone([
+        "Guitar",
+        "Drums",
+        "Piano",
+        "Vocals",
+        "Songwriting",
+      ]), // Adding an expertise area for the instructor
+    })), // Instructors with bios and expertise
+    courseType: `${
+      course.courseType
+    } - Perfect for those looking for structured learning in ${course.genres.join(
+      ", "
+    )}`, // Enhanced course type with context
+    description: `${
+      course.description
+    } This course will guide you through essential techniques in ${chance.pickone(
+      course.genres
+    )}. You'll learn through practical exercises, breakdowns of classic songs, and tips from experienced instructors. Whether you're just starting out or looking to hone your skills, this course is designed to help you progress.`,
+    requirements: `To take this course, you need ${chance.pickone([
+      "a basic understanding of music theory",
+      "some experience with your instrument",
+      "an interest in improving your skills",
+      "a desire to master advanced techniques",
+    ])}. You should also have access to ${chance.pickone([
+      "a guitar or keyboard",
+      "basic recording equipment",
+      "sheet music",
+      "a metronome",
+    ])}.`,
+  };
+}
+
+// Function to generate an array of DetailEduPathProps
+export function generateDetailEduPaths(
+  numberOfPaths: number
+): DetailEduPathProps[] {
+  return Array.from({ length: numberOfPaths }, generateDetailEduPathProps); // Generate a specified number of educational paths
 }
 
 // Example usage
-const sampleCourses = generateCourses(10); // Generates an array of 10 mock courses
-console.log(sampleCourses); // Log the generated courses for inspection
+const sampleDetailEduPaths = generateDetailEduPaths(10); // Generates an array of 10 mock educational paths
+console.log(sampleDetailEduPaths); // Log the generated paths for inspection
