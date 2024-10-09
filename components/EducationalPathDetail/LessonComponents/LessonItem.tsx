@@ -40,7 +40,6 @@ interface LessonItemProps extends DetailEduPathProps {
   isJukebox?: boolean;
   imageSrc?: string;
   isCurrent?: boolean;
-  // No need to redefine `instructors` as it's inherited from DetailEduPathProps
 }
 
 const LessonItem: React.FC<LessonItemProps> = ({
@@ -55,6 +54,7 @@ const LessonItem: React.FC<LessonItemProps> = ({
 }) => {
   // State to manage dialog visibility
   const [openDialog, setOpenDialog] = useState(false);
+  const [openCompletionDialog, setOpenCompletionDialog] = useState(false); // New state for completion dialog
 
   const handleOpenDialog = () => {
     setOpenDialog(true);
@@ -62,6 +62,14 @@ const LessonItem: React.FC<LessonItemProps> = ({
 
   const handleCloseDialog = () => {
     setOpenDialog(false);
+  };
+
+  const handleOpenCompletionDialog = () => {
+    setOpenCompletionDialog(true); // Open completion dialog
+  };
+
+  const handleCloseCompletionDialog = () => {
+    setOpenCompletionDialog(false); // Close completion dialog
   };
 
   return (
@@ -80,7 +88,7 @@ const LessonItem: React.FC<LessonItemProps> = ({
                   loading="lazy"
                   src={imageSrc}
                   alt=""
-                  className="object-contain aspect-[1.68] w-[148px]"
+                  className="object-contain aspect-[1.68] w-[100px] md:w-[150px]"
                 />
               </div>
             </div>
@@ -127,7 +135,7 @@ const LessonItem: React.FC<LessonItemProps> = ({
                 variant="contained"
                 color="primary"
                 className="w-full"
-                onClick={handleOpenDialog} // Open dialog on click
+                onClick={handleOpenDialog} // Open lesson dialog on click
               >
                 <Typography variant="button-s">Guarda lezione</Typography>
               </Button>
@@ -136,6 +144,7 @@ const LessonItem: React.FC<LessonItemProps> = ({
                 variant="outlined"
                 color="primary"
                 className="mt-4"
+                onClick={handleOpenCompletionDialog} // Open completion dialog on click
               >
                 <Typography variant="button-s">
                   Segna come completato
@@ -146,7 +155,7 @@ const LessonItem: React.FC<LessonItemProps> = ({
         </div>
       </div>
 
-      {/* MUI Dialog Component */}
+      {/* Lesson Dialog */}
       <Dialog
         open={openDialog}
         onClose={handleCloseDialog}
@@ -212,6 +221,76 @@ const LessonItem: React.FC<LessonItemProps> = ({
           >
             <PlayArrow />
             <Typography variant="button-m">Accedi a tutti i corsi</Typography>
+          </Button>
+        </DialogActions>
+      </Dialog>
+
+      {/* Completion Confirmation Dialog */}
+      <Dialog
+        open={openCompletionDialog}
+        onClose={handleCloseCompletionDialog}
+        maxWidth="md"
+        fullWidth
+      >
+        <DialogTitle className="flex items-center justify-between p-6">
+          Vuoi segnare come completato?
+          <IconButton aria-label="close" onClick={handleCloseCompletionDialog}>
+            <CancelRounded className="text-action-divider" />
+          </IconButton>
+        </DialogTitle>
+
+        <DialogContent>
+          <Box
+            display="flex"
+            alignItems="center"
+            className="p-6 bg-background"
+            borderRadius={3}
+          >
+            <div className="flex flex-col md:flex-row gap-4 w-full md:w-auto items-center">
+              <div className="overflow-hidden rounded-md">
+                <img
+                  loading="lazy"
+                  src={imageSrc}
+                  alt=""
+                  className="object-contain aspect-[1.68] w-[100px] md:w-[150px]"
+                />
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <Typography variant="h5" color="textPrimary">
+                  {title}
+                </Typography>
+                <Chip
+                  label={
+                    <Typography variant="caption-500">{duration}</Typography>
+                  }
+                  size="medium"
+                  variant="filled"
+                  className="self-start bg-neutral-main"
+                />
+              </div>
+            </div>
+          </Box>
+        </DialogContent>
+        <DialogActions className="flex flex-wrap gap-2">
+          <Button
+            onClick={handleCloseCompletionDialog}
+            color="secondary"
+            variant="contained"
+            className="w-full sm:w-auto"
+          >
+            <Typography variant="button-m">Segna come completato</Typography>
+          </Button>
+          <Button
+            onClick={() => {
+              /* Handle completion logic here */ handleCloseCompletionDialog();
+            }}
+            color="primary"
+            variant="contained"
+            className="w-full sm:w-auto"
+          >
+            <PlayArrow />
+            <Typography variant="button-m">Guarda Lezione</Typography>
           </Button>
         </DialogActions>
       </Dialog>

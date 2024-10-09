@@ -60,11 +60,20 @@ const EducationalPathDetailPage: React.FC<DetailEduPathProps> = ({
           />
         </div>
         <div className="max-w-[800px] m-auto">
-          <div className="flex justify-between items-center w-full mb-6">
-            <Typography variant="h3">Lezioni</Typography>
-            <Typography variant="subtitle1">{lessonCount} elementi</Typography>
+          <div className="mb-10">
+            <div className="flex justify-between items-center w-full mb-6">
+              <Typography variant="h3">Lezioni</Typography>
+              <Typography variant="s1">{lessonCount} elementi</Typography>
+            </div>
+            <LessonList lessons={lessons} />
           </div>
-          <LessonList lessons={lessons} />
+          <div className="mb-10">
+            <div className="flex justify-between items-center w-full mb-6">
+              <Typography variant="h3">Serie</Typography>
+              <Typography variant="s1">{lessonCount} elementi</Typography>
+            </div>
+            <LessonList lessons={lessons} />
+          </div>
         </div>
       </main>
     </Layout>
