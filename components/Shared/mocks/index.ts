@@ -28,6 +28,7 @@ export function generateCourse(): CourseData {
       () => ({
         name: faker.person.fullName(), // Random instructor name
         avatarUrl: faker.image.avatar(), // Random avatar image for the instructor
+        profession: faker.person.jobArea(),
       })
     ),
     description: faker.lorem.paragraph(), // Random course description

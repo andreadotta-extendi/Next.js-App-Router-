@@ -1,17 +1,18 @@
-import EducationalPathDetailPage from "@/components/EducationalPathDetail/EducationalPathDetail";
+import EducationalPathDetailPage from "@/components/EducationalPathDetail/EducationalPathDetailPage";
 import React from "react";
 
 export default async function Page(props: { params: { page: any[] } }) {
   return (
     <>
       <EducationalPathDetailPage
-        title={""}
-        completionPercentage={0}
-        description={""}
-        requirements={""}
-        difficulty={""}
-        videoCount={0}
-        teachers={[]}
+        title="titolo"
+        description={"wewq"}
+        requirements={"ewqeqw"}
+        lessonCount={10}
+        instructors={[]}
+        videoCount={40}
+        level="base"
+        courseType="percorsi"
       />
     </>
   );

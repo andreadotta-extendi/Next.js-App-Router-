@@ -18,6 +18,7 @@ export interface CourseData {
   instructors: {
     name: string;
     avatarUrl: string;
+    profession?: string;
   }[];
   description: string;
   videoUrl: string;
@@ -84,10 +85,9 @@ export interface DetailEduPathProps
   extends Pick<
     CourseData,
     | "title"
-    | "lessonCount"
+    | "videoCount"
     | "level"
     | "genres"
-    | "duration"
     | "instructors"
     | "courseType"
     | "lessonCount"

@@ -5,9 +5,9 @@ import { ReactNode } from "react";
 
 interface InfoCardProps {
   title?: string;
-  children: ReactNode;
-  button: ReactNode;
-  className: string;
+  children?: ReactNode;
+  button?: ReactNode;
+  className?: string;
 }
 
 const InfoCard: React.FC<InfoCardProps> = ({
@@ -20,7 +20,7 @@ const InfoCard: React.FC<InfoCardProps> = ({
     <div
       className={`flex flex-col gap-2 p-6 rounded-2xl bg-paper ${className}`}
     >
-      <div className="flex">
+      <div className="flex justify-between items-center">
         <Typography variant="s1" color="textSecondary">
           {title}
         </Typography>

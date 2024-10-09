@@ -527,6 +527,9 @@ const theme = createTheme({
         labelSmall: ({ theme }) => ({
           padding: `0px ${theme.spacing(0.5)}`,
         }),
+        labelMedium: ({ theme }) => ({
+          padding: `3px ${theme.spacing(0.5)}`,
+        }),
         avatar: ({ theme }) => ({
           marginLeft: "0px",
         }),
