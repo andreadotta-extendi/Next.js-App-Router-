@@ -254,6 +254,7 @@ const theme = createTheme({
       },
     },
     h3: {
+      fontFamily: `${workSans.style.fontFamily}, sans-serif`,
       fontSize: "2rem", // 32px
       fontWeight: 600,
       lineHeight: "38px",
