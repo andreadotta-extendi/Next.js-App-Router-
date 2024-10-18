@@ -74,7 +74,7 @@ export default function LoginForm() {
           labelPlacement="end"
           className="mt-2"
           control={<Checkbox size="small" color="primary" />}
-          label="Remember me"
+          label="Ricordami"
         />
       </div>
       <div className="flex flex-col gap-4">

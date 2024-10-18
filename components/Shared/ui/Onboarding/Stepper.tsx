@@ -29,7 +29,7 @@ const QontoStepIconRoot = styled("div")<{ ownerState: { active?: boolean } }>(
     }),
     "& .QontoStepIcon-circle": {
       padding: 0,
-      width: 72,
+      width: 72, // Default width for larger screens
       height: 16,
       borderRadius: "10px",
       backgroundColor: "currentColor",
@@ -41,7 +41,7 @@ function QontoStepIcon(props: StepIconProps) {
   const { active, completed, className } = props;
 
   return (
-    <QontoStepIconRoot ownerState={{ active }} className={className}>
+    <QontoStepIconRoot ownerState={{ active }} className={`${className} px-0`}>
       {completed ? (
         <div
           className="QontoStepIcon-circle"

@@ -547,6 +547,10 @@ const theme = createTheme({
         root: ({ theme }) => ({
           color: theme.palette.title.main,
           fontWeight: 600,
+
+          "&.Mui-error": {
+            color: theme.palette.error.main,
+          },
         }),
       },
     },
@@ -742,6 +746,7 @@ const theme = createTheme({
           // Focused
           "& .Mui-focused .MuiOutlinedInput-root": {
             color: theme.palette.text.primary,
+            backgroundColor: "#393A47", // Action focus
           },
           "& .Mui-focused .MuiInputLabel-root": {
             color: theme.palette.text.primary,
@@ -762,7 +767,6 @@ const theme = createTheme({
             borderColor: "#8C8D97 !important", // Action Divider
             top: "0",
           },
-
           "& input:-webkit-autofill": {
             WebkitBoxShadow: "0 0 0 100px #1C1D22 inset !important", // Sfondo specifico
             WebkitTextFillColor: "#fff !important", // Colore del testo
@@ -798,6 +802,11 @@ const theme = createTheme({
           "&.MuiOutlinedInput-notchedOutline": {
             borderColor: theme.palette.action.divider,
           },
+
+          // Error
+          "&.Mui-error .MuiOutlinedInput-notchedOutline": {
+            borderColor: `${theme.palette.error.main} !important`,
+          },
         }),
       },
     },
@@ -810,6 +819,7 @@ const theme = createTheme({
             padding: theme.spacing(2),
             fontSize: "14px",
             border: "none",
+            borderRadius: "0px !important",
           },
           "& .MuiInputBase-formControl": {
             color: theme.palette.text.primary,
@@ -817,11 +827,20 @@ const theme = createTheme({
             borderRadius: theme.spacing(1),
           },
 
+          "& .MuiInputBase-formControl ::-webkit-input-placeholder": {
+            color: theme.palette.text.secondary,
+            opacity: "1 !important",
+          },
+
           // Variant Outlined
           "& .MuiOutlinedInput-root": {
             color: theme.palette.text.primary,
             border: "none",
             backgroundColor: "transparent !important",
+          },
+
+          "& .MuiOutlinedInput-root:hover": {
+            boxShadow: `0px 0px 0px 0.5px ${theme.palette.divider}`,
           },
 
           // Label
@@ -838,6 +857,10 @@ const theme = createTheme({
           // },
 
           // Focused
+          "& .Mui-focused.MuiOutlinedInput-root": {
+            color: theme.palette.text.primary, // text primary
+            backgroundColor: "#393A47 !important", // Action focus
+          },
           "& .Mui-focused.MuiOutlinedInput-root": {
             color: theme.palette.text.primary, // text primary
             backgroundColor: "#393A47 !important", // Action focus
@@ -863,6 +886,7 @@ const theme = createTheme({
           // adornment color
           "& .MuiIconButton-root": {
             color: theme.palette.text.secondary,
+            padding: "8px 10px 8px 4px",
           },
 
           // creative checkbox
@@ -918,6 +942,23 @@ const theme = createTheme({
         }),
       },
     },
+
+    MuiStep: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          [theme.breakpoints.down("sm")]: {
+            // Applies styles only for mobile devices
+            paddingLeft: "4px !important",
+            paddingRight: "4px !important",
+
+            "& .QontoStepIcon-circle": {
+              height: "14px !important",
+              width: "40px !important",
+            },
+          },
+        }),
+      },
+    },
     MuiLinearProgress: {
       styleOverrides: {
         root: ({ theme }) => ({
@@ -934,6 +975,19 @@ const theme = createTheme({
       styleOverrides: {
         root: ({ theme }) => ({
           backgroundColor: theme.palette.action.divider,
+        }),
+      },
+    },
+    MuiAlert: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          borderRadius: theme.spacing(1),
+
+          "&.MuiAlert-colorError": {
+            backgroundColor: "#B91C1C20",
+            border: "1px solid #B91C1C20",
+            color: "#ff7c7c",
+          },
         }),
       },
     },
