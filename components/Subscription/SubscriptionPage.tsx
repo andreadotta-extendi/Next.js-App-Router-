@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import SubscriptionOfferCard from "./SubscriptionOfferCard";
 import Layout from "../Shared/ui/Layout";

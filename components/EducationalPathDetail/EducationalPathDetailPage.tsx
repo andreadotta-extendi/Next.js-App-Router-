@@ -1,3 +1,4 @@
+"use client";
 import { Box, Stack, Typography } from "@mui/material";
 import { generateDetailEduPaths } from "../Shared/mocks";
 import EducationalPathDetail from "./Components/EducationalPathDetail";

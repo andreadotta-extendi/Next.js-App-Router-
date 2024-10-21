@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { CatalogSection } from "./CatalogSection";
 import { Grid, Typography } from "@mui/material";

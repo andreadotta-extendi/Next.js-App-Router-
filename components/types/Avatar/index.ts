@@ -1,3 +1,4 @@
+"use client";
 import { CourseData } from "../Course";
 
 export interface AvatarProps

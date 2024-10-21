@@ -1,3 +1,4 @@
+"use client";
 import { Box, Typography, Button } from "@mui/material";
 import { DownloadRounded } from "@mui/icons-material";
 import { ReactElement, ElementType } from "react";

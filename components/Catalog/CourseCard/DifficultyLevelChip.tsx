@@ -1,7 +1,10 @@
-import { CourseType, DifficultyLevel } from "@/components/types/Course";
+import {
+  CourseCardProps,
+  CourseType,
+  DifficultyLevel,
+} from "@/components/types/Course";
 import { Avatar, Chip, Typography } from "@mui/material";
 import React from "react";
-import { CourseCardProps } from ".";
 import { getCardColors } from "../utils";
 
 const DifficultyLevelChip = ({

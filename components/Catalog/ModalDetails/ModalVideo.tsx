@@ -1,3 +1,4 @@
+"use client";
 import { PlayCircleOutlineRounded } from "@mui/icons-material";
 import React from "react";
 

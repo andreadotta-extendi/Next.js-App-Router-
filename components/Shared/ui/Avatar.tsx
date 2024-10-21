@@ -1,3 +1,4 @@
+"use client";
 import { getCardColors, getInstructorName } from "@/components/Catalog/utils";
 import { AvatarProps } from "@/components/types/Avatar";
 import { AvatarGroup, Avatar as MUIAvatar, Typography } from "@mui/material";

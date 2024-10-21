@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { CheckCircleRounded } from "@mui/icons-material";
 import { Typography } from "@mui/material";

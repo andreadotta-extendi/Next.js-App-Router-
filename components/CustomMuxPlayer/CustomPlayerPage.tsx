@@ -1,3 +1,4 @@
+"use client";
 import CustomMuxPlayer from "@/components/CustomMuxPlayer";
 import Layout from "@/components/Shared/ui/Layout";
 import {

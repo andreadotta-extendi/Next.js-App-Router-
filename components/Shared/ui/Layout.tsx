@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Header from "./Header";
 import SubNavbar from "./SubNavbar";
@@ -9,6 +10,7 @@ interface LayoutProps {
   stepsPage?: boolean;
   leftButtonSubNavbar?: boolean;
   rightButtonSubNavbar?: boolean;
+  isProfile?: boolean;
 }
 
 const Layout: React.FC<LayoutProps> = ({
@@ -16,6 +18,7 @@ const Layout: React.FC<LayoutProps> = ({
   hasSubNavbar,
   leftButtonSubNavbar,
   rightButtonSubNavbar,
+  isProfile = false,
   children,
 }) => {
   return (
@@ -28,9 +31,9 @@ const Layout: React.FC<LayoutProps> = ({
         />
       )}
       <main
-        className={`${
-          hasSubNavbar ? "pt-0 pb-16" : "py-16"
-        } px-4 max-w-[1440px] m-auto`}
+        className={`${hasSubNavbar ? "pt-0 pb-16" : "py-16"} ${
+          !isProfile ? "px-4 max-w-[1440px] m-auto" : ""
+        }`}
       >
         {children}
       </main>

@@ -1,3 +1,4 @@
+"use client";
 import { AddRounded, CheckCircleOutline } from "@mui/icons-material";
 import { IconButton, Typography, Box, Divider } from "@mui/material";
 import React from "react";

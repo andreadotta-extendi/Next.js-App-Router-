@@ -8,7 +8,7 @@ import {
 import { TypographyStyleOptions } from "@mui/material/styles/createTypography";
 import taiwindConfig from "../tailwind.config";
 import { CustomExtendConfig } from "@/tailwind.type";
-import { Height } from "@mui/icons-material";
+
 declare module "@mui/material/styles" {
   interface TypeAction {
     divider?: string;
@@ -223,6 +223,7 @@ const theme = createTheme({
       main: "#5767FF", // Gradient
     },
   },
+
   typography: {
     fontFamily: `${workSans.style.fontFamily}, sans-serif`,
     h1: {

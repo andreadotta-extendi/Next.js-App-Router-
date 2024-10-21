@@ -1,3 +1,4 @@
+"use client";
 import { Box, Typography, Chip } from "@mui/material";
 import CheckRounded from "@mui/icons-material/CheckRounded"; // Assuming you're using MUI icons
 

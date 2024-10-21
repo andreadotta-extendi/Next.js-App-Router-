@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { IconButton, Typography } from "@mui/material";
 import CourseCard from "./CourseCard";

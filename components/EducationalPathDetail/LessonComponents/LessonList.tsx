@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import LessonItem from "./LessonItem";
 
@@ -17,7 +18,7 @@ const LessonList: React.FC<LessonListProps> = ({ lessons }) => {
   return (
     <section className="space-y-3">
       {lessons.map((lesson, index) => (
-        <LessonItem key={index} {...lesson} />
+        <LessonItem instructors={[]} key={index} {...lesson} />
       ))}
     </section>
   );

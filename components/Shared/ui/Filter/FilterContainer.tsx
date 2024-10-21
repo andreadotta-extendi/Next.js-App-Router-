@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import FilterHeader from "./FilterHeader";
 import FilterAccordion from "./FilterAccordion";

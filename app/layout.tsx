@@ -1,5 +1,6 @@
 import React from "react";
 import { ThemeProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
 import "./global.css"; // Ensure you have styles in this file
 import { Work_Sans } from "next/font/google";
 import Head from "next/head";
@@ -27,7 +28,10 @@ export default function RootLayout({
       </Head>
       <body id="root" className={`${workSans.className} bg-background`}>
         <AppRouterCacheProvider>
-          <ThemeProvider theme={theme}>{children}</ThemeProvider>
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
+            {children}
+          </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
     </html>

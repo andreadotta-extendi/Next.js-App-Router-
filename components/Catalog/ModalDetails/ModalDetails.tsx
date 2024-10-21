@@ -50,6 +50,7 @@ const ModalDetails: React.FC<ModalDetailsProps> = ({
           </Grid>
           <Grid item md={4}>
             <ModalMetadata
+              key={Math.random()}
               lessonCount={lessonCount}
               level={level}
               genres={genres}
