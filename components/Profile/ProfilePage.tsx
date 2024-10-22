@@ -16,8 +16,8 @@ const ProfilePage: React.FC = () => {
     <>
       <Layout isProfile={true}>
         <div className="relative">
-          <ProfileSidebar items={sidebarItems} />
-          <div className="px-4 max-w-[1440px] m-auto pl-[264px]">
+          {/* <ProfileSidebar items={sidebarItems} /> */}
+          <div className="px-4 max-w-[1440px] m-auto">
             <div className="space-y-6">
               <Typography variant="h1" component="h1">
                 Profilo

@@ -188,6 +188,7 @@ const MusicJourneySelection: React.FC = () => {
                 imageSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/fefd87c43df65a0f5ea72240f66fbce99941d130db0488f79b4242cbab607263?apiKey=ae92917785e7425fbb91907da8ebf914"
                 text={selectedFeedback ?? ""}
                 alt="consiglio"
+                boxClassName="bg-paper"
               />
             </div>
           </Grow>

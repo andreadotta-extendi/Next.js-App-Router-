@@ -150,6 +150,7 @@ const SessionPlanner: React.FC = () => {
               <OptionSelectedFeedback
                 imageSrc={selectedOption.feedback.imageSrc}
                 text={selectedOption.feedback.text}
+                boxClassName="bg-paper"
               />
             </div>
           </Grow>
